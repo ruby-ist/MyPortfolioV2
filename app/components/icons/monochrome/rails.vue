@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.2829 40" width="42">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 41.2829 40">
     <g>
       <path
         class="cls-1"

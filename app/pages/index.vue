@@ -16,67 +16,251 @@
       </div>
     </div>
     <div class="w-40p grid place-i-end">
-      <table
-        class="[&_td]:bd-1 [&_td]:bd-solid [&_td]:bd-color-brown [&_td]:w-80 [&_td]:h-80 [&_td]:ta-center"
-        border-collapse="collapse"
-      >
+      <table border-collapse="collapse">
         <tbody>
+          <!-- ROW 1 -->
           <tr>
-            <td class="strict:border-none" />
-            <td class="strict:bd-t-0"><IconsMonochromeDocker /></td>
-            <td class="strict:border-none" />
-            <td class="strict:border-none" />
-            <td class="strict:bd-t-0"><IconsMonochromeKafka /></td>
-            <td class="strict:border-none" />
-          </tr>
-          <tr>
-            <td class="strict:border-none" />
-            <td><IconsMonochromePostgres /></td>
-            <td><IconsMonochromeRedis /></td>
-            <td><IconsMonochromeWebsocket /></td>
-            <td><IconsMonochromeGrpc /></td>
-            <td><IconsMonochromeGo /></td>
-          </tr>
-          <tr>
-            <td class="strict:bd-l-0"><IconsMonochromeRuby /></td>
-            <td><IconsMonochromeRails /></td>
-            <td><IconsMonochromeRest /></td>
-            <td><IconsMonochromeGraphql /></td>
-            <td class="strict:border-none" />
-            <td class="strict:border-none" />
-          </tr>
-          <tr>
-            <td class="strict:bd-l-0"><IconsMonochromeRspec /></td>
-            <td><IconsMonochromeTurbo /></td>
-            <td><IconsMonochromeStimulus /></td>
-            <td><IconsMonochromeJavascript /></td>
-            <td><IconsMonochromeVue /></td>
-            <td><IconsMonochromeNuxt /></td>
-          </tr>
-          <tr>
-            <td class="strict:border-none" />
-            <td class="strict:border-none" />
-            <td class="strict:border-none" />
-            <td><IconsMonochromeTypescript /></td>
-            <td><IconsMonochromeGsap /></td>
-            <td class="strict:border-none" />
-          </tr>
-          <tr>
-            <td class="strict:border-none" />
-            <td><IconsMonochromeUnocss /></td>
-            <td><IconsMonochromeCss /></td>
-            <td><IconsMonochromeHtml /></td>
-            <td><IconsMonochromeSvg /></td>
-            <td class="strict:border-none" />
+            <td />
+            <IconCell class="strict:bd-t-0">
+              <template #mono>
+                <IconsMonochromeDocker class="w-38" />
+              </template>
+              <template #color>
+                <IconsColoredDocker class="w-38" />
+              </template>
+            </IconCell>
+            <td />
+            <td />
+            <IconCell class="strict:bd-t-0">
+              <template #mono>
+                <IconsMonochromeKafka class="w-20" />
+              </template>
+              <template #color>
+                <IconsColoredKafka class="w-20" />
+              </template>
+            </IconCell>
+            <td />
           </tr>
 
+          <!-- ROW 2 -->
           <tr>
-            <td class="strict:border-none" />
-            <td class="strict:border-none" />
-            <td class="strict:border-none" />
-            <td><IconsMonochromeFigma /></td>
-            <td><IconsMonochromeIllustrator /></td>
-            <td class="strict:border-none" />
+            <td />
+            <IconCell>
+              <template #mono
+                ><IconsMonochromePostgres class="w-32" />
+              </template>
+              <template #color>
+                <IconsColoredPostgres class="w-32" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeRedis class="w-36" />
+              </template>
+              <template #color>
+                <IconsColoredRedis class="w-36" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeWebsocket class="w-36" />
+              </template>
+              <template #color>
+                <IconsColoredWebsocket class="w-36" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeGrpc class="w-42" />
+              </template>
+              <template #color>
+                <IconsColoredGrpc class="w-42" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeGo class="w-40" />
+              </template>
+              <template #color>
+                <IconsColoredGo class="w-40" />
+              </template>
+            </IconCell>
+          </tr>
+
+          <!-- ROW 3 -->
+          <tr>
+            <IconCell class="strict:bd-l-0">
+              <template #mono>
+                <IconsMonochromeRuby class="w-36" />
+              </template>
+              <template #color>
+                <IconsColoredRuby class="w-36" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeRails class="w-36" />
+              </template>
+              <template #color>
+                <IconsColoredRails class="w-36" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeRest class="w-36" />
+              </template>
+              <template #color>
+                <IconsColoredRest class="w-36" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeGraphql class="w-30" />
+              </template>
+              <template #color>
+                <IconsColoredGraphql class="w-30" />
+              </template>
+            </IconCell>
+            <td />
+            <td />
+          </tr>
+
+          <!-- ROW 4 -->
+          <tr>
+            <IconCell class="strict:bd-l-0">
+              <template #mono>
+                <IconsMonochromeRspec class="w-36" />
+              </template>
+              <template #color>
+                <IconsColoredRspec class="w-36" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeTurbo class="w-34" />
+              </template>
+              <template #color>
+                <IconsColoredTurbo class="w-34" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeStimulus class="w-34" />
+              </template>
+              <template #color>
+                <IconsColoredStimulus class="w-34" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeJavascript class="w-34" />
+              </template>
+              <template #color>
+                <IconsColoredJavascript class="w-34" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeVue class="w-36" />
+              </template>
+              <template #color>
+                <IconsColoredVue class="w-36" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeNuxt class="w-38" />
+              </template>
+              <template #color>
+                <IconsColoredNuxt class="w-38" />
+              </template>
+            </IconCell>
+          </tr>
+
+          <!-- ROW 5 -->
+          <tr>
+            <td />
+            <td />
+            <td />
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeTypescript class="w-34" />
+              </template>
+              <template #color>
+                <IconsColoredTypescript class="w-34" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeGsap class="w-54" />
+              </template>
+              <template #color>
+                <IconsColoredGsap class="w-54" />
+              </template>
+            </IconCell>
+            <td />
+          </tr>
+
+          <!-- ROW 6 -->
+          <tr>
+            <td />
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeUnocss class="w-34" />
+              </template>
+              <template #color>
+                <IconsColoredUnocss class="w-34" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeCss class="w-34" />
+              </template>
+              <template #color>
+                <IconsColoredCss class="w-34" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeHtml class="w-28" />
+              </template>
+              <template #color>
+                <IconsColoredHtml class="w-28" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeSvg class="w-36" />
+              </template>
+              <template #color>
+                <IconsColoredSvg class="w-36" />
+              </template>
+            </IconCell>
+            <td />
+          </tr>
+
+          <!-- ROW 7 -->
+          <tr>
+            <td />
+            <td />
+            <td />
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeFigma class="w-34" />
+              </template>
+              <template #color>
+                <IconsColoredFigma class="w-34" />
+              </template>
+            </IconCell>
+            <IconCell>
+              <template #mono>
+                <IconsMonochromeIllustrator class="w-34" />
+              </template>
+              <template #color>
+                <IconsColoredIllustrator class="w-34" />
+              </template>
+            </IconCell>
+            <td />
           </tr>
         </tbody>
       </table>
@@ -102,9 +286,5 @@ table {
 
 td {
   background: var(--beige) url("/noise.avif");
-}
-
-td:not(.strict\:border-none):hover {
-  background: none;
 }
 </style>
