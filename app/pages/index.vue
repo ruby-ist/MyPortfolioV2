@@ -4,13 +4,9 @@
       <div class="w-70p">
         <h1>Sriram V</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
-          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
-          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
-          per conubia nostra inceptos himenaeos.
+          I'm a software developer and I write tech blogs about the things I
+          learn along the way. I also love doing origami. Checkout my projects
+          if you want.
         </p>
         <p>Contact: Email, Linkedin</p>
       </div>

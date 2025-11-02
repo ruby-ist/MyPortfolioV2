@@ -4,6 +4,7 @@
     class="w-68 h-68 ta-center"
     border="1 solid color-brown"
     @mouseenter="colorize"
+    @mouseleave="decolorize"
   >
     <div ref="mono" class="inline-block">
       <slot name="mono" />
@@ -16,21 +17,26 @@
 
 <script lang="ts">
 export default defineNuxtComponent({
+  data: () => ({
+    timerId: null as null | NodeJS.Timeout,
+  }),
   methods: {
     colorize() {
       if (!(this.$refs.mono && this.$refs.color && this.$refs.cell)) return;
 
+      if (this.timerId) clearTimeout(this.timerId);
       (this.$refs.cell as HTMLElement).classList.add("no-bg");
       (this.$refs.mono as HTMLElement).classList.add("no-display");
       (this.$refs.color as HTMLElement).classList.remove("no-display");
-      setTimeout(this.decolorize, 3000);
     },
     decolorize() {
       if (!(this.$refs.mono && this.$refs.color && this.$refs.cell)) return;
 
-      (this.$refs.cell as HTMLElement).classList.remove("no-bg");
-      (this.$refs.mono as HTMLElement).classList.remove("no-display");
-      (this.$refs.color as HTMLElement).classList.add("no-display");
+      this.timerId = setTimeout(() => {
+        (this.$refs.cell as HTMLElement).classList.remove("no-bg");
+        (this.$refs.mono as HTMLElement).classList.remove("no-display");
+        (this.$refs.color as HTMLElement).classList.add("no-display");
+      }, 2000);
     },
   },
 });
