@@ -15,7 +15,16 @@ import listRules from "./unocss/list.rules";
 import tableRules from "./unocss/table.rules";
 
 export default defineConfig({
-  presets: [presetMini(), presetAttributify(), presetWebFonts({})],
+  presets: [
+    presetMini(),
+    presetAttributify(),
+    presetWebFonts({
+      provider: "google",
+      fonts: {
+        sans: ["Bellefair", "Life Savers"],
+      },
+    }),
+  ],
   rules: [
     ...boxRules,
     ...displayRules,
