@@ -22,6 +22,6 @@
 
 <style scoped>
 .cls-1 {
-  fill: #7e6752;
+  fill: #998267;
 }
 </style>
