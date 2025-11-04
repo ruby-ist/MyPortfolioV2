@@ -19,10 +19,10 @@
 }
 .cls-1,
 .cls-2 {
-  stroke: #998267;
+  stroke: var(--medium-brown);
   stroke-miterlimit: 20;
 }
 .cls-2 {
-  fill: #998267;
+  fill: var(--medium-brown);
 }
 </style>

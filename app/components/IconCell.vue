@@ -2,7 +2,7 @@
   <td
     ref="cell"
     class="w-68 h-68 ta-center"
-    border="1 solid color-brown"
+    border="1 solid color-medium-brown"
     @mouseenter="colorize"
     @mouseleave="decolorize"
   >

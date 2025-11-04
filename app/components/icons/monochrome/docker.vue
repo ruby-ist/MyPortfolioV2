@@ -270,6 +270,6 @@
 
 <style scoped>
 .cls-1 {
-  fill: #998267;
+  fill: var(--medium-brown);
 }
 </style>

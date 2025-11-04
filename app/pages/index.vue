@@ -36,7 +36,8 @@
 body {
   --beige: #f2e2b1;
   --brown: #7e6752;
-  --sea-green: #98eecc;
+  --medium-brown: #998267;
+  --sea-green: #7fe9de;
   --beach: #d0f5be;
   --header-font: "Life Savers", serif;
   --paragraph-font: "Bellefair", serif;

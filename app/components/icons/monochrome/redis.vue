@@ -62,12 +62,12 @@
 }
 .cls-1,
 .cls-2 {
-  stroke: #998267;
+  stroke: var(--medium-brown);
   stroke-miterlimit: 10;
 }
 .cls-2,
 .cls-3 {
-  fill: #998267;
+  fill: var(--medium-brown);
 }
 .cls-2 {
   stroke-width: 0.25px;

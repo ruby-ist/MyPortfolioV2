@@ -63,11 +63,11 @@
 <style scoped>
 .cls-1 {
   fill: none;
-  stroke: #998267;
+  stroke: var(--medium-brown);
   stroke-miterlimit: 10;
   stroke-width: 0.25px;
 }
 .cls-2 {
-  fill: #998267;
+  fill: var(--medium-brown);
 }
 </style>

@@ -15,11 +15,11 @@
 
 <style scoped>
 .cls-1 {
-  fill: #998267;
+  fill: var(--medium-brown);
 }
 .cls-1,
 .cls-2 {
-  stroke: #998267;
+  stroke: var(--medium-brown);
   stroke-miterlimit: 10;
 }
 .cls-2 {
