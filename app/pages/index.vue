@@ -1,7 +1,7 @@
 <template>
   <div class="flex h-100vh">
     <div class="w-60p pt-12p pl-16p">
-      <div class="w-75p" font="s-1.4rem">
+      <div class="w-75p" font="s-1.45rem">
         <h1 font="s-2.2rem f-header-font" class="mb-60">Sriram V</h1>
         <p class="mb-40 lh-36px" font="f-paragraph-font">
           I build elegant things with Ruby <em>and</em> Rails, mess around with
@@ -50,7 +50,7 @@ a::after {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 60%;
+  top: 65%;
   left: -0.1em;
   right: -0.1em;
   bottom: 0;
