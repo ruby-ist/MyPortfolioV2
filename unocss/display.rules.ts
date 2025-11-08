@@ -3,70 +3,107 @@ import type { Rule } from "unocss";
 
 export default [
   // Flexbox shorthand rules
-  ['flex', { display: 'flex' }],
+  ["flex", { display: "flex" }],
   [/^flex-(\d+)$/, ([, value]: string[]) => ({ flex: value })],
-  [/^align-i-([a-z-]+)$/, ([, alignment]) => ({ 'align-items': alignment })],
-  [/^align-c-([a-z-]+)$/, ([, alignment]) => ({ 'align-content': alignment })],
-  [/^align-s-([a-z-]+)$/, ([, alignment]) => ({ 'align-self': alignment })],
-  [/^just-i-([a-z-]+)$/, ([, alignment]) => ({ 'justify-items': alignment })],
-  [/^just-c-([a-z-]+)$/, ([, alignment]) => ({ 'justify-content': alignment })],
-  [/^(row|column)$/, ([, direction]) => ({ 'flex-direction': direction })],
-  [/^(wrap|nowrap)$/, ([, wrap]) => ({ 'flex-wrap': wrap })],
-  [/^gap-(\d+)(\w{1,3})?/, ([, value, unit]) => {
-    return { gap: `${value}${mapUnit(unit)}` }
-  }],
+  [/^align-i-([a-z-]+)$/, ([, alignment]) => ({ "align-items": alignment })],
+  [/^align-c-([a-z-]+)$/, ([, alignment]) => ({ "align-content": alignment })],
+  [/^align-s-([a-z-]+)$/, ([, alignment]) => ({ "align-self": alignment })],
+  [/^just-i-([a-z-]+)$/, ([, alignment]) => ({ "justify-items": alignment })],
+  [/^just-c-([a-z-]+)$/, ([, alignment]) => ({ "justify-content": alignment })],
+  [/^(row|column)$/, ([, direction]) => ({ "flex-direction": direction })],
+  [/^(wrap|nowrap)$/, ([, wrap]) => ({ "flex-wrap": wrap })],
+  [
+    /^gap-(\d+)(\w{1,3})?/,
+    ([, value, unit]) => {
+      return { gap: `${value}${mapUnit(unit)}` };
+    },
+  ],
+
+  [
+    /^gap-(\d+)(\w{1,3})?-(\d+)(\w{1,3})?/,
+    ([, value, unit, value2, unit2]) => {
+      return { gap: `${value}${mapUnit(unit)} ${value2}${mapUnit(unit2)}` };
+    },
+  ],
 
   // grid rules
-  ['grid', { display: 'grid' }],
-  [/^place-i-([a-z-]+)$/, ([, alignment]) => ({ 'place-items': alignment })],
+  ["grid", { display: "grid" }],
+  [/^place-i-([a-z-]+)$/, ([, alignment]) => ({ "place-items": alignment })],
+  [
+    /^grid-auto-(rows|columns)-(\d+)(\w{1,3})?$/,
+    ([, axis, value, unit]) => ({
+      [`grid-auto-${axis}`]: `${value}${mapUnit(unit)}`,
+    }),
+  ],
+  [
+    /^grid-(row|column)-span-(\d+)$/,
+    ([, axis, value]) => ({
+      [`grid-${axis}`]: `span ${value}`,
+    }),
+  ],
 
   // display rules
-  ['inline-block', { display: 'inline-block' }],
-  ['block', { display: 'block' }],
-  ['no-display', { display: 'none' }],
-  ['inline-flex', { display: 'inline-flex' }],
+  ["inline-block", { display: "inline-block" }],
+  ["block", { display: "block" }],
+  ["no-display", { display: "none" }],
+  ["inline-flex", { display: "inline-flex" }],
 
   // Overflow rules
-  [/^oflow-(x|y)?-?(\w+)$/, ([, axis, value]: string[]) => {
-      if(axis) {
+  [
+    /^oflow-(x|y)?-?(\w+)$/,
+    ([, axis, value]: string[]) => {
+      if (axis) {
         return { [`overflow-${axis}`]: value };
       } else {
-        return { 'overflow': value }
+        return { overflow: value };
       }
-  }],
+    },
+  ],
 
   // Scrollbar rules
-  [/^no-scrollbar$/,
+  [
+    /^no-scrollbar$/,
     () => {
       return [
         {
-          '-ms-overflow-style': 'none',
-          'scrollbar-width': 'none',
+          "-ms-overflow-style": "none",
+          "scrollbar-width": "none",
         },
-        '.no-scrollbar::-webkit-scrollbar {display: none;}',
+        ".no-scrollbar::-webkit-scrollbar {display: none;}",
       ];
     },
   ],
 
-  [/^scrollbar-w-(\w+)$/, ([, value]: string[]) => {
-    return { ['scrollbar-width']: value };
-  }],
+  [
+    /^scrollbar-w-(\w+)$/,
+    ([, value]: string[]) => {
+      return { ["scrollbar-width"]: value };
+    },
+  ],
 
-  [/^scrollbar-color-([-a-z]+)--([-a-z]+)$/, ([, thumbColor, trackColor]: string[]) => {
-    return { ['scrollbar-color']: `var(--${thumbColor}) var(--${trackColor})` };
-  }],
+  [
+    /^scrollbar-color-([-a-z]+)--([-a-z]+)$/,
+    ([, thumbColor, trackColor]: string[]) => {
+      return {
+        ["scrollbar-color"]: `var(--${thumbColor}) var(--${trackColor})`,
+      };
+    },
+  ],
 
   // cursor rule
   ["pointer", { cursor: "pointer" }],
 
   // visibility rules
-  ["hidden", { visibility: 'hidden' }],
-  ["visible", { visibility: 'visible' }],
+  ["hidden", { visibility: "hidden" }],
+  ["visible", { visibility: "visible" }],
 
   // Opacity Rule
-  [/^opacity-([\d.]+)$/, ([, value]) => {
-    return {
-      opacity: value,
-    };
-  }],
+  [
+    /^opacity-([\d.]+)$/,
+    ([, value]) => {
+      return {
+        opacity: value,
+      };
+    },
+  ],
 ] as Rule[];
