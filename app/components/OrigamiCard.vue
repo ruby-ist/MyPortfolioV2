@@ -7,6 +7,7 @@
       :src="`/origami/${origamiInfo.picFolderName}/pic_1.webp`"
       :alt="origamiInfo.name"
       class="w-100p bd-rad-23"
+      :style="`height: ${origamiInfo.height + 57 + 20}`"
       loading="lazy"
     />
     <div class="flex column gap-7">
