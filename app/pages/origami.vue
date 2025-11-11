@@ -1,8 +1,8 @@
 <template>
   <main>
     <h1 font="s-1.8rem f-header-font" class="pl-80 pt-20">Srira's Origami</h1>
-    <div font="f-paragraph-font" class="grid place-i-center m-60-0">
-      <div class="origami-grid grid gap-0-20 grid-auto-rows-1px max-w-80vw">
+    <div font="f-paragraph-font" class="m-60-0 p-0-10p">
+      <div ref="origamiGrid" class="max-w-80vw relative">
         <OrigamiCard
           v-for="origamiInfo in ORIGAMI_INFO_ARRAY"
           :key="origamiInfo.id"
@@ -30,9 +30,5 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
-}
-
-.origami-grid {
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 }
 </style>
