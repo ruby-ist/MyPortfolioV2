@@ -19,7 +19,13 @@
           :datetime="origamiInfo.date"
         />
       </div>
-      <div font="s-0.75rem" class="color-grey">{{ origamiInfo.author }}</div>
+      <div
+        font="s-0.75rem"
+        class="color-grey w-250 oflow-x-hidden"
+        style="white-space: nowrap; text-overflow: ellipsis"
+      >
+        {{ origamiInfo.author }}
+      </div>
     </div>
   </div>
 </template>
@@ -42,10 +48,7 @@ export default defineNuxtComponent({
     while (id !== index) {
       if (id % numCols === index % numCols) {
         const info = ORIGAMI_INFO_ARRAY[id];
-        if (index === 50) {
-          console.log(info);
-        }
-        if (info) columnHeight += info!.height + 52 + 20;
+        if (info) columnHeight += info.height * 250 + 52 + 20;
       }
 
       id++;
