@@ -2,7 +2,7 @@
   <main>
     <h1 font="s-1.8rem f-header-font" class="pl-80 pt-20">Srira's Origami</h1>
     <div font="f-paragraph-font" class="m-60-0 origami-grid">
-      <div ref="origamiGrid" class="max-w-80vw relative">
+      <div ref="origamiGrid" class="max-w-80vw relative flex row wrap gap-20">
         <OrigamiCard
           v-for="origamiInfo in ORIGAMI_INFO_ARRAY"
           :key="origamiInfo.id"

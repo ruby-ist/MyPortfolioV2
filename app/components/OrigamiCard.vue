@@ -1,5 +1,5 @@
 <template>
-  <div ref="card" class="origami flex column gap-12 w-250 absolute pointer">
+  <div ref="card" class="origami flex column gap-12 w-250 pointer">
     <img
       :src="`/origami/${origamiInfo.picFolderName}/pic_1.webp`"
       :alt="origamiInfo.name"
@@ -44,20 +44,17 @@ export default defineNuxtComponent({
     const index = ORIGAMI_INFO_ARRAY.length - this.origamiInfo.id;
     let id = 0;
     let columnHeight = 0;
-
     while (id !== index) {
       if (id % numCols === index % numCols) {
         const info = ORIGAMI_INFO_ARRAY[id];
         if (info) columnHeight += info.height * 250 + 52 + 20;
       }
-
       id++;
     }
-
     card.style.top = `${columnHeight}px`;
-
     const column = index % numCols;
     card.style.left = `${column * (250 + 20)}px`;
+    card.style.position = "absolute";
   },
 });
 </script>
