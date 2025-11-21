@@ -1,7 +1,7 @@
 <template>
   <main>
     <h1 font="s-1.8rem f-header-font" class="pl-80 pt-20">Srira's Origami</h1>
-    <div font="f-paragraph-font" class="m-60-0 p-0-10p">
+    <div font="f-paragraph-font" class="m-60-0 origami-grid">
       <div ref="origamiGrid" class="max-w-80vw relative">
         <OrigamiCard
           v-for="origamiInfo in ORIGAMI_INFO_ARRAY"
@@ -30,5 +30,9 @@ body {
   &::-webkit-scrollbar {
     display: none;
   }
+}
+
+.origami-grid {
+  padding: 0 calc((100vw - ((250px * 4) + (20px * 3))) / 2);
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div ref="card" class="origami flex column gap-12 w-250 absolute">
+  <div ref="card" class="origami flex column gap-12 w-250 absolute pointer">
     <img
       :src="`/origami/${origamiInfo.picFolderName}/pic_1.webp`"
       :alt="origamiInfo.name"
