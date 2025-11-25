@@ -37,24 +37,42 @@ export default defineNuxtComponent({
       type: Object as PropType<OrigamiInfo>,
       required: true,
     },
+    gridCount: {
+      type: Number,
+      required: true,
+    },
   },
+
+  watch: {
+    gridCount: {
+      handler(newCount) {
+        this.updatePosition(newCount);
+      },
+    },
+  },
+
   mounted() {
-    const numCols = 4;
-    const card = this.$refs.card as HTMLElement;
-    const index = ORIGAMI_INFO_ARRAY.length - this.origamiInfo.id;
-    let id = 0;
-    let columnHeight = 0;
-    while (id !== index) {
-      if (id % numCols === index % numCols) {
-        const info = ORIGAMI_INFO_ARRAY[id];
-        if (info) columnHeight += info.height * 250 + 52 + 20;
+    this.updatePosition(this.gridCount);
+  },
+
+  methods: {
+    updatePosition(columnCount: number) {
+      const card = this.$refs.card as HTMLElement;
+      const index = ORIGAMI_INFO_ARRAY.length - this.origamiInfo.id;
+      let id = 0;
+      let columnHeight = 0;
+      while (id !== index) {
+        if (id % columnCount === index % columnCount) {
+          const info = ORIGAMI_INFO_ARRAY[id];
+          if (info) columnHeight += info.height * 250 + 52 + 20;
+        }
+        id++;
       }
-      id++;
-    }
-    card.style.top = `${columnHeight}px`;
-    const column = index % numCols;
-    card.style.left = `${column * (250 + 20)}px`;
-    card.style.position = "absolute";
+      card.style.top = `${columnHeight}px`;
+      const column = index % columnCount;
+      card.style.left = `${column * (250 + 20)}px`;
+      card.style.position = "absolute";
+    },
   },
 });
 </script>
