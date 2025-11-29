@@ -1,5 +1,5 @@
 <template>
-  <div class="flex h-100vh">
+  <main class="flex h-100vh">
     <div class="w-60p pt-12p pl-16p">
       <div class="w-75p" font="s-1.45rem">
         <h1 font="s-2.2rem f-header-font" class="mb-60">Sriram V</h1>
@@ -29,23 +29,10 @@
       </div>
     </div>
     <div class="w-40p grid place-i-end"><IconsGrid /></div>
-  </div>
+  </main>
 </template>
 
 <style>
-body {
-  --beige: #f2e2b1;
-  --brown: #7e6752;
-  --medium-brown: #998267;
-  --sea-green: #7fe9de;
-  --beach: #d0f5be;
-  --header-font: "Life Savers", serif;
-  --paragraph-font: "Bellefair", serif;
-
-  background: var(--beige) url("/noise.avif");
-  color: var(--brown);
-}
-
 a::after {
   content: "";
   position: absolute;

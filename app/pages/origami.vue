@@ -1,7 +1,8 @@
 <template>
   <main>
     <h1 font="s-1.8rem f-header-font" class="pl-80 pt-20">Srira's Origami</h1>
-    <div ref="origamiGridContainer" font="f-paragraph-font" class="m-60-0">
+    <NuxtPage v-if="modelName" />
+    <div v-else ref="origamiGridContainer" class="m-60-0">
       <div
         ref="origamiGrid"
         class="max-w-80vw relative flex row wrap gap-20 p-0-10vw just-c-center"
@@ -28,15 +29,25 @@ export default defineNuxtComponent({
     gridCount() {
       return Math.floor((this.width * 0.8 + 20) / 270);
     },
+    modelName() {
+      const route = useRoute();
+      const modelName = route.params.name as string;
+      const origami = ORIGAMI_INFO_ARRAY.find(
+        (origami) => origami.picFolderName === modelName,
+      );
+      return origami ? modelName : null;
+    },
   },
 
   mounted() {
+    if (this.modelName) return;
     this.width = window.innerWidth;
     this.updateLayout();
     window.addEventListener("resize", this.updateLayout);
   },
 
   beforeUnmount() {
+    if (this.modelName) return;
     window.removeEventListener("resize", this.updateLayout);
   },
 
@@ -79,15 +90,6 @@ export default defineNuxtComponent({
 </script>
 
 <style>
-body {
-  --medium-black: #1c1c1c;
-  --header-font: "Life Savers", serif;
-  --paragraph-font: "Wix Madefor Text", serif;
-
-  background: var(--medium-black) url("/noise.avif");
-  color: white;
-}
-
 :root {
   -ms-overflow-style: none;
   scrollbar-width: none;

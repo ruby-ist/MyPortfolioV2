@@ -5,6 +5,8 @@ export interface OrigamiInfo {
   author: string;
   date: Date;
   height: number;
+  imagesCount?: number;
+  description?: string;
 }
 
 export const ORIGAMI_INFO_ARRAY = [
@@ -969,3 +971,9 @@ export const ORIGAMI_INFO_ARRAY = [
     height: 1,
   },
 ].reverse() as OrigamiInfo[];
+
+export function origamiRoutes(): string[] {
+  return ORIGAMI_INFO_ARRAY.map(
+    (origami) => `/origami/${origami.picFolderName}`,
+  );
+}
