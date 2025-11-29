@@ -1080,6 +1080,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Ivan Danny Handoko",
     date: new Date(2025, 1, 24),
     lastModifiedDate: "2025-11-29",
+    imagesCount: 5,
     height: 1,
   },
   {

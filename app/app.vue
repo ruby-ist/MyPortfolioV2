@@ -5,7 +5,18 @@
 <script lang="ts">
 export default defineNuxtComponent({
   setup() {
-    const theme = useRoute().path.startsWith("/origami") ? "origami" : "index";
+    const route = useRoute();
+    let theme = "index";
+    switch (true) {
+      case /^\/origami\/\w+(\/)?/.test(route.path):
+        theme = "origami-show";
+        break;
+      case route.path.startsWith("/origami"):
+        theme = "origami";
+        break;
+      default:
+        theme = "index";
+    }
     useHead({
       bodyAttrs: {
         id: theme,
@@ -40,8 +51,23 @@ body#origami {
   --medium-black: #1c1c1c;
   --header-font: "Life Savers", serif;
   --paragraph-font: "Wix Madefor Text", serif;
+  --grey: #cccccc;
+  --white: #fff;
 
   background: var(--medium-black) url("/noise.avif");
+  color: white;
+  font-family: var(--paragraph-font);
+}
+
+body#origami-show {
+  --black: #000;
+  --medium-black: #1c1c1c44;
+  --header-font: "Life Savers", serif;
+  --paragraph-font: "Wix Madefor Text", serif;
+  --grey: #cccccc;
+  --white: #fff;
+
+  background: var(--black) url("/noise.avif");
   color: white;
   font-family: var(--paragraph-font);
 }

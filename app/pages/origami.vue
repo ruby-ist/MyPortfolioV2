@@ -1,8 +1,8 @@
 <template>
   <main>
-    <h1 font="s-1.8rem f-header-font" class="pl-80 pt-20">Srira's Origami</h1>
+    <h1 font="s-1.8rem f-header-font" class="p-40-80 m-0">Srira's Origami</h1>
     <NuxtPage v-if="modelName" />
-    <div v-else ref="origamiGridContainer" class="m-60-0">
+    <div v-else ref="origamiGridContainer" class="m-40-0">
       <div
         ref="origamiGrid"
         class="max-w-80vw relative flex row wrap gap-20 p-0-10vw just-c-center"
@@ -37,6 +37,10 @@ export default defineNuxtComponent({
       );
       return origami ? modelName : null;
     },
+  },
+
+  created() {
+    if (useRoute().params.name && !this.modelName) navigateTo("/origami");
   },
 
   mounted() {
@@ -82,7 +86,7 @@ export default defineNuxtComponent({
     updatePadding() {
       if (this.$refs.origamiGridContainer) {
         const gridContainer = this.$refs.origamiGridContainer as HTMLElement;
-        gridContainer.style.padding = `0 calc((100vw - ((250px * ${this.gridCount}) + (20px * 3))) / 2)`;
+        gridContainer.style.padding = `0 calc((100vw - ((250px * ${this.gridCount}) + (20px * ${this.gridCount - 1}))) / 2)`;
       }
     },
   },

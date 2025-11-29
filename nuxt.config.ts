@@ -4,7 +4,7 @@ import { origamiLastMod, origamiRoutes } from "./app/utils/origami";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@unocss/nuxt", "@nuxtjs/sitemap"],
+  modules: ["@nuxt/eslint", "@unocss/nuxt", "@nuxtjs/sitemap", "nuxt-swiper"],
   nitro: {
     prerender: {
       crawlLinks: true,
@@ -23,5 +23,12 @@ export default defineNuxtConfig({
       },
       ...origamiLastMod,
     ],
+  },
+  vue: {
+    compilerOptions: {
+      isCustomElement: (tag: string) => {
+        return tag.startsWith("swiper-");
+      },
+    },
   },
 });
