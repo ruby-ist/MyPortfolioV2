@@ -4,6 +4,7 @@ export interface OrigamiInfo {
   picFolderName: string;
   author: string;
   date: Date;
+  lastModifiedDate: string;
   height: number;
   imagesCount?: number;
   description?: string;
@@ -16,6 +17,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "deer_and_fawn",
     author: "John Montroll, Stephen Weiss",
     date: new Date(2019, 5, 19),
+    lastModifiedDate: "2025-11-29",
     height: 0.74,
   },
   {
@@ -24,6 +26,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "pegasus",
     author: "Dong Viet Thien",
     date: new Date(2019, 5, 25),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -32,6 +35,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "owl",
     author: "Para Nicolas",
     date: new Date(2019, 5, 27),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -40,6 +44,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "turtle_and_zebra",
     author: "Won Park, Kawahata Fumiaki",
     date: new Date(2019, 5, 30),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -48,6 +53,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "flying_eagle",
     author: "Zhou Xian Zong",
     date: new Date(2019, 6, 6),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -56,6 +62,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "penguin",
     author: "Yoo Tae Yong",
     date: new Date(2019, 6, 7),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -64,6 +71,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "fighter_jets",
     author: "Won Park, Yoshihisa Kimura, Elmer A. Norvell",
     date: new Date(2019, 6, 10),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -72,6 +80,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "coelophysis",
     author: "Kamiya Satoshi",
     date: new Date(2019, 6, 11),
+    lastModifiedDate: "2025-11-29",
     height: 0.84,
   },
   {
@@ -80,6 +89,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "baby_parrot",
     author: "Riccardo Foschi",
     date: new Date(2019, 6, 27),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -88,6 +98,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "ant",
     author: "Piotr Pluta",
     date: new Date(2019, 6, 28),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -96,6 +107,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "zero_fighter_plane",
     author: "Won Park",
     date: new Date(2019, 7, 4),
+    lastModifiedDate: "2025-11-29",
     height: 0.76,
   },
   {
@@ -104,6 +116,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "woman",
     author: "Sriram V",
     date: new Date(2019, 7, 7),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -112,6 +125,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "night_fury",
     author: "Saku B",
     date: new Date(2019, 7, 12),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -120,6 +134,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "man",
     author: "Sriram V",
     date: new Date(2019, 7, 16),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -128,6 +143,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "man_and_woman",
     author: "Sriram V",
     date: new Date(2019, 7, 18),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -136,6 +152,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "rooster",
     author: "Gen Hagiwara",
     date: new Date(2019, 7, 25),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -144,6 +161,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "daedalus",
     author: "Tran Trung Hieu",
     date: new Date(2019, 8, 1),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -152,6 +170,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "peacock",
     author: "Jun Maekawa",
     date: new Date(2019, 8, 1),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -160,6 +179,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "mammoth",
     author: "Crease Lightning Origami",
     date: new Date(2019, 8, 2),
+    lastModifiedDate: "2025-11-29",
     height: 0.85,
   },
   {
@@ -168,6 +188,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "dragon",
     author: "Miyamoto Chuya",
     date: new Date(2019, 8, 8),
+    lastModifiedDate: "2025-11-29",
     height: 0.83,
   },
   {
@@ -176,6 +197,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "robin",
     author: "Winston Lee",
     date: new Date(2019, 8, 9),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -184,6 +206,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "rhino",
     author: "Ta Trung Dong",
     date: new Date(2019, 8, 13),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -192,6 +215,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "lion",
     author: "Beth Johnson",
     date: new Date(2019, 8, 26),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -200,6 +224,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "unicorn",
     author: "Roman Diaz",
     date: new Date(2019, 8, 29),
+    lastModifiedDate: "2025-11-29",
     height: 0.85,
   },
   {
@@ -208,6 +233,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "t-rex",
     author: "Park Jong Woo",
     date: new Date(2019, 9, 3),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -216,6 +242,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "horse",
     author: "Jeong Jae Il",
     date: new Date(2019, 9, 6),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -224,6 +251,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "hippocampus",
     author: "Roman Diaz",
     date: new Date(2019, 9, 8),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -232,6 +260,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "horses_lineup",
     author: "Dong Viet Thien, Roman Diaz, Jeong Jae Il",
     date: new Date(2019, 9, 8),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -240,6 +269,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "giraffe",
     author: "John Montroll",
     date: new Date(2019, 9, 13),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -248,6 +278,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "phoenix",
     author: "John Montroll",
     date: new Date(2019, 9, 13),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -256,6 +287,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "mammoth_2",
     author: "Miyajima Noboru",
     date: new Date(2019, 9, 26),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -264,6 +296,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "smilodon",
     author: "Kamiya Satoshi",
     date: new Date(2019, 9, 28),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -272,6 +305,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "polar_bear",
     author: "Gerard Ty Sovann",
     date: new Date(2019, 10, 3),
+    lastModifiedDate: "2025-11-29",
     height: 0.8,
   },
   {
@@ -280,6 +314,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "boats_lineup",
     author: "Traditional, Hadi Tahir",
     date: new Date(2019, 10, 11),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -288,6 +323,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "tortoise",
     author: "Lo Yu",
     date: new Date(2019, 10, 17),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -296,6 +332,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "fox",
     author: "Hadi Tahir, Yoo Tae Yong",
     date: new Date(2019, 11, 1),
+    lastModifiedDate: "2025-11-29",
     height: 0.83,
   },
   {
@@ -304,6 +341,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "dolphin",
     author: "Kawahata Fumiaki",
     date: new Date(2019, 11, 8),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -312,6 +350,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "rabbit",
     author: "Richard Galindo",
     date: new Date(2019, 11, 15),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -320,6 +359,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "reindeer_and_sleigh",
     author: "Kamiya Satoshi, Taon",
     date: new Date(2019, 11, 25),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -328,6 +368,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "reindeer",
     author: "Kamiya Satoshi",
     date: new Date(2019, 11, 29),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -336,6 +377,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "brown_grouper_fish",
     author: "Gerard Ty Sovann",
     date: new Date(2020, 1, 9),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -344,6 +386,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "fish",
     author: "Eric Joisel",
     date: new Date(2020, 1, 9),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -352,6 +395,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "heart_with_arrow",
     author: "Robert J. Lang",
     date: new Date(2020, 1, 14),
+    lastModifiedDate: "2025-11-29",
     height: 0.83,
   },
   {
@@ -360,6 +404,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "heart_with_wings",
     author: "Phong Tran",
     date: new Date(2020, 1, 14),
+    lastModifiedDate: "2025-11-29",
     height: 0.83,
   },
   {
@@ -368,6 +413,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "heart_with_music",
     author: "Christophe Michel",
     date: new Date(2020, 1, 14),
+    lastModifiedDate: "2025-11-29",
     height: 0.83,
   },
   {
@@ -376,6 +422,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "heart_with_bat_wings",
     author: "Phong Tran",
     date: new Date(2020, 1, 14),
+    lastModifiedDate: "2025-11-29",
     height: 0.83,
   },
   {
@@ -384,6 +431,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "heart",
     author: "Paper Kawaii",
     date: new Date(2020, 1, 14),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -392,6 +440,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "i_love_u",
     author: "Jeremy Shafer",
     date: new Date(2020, 1, 14),
+    lastModifiedDate: "2025-11-29",
     height: 0.83,
   },
   {
@@ -400,6 +449,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "goat_fish",
     author: "Robert J. Lang",
     date: new Date(2020, 2, 2),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -408,6 +458,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "angel_fish",
     author: "Kamiya Satoshi",
     date: new Date(2020, 2, 5),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -416,6 +467,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "gold_fish",
     author: "Ta Trung Dong",
     date: new Date(2020, 2, 9),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -424,6 +476,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "gourami_fish",
     author: "Winston lee",
     date: new Date(2020, 2, 12),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -432,6 +485,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "symbol",
     author: "Traditional",
     date: new Date(2020, 2, 16),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -440,6 +494,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "narwhal",
     author: "Ryan Weish",
     date: new Date(2020, 2, 25),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -448,6 +503,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "adt-x_plane",
     author: "Ryo Aoki",
     date: new Date(2020, 2, 27),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -456,6 +512,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "unicorn_2",
     author: "Tetsuya Gotani",
     date: new Date(2020, 3, 2),
+    lastModifiedDate: "2025-11-29",
     height: 0.82,
   },
   {
@@ -464,6 +521,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "clown_fish",
     author: "Yoo Tae Yong",
     date: new Date(2020, 3, 7),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -472,6 +530,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "toucan",
     author: "Hoang Tien Quyet",
     date: new Date(2020, 3, 13),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -480,6 +539,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "squirrel",
     author: "Hideo Komatsu",
     date: new Date(2020, 3, 26),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -488,6 +548,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "man_and_woman_colored",
     author: "Sriram V",
     date: new Date(2020, 4, 5),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -496,6 +557,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "structure",
     author: "Modern",
     date: new Date(2020, 4, 16),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -504,6 +566,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "siamese_fighting_fish",
     author: "Robert J. Lang",
     date: new Date(2020, 4, 21),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -512,6 +575,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "f15_eagle",
     author: "Issei Yoshino",
     date: new Date(2020, 4, 29),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -520,6 +584,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "t-rex_2",
     author: "Takaya Inoue",
     date: new Date(2020, 5, 1),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -528,6 +593,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "cockatiel",
     author: "Soren Grinsfeider",
     date: new Date(2020, 5, 21),
+    lastModifiedDate: "2025-11-29",
     height: 0.78,
   },
   {
@@ -536,6 +602,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "robin_2",
     author: "Dave Brill",
     date: new Date(2020, 5, 29),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -544,6 +611,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "long_tailed_tit",
     author: "Kyohei Katsuta",
     date: new Date(2020, 6, 5),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -552,6 +620,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "lucifer",
     author: "Sriram V",
     date: new Date(2020, 6, 6),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -560,6 +629,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "bird",
     author: "Kawahata Fumiaki",
     date: new Date(2020, 6, 10),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -568,6 +638,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "gojira",
     author: "Seiji Nishikawa",
     date: new Date(2020, 6, 12),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -576,6 +647,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "kiwi",
     author: "Roman Diaz",
     date: new Date(2020, 6, 14),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -584,6 +656,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "flying_boar",
     author: "Mark Morden",
     date: new Date(2020, 6, 19),
+    lastModifiedDate: "2025-11-29",
     height: 0.88,
   },
   {
@@ -592,6 +665,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "griffin",
     author: "Kyohei Katsuta",
     date: new Date(2020, 6, 22),
+    lastModifiedDate: "2025-11-29",
     height: 0.74,
   },
   {
@@ -600,6 +674,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "cerberus",
     author: "Henry Pham",
     date: new Date(2020, 6, 24),
+    lastModifiedDate: "2025-11-29",
     height: 0.8,
   },
   {
@@ -608,6 +683,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "mouse",
     author: "Zhen-Ming Huang",
     date: new Date(2020, 6, 31),
+    lastModifiedDate: "2025-11-29",
     height: 0.83,
   },
   {
@@ -616,6 +692,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "golden_tamarin",
     author: "Kunsulu Jilkishiyeva",
     date: new Date(2020, 7, 6),
+    lastModifiedDate: "2025-11-29",
     height: 0.79,
   },
   {
@@ -624,6 +701,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "helicopter",
     author: "Marc Kirschenbaum",
     date: new Date(2020, 7, 8),
+    lastModifiedDate: "2025-11-29",
     height: 0.71,
   },
   {
@@ -632,6 +710,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "airliner",
     author: "Hitoshi Kakami",
     date: new Date(2020, 7, 11),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -640,6 +719,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "cat",
     author: "Ermakov Andrey",
     date: new Date(2020, 7, 17),
+    lastModifiedDate: "2025-11-29",
     height: 0.79,
   },
   {
@@ -648,6 +728,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "gold_fish_type_square",
     author: "Kasumi Seishi",
     date: new Date(2020, 7, 19),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -656,6 +737,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "sky_bison",
     author: "Sriram V",
     date: new Date(2020, 7, 21),
+    lastModifiedDate: "2025-11-29",
     height: 0.86,
   },
   {
@@ -664,6 +746,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "sheep",
     author: "Naoto Horiguchi",
     date: new Date(2020, 7, 23),
+    lastModifiedDate: "2025-11-29",
     height: 0.78,
   },
   {
@@ -672,6 +755,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "peacock_2",
     author: "Xiao Xian Huang",
     date: new Date(2020, 7, 27),
+    lastModifiedDate: "2025-11-29",
     height: 0.61,
   },
   {
@@ -680,6 +764,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "pyramid",
     author: "Jo Nakashima",
     date: new Date(2020, 8, 1),
+    lastModifiedDate: "2025-11-29",
     height: 0.77,
   },
   {
@@ -688,6 +773,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "exotic_bird",
     author: "Raphael Maillot",
     date: new Date(2020, 8, 5),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -696,6 +782,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "dodo",
     author: "Kazuhiro Tominaga",
     date: new Date(2020, 8, 9),
+    lastModifiedDate: "2025-11-29",
     height: 0.97,
   },
   {
@@ -704,6 +791,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "pomeranian",
     author: "Kyohei Katsuta",
     date: new Date(2020, 8, 21),
+    lastModifiedDate: "2025-11-29",
     height: 0.8,
   },
   {
@@ -712,6 +800,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "hippocampus_2",
     author: "Hagiwara Gen",
     date: new Date(2020, 8, 27),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -720,6 +809,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "centaur",
     author: "Juston Hairgrove",
     date: new Date(2020, 9, 4),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -728,6 +818,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "running_horse",
     author: "Chen Xiao",
     date: new Date(2020, 9, 9),
+    lastModifiedDate: "2025-11-29",
     height: 0.56,
   },
   {
@@ -736,6 +827,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "unicorn_3",
     author: "Yamamoto Taiga",
     date: new Date(2020, 9, 13),
+    lastModifiedDate: "2025-11-29",
     height: 0.65,
   },
   {
@@ -744,6 +836,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "horses_lineup_2",
     author: "Yamamoto Taiga, Juston Hairgrove, Hagiwara Gen, Chen Xiao",
     date: new Date(2020, 9, 16),
+    lastModifiedDate: "2025-11-29",
     height: 0.74,
   },
   {
@@ -752,6 +845,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "structure_2",
     author: "Modern",
     date: new Date(2020, 9, 23),
+    lastModifiedDate: "2025-11-29",
     height: 0.77,
   },
   {
@@ -760,6 +854,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "thread_sail_fish",
     author: "Kashiwamura Takuro",
     date: new Date(2020, 9, 26),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -768,6 +863,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "husky_dog",
     author: "Chen Xiao",
     date: new Date(2020, 9, 30),
+    lastModifiedDate: "2025-11-29",
     height: 0.88,
   },
   {
@@ -776,6 +872,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "mermaid",
     author: "Chen Xiao",
     date: new Date(2020, 10, 1),
+    lastModifiedDate: "2025-11-29",
     height: 0.9,
   },
   {
@@ -784,6 +881,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "nine_tailed_fox",
     author: "Unknown",
     date: new Date(2020, 10, 6),
+    lastModifiedDate: "2025-11-29",
     height: 0.52,
   },
   {
@@ -792,6 +890,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "horse_woman",
     author: "Chen Xiao",
     date: new Date(2020, 10, 15),
+    lastModifiedDate: "2025-11-29",
     height: 0.73,
   },
   {
@@ -800,6 +899,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "devil_girl",
     author: "Chen Xiao",
     date: new Date(2020, 10, 23),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -808,6 +908,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "elder_dragon",
     author: "Tsuruta Yoshimasa",
     date: new Date(2020, 10, 29),
+    lastModifiedDate: "2025-11-29",
     height: 0.6,
   },
   {
@@ -816,6 +917,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "night_fury_2",
     author: "Saku B",
     date: new Date(2020, 11, 5),
+    lastModifiedDate: "2025-11-29",
     height: 0.87,
   },
   {
@@ -824,6 +926,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "structure_3",
     author: "Modern",
     date: new Date(2020, 11, 13),
+    lastModifiedDate: "2025-11-29",
     height: 0.83,
   },
   {
@@ -832,6 +935,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "owl_2",
     author: "Seo Won Seon",
     date: new Date(2020, 11, 17),
+    lastModifiedDate: "2025-11-29",
     height: 0.86,
   },
   {
@@ -840,6 +944,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "deer_and_sleigh",
     author: "Kamiya Satoshi, Hyo Ahn",
     date: new Date(2020, 11, 25),
+    lastModifiedDate: "2025-11-29",
     height: 0.66,
   },
   {
@@ -848,6 +953,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "giraffe_2",
     author: "Seo Won Seon",
     date: new Date(2021, 0, 24),
+    lastModifiedDate: "2025-11-29",
     height: 0.68,
   },
   {
@@ -856,6 +962,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "wolf",
     author: "Meng Weining",
     date: new Date(2021, 1, 21),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -864,6 +971,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "ah1_cobra",
     author: "Lee JaeGu",
     date: new Date(2021, 2, 28),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -872,6 +980,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "sparrow",
     author: "Meng Weining",
     date: new Date(2021, 3, 14),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -880,6 +989,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "peacock_3",
     author: "Meng Weining",
     date: new Date(2021, 4, 4),
+    lastModifiedDate: "2025-11-29",
     height: 0.64,
   },
   {
@@ -888,6 +998,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "cow",
     author: "Kamiya Satoshi",
     date: new Date(2021, 4, 40),
+    lastModifiedDate: "2025-11-29",
     height: 0.61,
   },
   {
@@ -896,6 +1007,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "icarus",
     author: "Takashi Hojyo",
     date: new Date(2021, 5, 6),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -904,6 +1016,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "christmas_tree",
     author: "Sarjigami",
     date: new Date(2021, 11, 25),
+    lastModifiedDate: "2025-11-29",
     height: 0.8,
   },
   {
@@ -912,6 +1025,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "buddha",
     author: "Takashi Hojyo",
     date: new Date(2023, 4, 6),
+    lastModifiedDate: "2025-11-29",
     height: 1.15,
   },
   {
@@ -920,6 +1034,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "camera",
     author: "Won Park",
     date: new Date(2023, 7, 28),
+    lastModifiedDate: "2025-11-29",
     height: 0.75,
   },
   {
@@ -928,6 +1043,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "alpaca",
     author: "Yuta Katsuzaki",
     date: new Date(2023, 9, 29),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -936,6 +1052,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "frog",
     author: "Chris Heynan",
     date: new Date(2024, 6, 17),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -944,6 +1061,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "monarch_butterfly",
     author: "Dang Viet Tan",
     date: new Date(2024, 6, 28),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -952,6 +1070,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "flower_horn_fish",
     author: "Meng Weining",
     date: new Date(2024, 8, 8),
+    lastModifiedDate: "2025-11-29",
     height: 0.89,
   },
   {
@@ -960,6 +1079,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "crab",
     author: "Ivan Danny Handoko",
     date: new Date(2025, 1, 24),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
   {
@@ -968,12 +1088,16 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "firecracker",
     author: "Yami Yamauchi",
     date: new Date(2025, 2, 11),
+    lastModifiedDate: "2025-11-29",
     height: 1,
   },
 ].reverse() as OrigamiInfo[];
 
-export function origamiRoutes(): string[] {
-  return ORIGAMI_INFO_ARRAY.map(
-    (origami) => `/origami/${origami.picFolderName}`,
-  );
-}
+export const origamiRoutes = ORIGAMI_INFO_ARRAY.map(
+  (origami) => `/origami/${origami.picFolderName}`,
+);
+
+export const origamiLastMod = ORIGAMI_INFO_ARRAY.map((origami) => ({
+  loc: `/origami/${origami.picFolderName}`,
+  lastmod: origami.lastModifiedDate,
+}));
