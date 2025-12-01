@@ -6,7 +6,7 @@ export interface OrigamiInfo {
   date: Date;
   lastModifiedDate: string;
   height: number;
-  imagesCount?: number;
+  imagesCount: number;
   description?: string;
 }
 
@@ -19,6 +19,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 5, 19),
     lastModifiedDate: "2025-11-29",
     height: 0.74,
+    imagesCount: 1,
   },
   {
     id: 2,
@@ -28,6 +29,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 5, 25),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 4,
   },
   {
     id: 3,
@@ -37,6 +39,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 5, 27),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 4,
@@ -46,6 +49,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 5, 30),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 5,
@@ -55,6 +59,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 6, 6),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 6,
@@ -64,6 +69,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 6, 7),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 7,
@@ -73,6 +79,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 6, 10),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 8,
@@ -82,6 +89,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 6, 11),
     lastModifiedDate: "2025-11-29",
     height: 0.84,
+    imagesCount: 2,
   },
   {
     id: 9,
@@ -91,6 +99,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 6, 27),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 10,
@@ -100,6 +109,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 6, 28),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 4,
   },
   {
     id: 11,
@@ -109,6 +119,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 7, 4),
     lastModifiedDate: "2025-11-29",
     height: 0.76,
+    imagesCount: 5,
   },
   {
     id: 12,
@@ -118,6 +129,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 7, 7),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 4,
   },
   {
     id: 13,
@@ -127,6 +139,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 7, 12),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 3,
   },
   {
     id: 14,
@@ -136,6 +149,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 7, 16),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 3,
   },
   {
     id: 15,
@@ -145,15 +159,17 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 7, 18),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 16,
     name: "Rooster",
     picFolderName: "rooster",
-    author: "Gen Hagiwara",
+    author: "Hagiwara Gen",
     date: new Date(2019, 7, 25),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 3,
   },
   {
     id: 17,
@@ -163,6 +179,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 8, 1),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 18,
@@ -172,6 +189,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 8, 1),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 3,
   },
   {
     id: 19,
@@ -181,6 +199,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 8, 2),
     lastModifiedDate: "2025-11-29",
     height: 0.85,
+    imagesCount: 1,
   },
   {
     id: 20,
@@ -190,6 +209,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 8, 8),
     lastModifiedDate: "2025-11-29",
     height: 0.83,
+    imagesCount: 4,
   },
   {
     id: 21,
@@ -199,6 +219,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 8, 9),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 4,
   },
   {
     id: 22,
@@ -208,6 +229,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 8, 13),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 3,
   },
   {
     id: 23,
@@ -217,6 +239,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 8, 26),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 24,
@@ -226,6 +249,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 8, 29),
     lastModifiedDate: "2025-11-29",
     height: 0.85,
+    imagesCount: 2,
   },
   {
     id: 25,
@@ -235,6 +259,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 9, 3),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 5,
   },
   {
     id: 26,
@@ -244,6 +269,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 9, 6),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 7,
   },
   {
     id: 27,
@@ -253,6 +279,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 9, 8),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 28,
@@ -262,6 +289,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 9, 8),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 1,
   },
   {
     id: 29,
@@ -271,6 +299,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 9, 13),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 5,
   },
   {
     id: 30,
@@ -280,6 +309,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 9, 13),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 5,
   },
   {
     id: 31,
@@ -289,6 +319,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 9, 26),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 6,
   },
   {
     id: 32,
@@ -298,6 +329,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 9, 28),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 6,
   },
   {
     id: 33,
@@ -307,6 +339,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 10, 3),
     lastModifiedDate: "2025-11-29",
     height: 0.8,
+    imagesCount: 5,
   },
   {
     id: 34,
@@ -316,6 +349,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 10, 11),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 10,
   },
   {
     id: 35,
@@ -325,6 +359,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 10, 17),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 4,
   },
   {
     id: 36,
@@ -334,6 +369,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 11, 1),
     lastModifiedDate: "2025-11-29",
     height: 0.83,
+    imagesCount: 1,
   },
   {
     id: 37,
@@ -343,6 +379,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 11, 8),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 8,
   },
   {
     id: 38,
@@ -352,6 +389,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 11, 15),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 2,
   },
   {
     id: 39,
@@ -361,6 +399,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 11, 25),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 10,
   },
   {
     id: 40,
@@ -370,6 +409,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2019, 11, 29),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 6,
   },
   {
     id: 41,
@@ -379,6 +419,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 1, 9),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 42,
@@ -388,6 +429,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 1, 9),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 43,
@@ -397,6 +439,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
     height: 0.83,
+    imagesCount: 1,
   },
   {
     id: 44,
@@ -406,6 +449,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
     height: 0.83,
+    imagesCount: 1,
   },
   {
     id: 45,
@@ -415,6 +459,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
     height: 0.83,
+    imagesCount: 1,
   },
   {
     id: 46,
@@ -424,6 +469,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
     height: 0.83,
+    imagesCount: 1,
   },
   {
     id: 47,
@@ -433,6 +479,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 48,
@@ -442,6 +489,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
     height: 0.83,
+    imagesCount: 1,
   },
   {
     id: 49,
@@ -451,6 +499,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 2, 2),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 50,
@@ -460,6 +509,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 2, 5),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 51,
@@ -469,6 +519,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 2, 9),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 52,
@@ -478,6 +529,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 2, 12),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 53,
@@ -487,6 +539,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 2, 16),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 54,
@@ -496,6 +549,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 2, 25),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 55,
@@ -505,6 +559,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 2, 27),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 3,
   },
   {
     id: 56,
@@ -514,6 +569,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 3, 2),
     lastModifiedDate: "2025-11-29",
     height: 0.82,
+    imagesCount: 2,
   },
   {
     id: 57,
@@ -523,6 +579,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 3, 7),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 1,
   },
   {
     id: 58,
@@ -532,6 +589,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 3, 13),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 59,
@@ -541,6 +599,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 3, 26),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 2,
   },
   {
     id: 60,
@@ -550,6 +609,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 4, 5),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 3,
   },
   {
     id: 61,
@@ -559,6 +619,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 4, 16),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 4,
   },
   {
     id: 62,
@@ -568,6 +629,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 4, 21),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 63,
@@ -577,6 +639,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 4, 29),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 6,
   },
   {
     id: 64,
@@ -586,6 +649,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 5, 1),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 65,
@@ -595,6 +659,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 5, 21),
     lastModifiedDate: "2025-11-29",
     height: 0.78,
+    imagesCount: 1,
   },
   {
     id: 66,
@@ -604,6 +669,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 5, 29),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 6,
   },
   {
     id: 67,
@@ -613,6 +679,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 6, 5),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 4,
   },
   {
     id: 68,
@@ -622,6 +689,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 6, 6),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 5,
   },
   {
     id: 69,
@@ -631,6 +699,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 6, 10),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 5,
   },
   {
     id: 70,
@@ -640,6 +709,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 6, 12),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 1,
   },
   {
     id: 71,
@@ -649,6 +719,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 6, 14),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 3,
   },
   {
     id: 72,
@@ -658,6 +729,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 6, 19),
     lastModifiedDate: "2025-11-29",
     height: 0.88,
+    imagesCount: 1,
   },
   {
     id: 73,
@@ -667,6 +739,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 6, 22),
     lastModifiedDate: "2025-11-29",
     height: 0.74,
+    imagesCount: 2,
   },
   {
     id: 74,
@@ -676,6 +749,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 6, 24),
     lastModifiedDate: "2025-11-29",
     height: 0.8,
+    imagesCount: 5,
   },
   {
     id: 75,
@@ -685,6 +759,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 6, 31),
     lastModifiedDate: "2025-11-29",
     height: 0.83,
+    imagesCount: 4,
   },
   {
     id: 76,
@@ -694,6 +769,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 7, 6),
     lastModifiedDate: "2025-11-29",
     height: 0.79,
+    imagesCount: 4,
   },
   {
     id: 77,
@@ -703,6 +779,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 7, 8),
     lastModifiedDate: "2025-11-29",
     height: 0.71,
+    imagesCount: 4,
   },
   {
     id: 78,
@@ -712,6 +789,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 7, 11),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 6,
   },
   {
     id: 79,
@@ -721,6 +799,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 7, 17),
     lastModifiedDate: "2025-11-29",
     height: 0.79,
+    imagesCount: 3,
   },
   {
     id: 80,
@@ -730,6 +809,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 7, 19),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 2,
   },
   {
     id: 81,
@@ -739,6 +819,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 7, 21),
     lastModifiedDate: "2025-11-29",
     height: 0.86,
+    imagesCount: 8,
   },
   {
     id: 82,
@@ -748,6 +829,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 7, 23),
     lastModifiedDate: "2025-11-29",
     height: 0.78,
+    imagesCount: 4,
   },
   {
     id: 83,
@@ -757,6 +839,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 7, 27),
     lastModifiedDate: "2025-11-29",
     height: 0.61,
+    imagesCount: 4,
   },
   {
     id: 84,
@@ -766,6 +849,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 8, 1),
     lastModifiedDate: "2025-11-29",
     height: 0.77,
+    imagesCount: 5,
   },
   {
     id: 85,
@@ -775,6 +859,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 8, 5),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 86,
@@ -784,6 +869,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 8, 9),
     lastModifiedDate: "2025-11-29",
     height: 0.97,
+    imagesCount: 3,
   },
   {
     id: 87,
@@ -793,6 +879,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 8, 21),
     lastModifiedDate: "2025-11-29",
     height: 0.8,
+    imagesCount: 5,
   },
   {
     id: 88,
@@ -802,6 +889,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 8, 27),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 89,
@@ -811,6 +899,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 9, 4),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 3,
   },
   {
     id: 90,
@@ -820,6 +909,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 9, 9),
     lastModifiedDate: "2025-11-29",
     height: 0.56,
+    imagesCount: 5,
   },
   {
     id: 91,
@@ -829,6 +919,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 9, 13),
     lastModifiedDate: "2025-11-29",
     height: 0.65,
+    imagesCount: 6,
   },
   {
     id: 92,
@@ -838,6 +929,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 9, 16),
     lastModifiedDate: "2025-11-29",
     height: 0.74,
+    imagesCount: 5,
   },
   {
     id: 93,
@@ -847,6 +939,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 9, 23),
     lastModifiedDate: "2025-11-29",
     height: 0.77,
+    imagesCount: 7,
   },
   {
     id: 94,
@@ -856,6 +949,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 9, 26),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 1,
   },
   {
     id: 95,
@@ -865,6 +959,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 9, 30),
     lastModifiedDate: "2025-11-29",
     height: 0.88,
+    imagesCount: 1,
   },
   {
     id: 96,
@@ -874,6 +969,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 10, 1),
     lastModifiedDate: "2025-11-29",
     height: 0.9,
+    imagesCount: 3,
   },
   {
     id: 97,
@@ -883,6 +979,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 10, 6),
     lastModifiedDate: "2025-11-29",
     height: 0.52,
+    imagesCount: 6,
   },
   {
     id: 98,
@@ -892,6 +989,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 10, 15),
     lastModifiedDate: "2025-11-29",
     height: 0.73,
+    imagesCount: 6,
   },
   {
     id: 99,
@@ -901,6 +999,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 10, 23),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 5,
   },
   {
     id: 100,
@@ -910,6 +1009,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 10, 29),
     lastModifiedDate: "2025-11-29",
     height: 0.6,
+    imagesCount: 9,
   },
   {
     id: 101,
@@ -919,6 +1019,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 11, 5),
     lastModifiedDate: "2025-11-29",
     height: 0.87,
+    imagesCount: 10,
   },
   {
     id: 102,
@@ -928,6 +1029,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 11, 13),
     lastModifiedDate: "2025-11-29",
     height: 0.83,
+    imagesCount: 7,
   },
   {
     id: 103,
@@ -937,6 +1039,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 11, 17),
     lastModifiedDate: "2025-11-29",
     height: 0.86,
+    imagesCount: 4,
   },
   {
     id: 104,
@@ -946,6 +1049,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2020, 11, 25),
     lastModifiedDate: "2025-11-29",
     height: 0.66,
+    imagesCount: 6,
   },
   {
     id: 105,
@@ -955,6 +1059,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2021, 0, 24),
     lastModifiedDate: "2025-11-29",
     height: 0.68,
+    imagesCount: 2,
   },
   {
     id: 106,
@@ -964,6 +1069,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2021, 1, 21),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 3,
   },
   {
     id: 107,
@@ -973,6 +1079,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2021, 2, 28),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 108,
@@ -982,6 +1089,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2021, 3, 14),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 3,
   },
   {
     id: 109,
@@ -991,6 +1099,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2021, 4, 4),
     lastModifiedDate: "2025-11-29",
     height: 0.64,
+    imagesCount: 4,
   },
   {
     id: 110,
@@ -1000,6 +1109,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2021, 4, 40),
     lastModifiedDate: "2025-11-29",
     height: 0.61,
+    imagesCount: 2,
   },
   {
     id: 111,
@@ -1009,6 +1119,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2021, 5, 6),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 6,
   },
   {
     id: 112,
@@ -1018,6 +1129,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2021, 11, 25),
     lastModifiedDate: "2025-11-29",
     height: 0.8,
+    imagesCount: 1,
   },
   {
     id: 113,
@@ -1027,6 +1139,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2023, 4, 6),
     lastModifiedDate: "2025-11-29",
     height: 1.15,
+    imagesCount: 2,
   },
   {
     id: 114,
@@ -1036,6 +1149,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2023, 7, 28),
     lastModifiedDate: "2025-11-29",
     height: 0.75,
+    imagesCount: 8,
   },
   {
     id: 115,
@@ -1045,6 +1159,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2023, 9, 29),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 116,
@@ -1054,6 +1169,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2024, 6, 17),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 2,
   },
   {
     id: 117,
@@ -1063,6 +1179,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2024, 6, 28),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 1,
   },
   {
     id: 118,
@@ -1072,6 +1189,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2024, 8, 8),
     lastModifiedDate: "2025-11-29",
     height: 0.89,
+    imagesCount: 1,
   },
   {
     id: 119,
@@ -1080,8 +1198,8 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Ivan Danny Handoko",
     date: new Date(2025, 1, 24),
     lastModifiedDate: "2025-11-29",
-    imagesCount: 5,
     height: 1,
+    imagesCount: 5,
   },
   {
     id: 120,
@@ -1091,6 +1209,7 @@ export const ORIGAMI_INFO_ARRAY = [
     date: new Date(2025, 2, 11),
     lastModifiedDate: "2025-11-29",
     height: 1,
+    imagesCount: 3,
   },
 ].reverse() as OrigamiInfo[];
 

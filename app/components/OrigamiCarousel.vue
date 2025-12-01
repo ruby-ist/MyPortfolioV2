@@ -2,11 +2,14 @@
   <ClientOnly fallback-tag="div">
     <div>
       <swiper-container
+        id="origami-swiper"
         ref="swiper"
         :slides-per-view="1"
         :space-between="28"
-        :pagination="true"
-        :pagination-clickable="true"
+        :pagination="paginatable"
+        :pagination-clickable="paginatable"
+        :loop="paginatable"
+        pagination-el=".origami-pagination"
         class="w-480 relative"
       >
         <swiper-slide
@@ -21,9 +24,17 @@
           />
         </swiper-slide>
       </swiper-container>
-      <div class="flex just-c-center gap-10 absolute w-480 -b-50">
-        <button @click="swiperEl.prev()">Prev</button>
-        <button @click="swiperEl.next()">Next</button>
+      <div
+        v-if="paginatable"
+        class="flex just-c-center align-i-center gap-24 absolute w-480 -b-50"
+      >
+        <button class="no-bg border-none" @click="swiperEl.prev()">
+          <IconsLeftArrow class="w-16" />
+        </button>
+        <div class="origami-pagination" />
+        <button class="no-bg border-none" @click="swiperEl.next()">
+          <IconsRightArrow class="w-16" />
+        </button>
       </div>
     </div>
     <template #fallback>
@@ -43,9 +54,31 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   origamiInfo: OrigamiInfo;
 }>();
 const swiper = ref(null);
 const swiperEl = useSwiper(swiper);
+const paginatable = computed(() => props.origamiInfo.imagesCount > 1);
 </script>
+
+<style>
+.origami-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+
+  .swiper-pagination-bullet {
+    background: var(--medium-black);
+    width: 7px;
+    height: 7px;
+    border-radius: 25px;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: var(--grey);
+    height: 8px;
+    width: 8px;
+  }
+}
+</style>

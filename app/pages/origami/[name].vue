@@ -45,6 +45,6 @@ export default defineNuxtComponent({
 
 <style scoped>
 .description {
-  background: var(--medium-black) url("/noise.avif");
+  background: var(--transparent-black) url("/noise.avif");
 }
 </style>
