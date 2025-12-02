@@ -1023,7 +1023,7 @@ export const ORIGAMI_INFO_ARRAY = [
   },
   {
     id: 102,
-    name: "Folder Structure",
+    name: "Folded Structure",
     picFolderName: "structure_3",
     author: "Modern",
     date: new Date(2020, 11, 13),

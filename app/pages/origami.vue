@@ -1,6 +1,11 @@
 <template>
   <main>
-    <h1 font="s-1.8rem f-header-font" class="p-40-80 m-0">Srira's Origami</h1>
+    <h1 font="s-1.8rem f-header-font" class="p-40-80 m-0">
+      Srira's Origami
+      <span v-if="modelName" class="color-grey" font="w-200 s-1.3rem">
+        &ensp;/&ensp;{{ modelName }}
+      </span>
+    </h1>
     <NuxtPage v-if="modelName" />
     <div v-else ref="origamiGridContainer" class="m-40-0">
       <div
@@ -35,7 +40,7 @@ export default defineNuxtComponent({
       const origami = ORIGAMI_INFO_ARRAY.find(
         (origami) => origami.picFolderName === modelName,
       );
-      return origami ? modelName : null;
+      return origami ? origami.name : null;
     },
   },
 
