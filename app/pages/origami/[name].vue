@@ -6,7 +6,7 @@
       <div class="w-480 grid place-i-center">
         <OrigamiCarousel :origami-info="origamiInfo" />
       </div>
-      <div class="description w-400 h-40vh p-60-90" border="rad-25">
+      <div class="description w-400 p-60-90" border="rad-25">
         <div class="flex just-c-space-between align-i-center">
           <div>
             <h3 class="m-0-0-10">Origami {{ origamiInfo.name }}</h3>
@@ -23,6 +23,12 @@
             :datetime="origamiInfo.date"
           />
         </div>
+        <div
+          v-if="origamiInfo.description"
+          class="p-60-0-40 flex align-i-center h-[calc(100%-50px)] lh-36"
+          font="s-1.1rem"
+          v-html="origamiInfo.description.replaceAll(`\n`, `<br/>`)"
+        />
       </div>
     </div>
   </div>

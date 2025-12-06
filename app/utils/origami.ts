@@ -30,6 +30,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1,
     imagesCount: 4,
+    description:
+      "Thought this wingèd fold as\nMy greatest work at that time—\nTime did change my mind",
   },
   {
     id: 3,
@@ -50,6 +52,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1,
     imagesCount: 1,
+    description:
+      "Reminded the tale\nof Chelone from Greek myth—\nI was lazy too",
   },
   {
     id: 5,
@@ -140,6 +144,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1,
     imagesCount: 3,
+    description:
+      "Unholy offspring\nof Lightning and Death itself—\nmy terrible fold",
   },
   {
     id: 14,
@@ -180,6 +186,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1,
     imagesCount: 1,
+    description:
+      "The mortal who flew\nin the age of Greek gods— proud\nto fold Daedalus",
   },
   {
     id: 18,
@@ -190,6 +198,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1,
     imagesCount: 3,
+    description:
+      "Folded this three times,\nas a request from maidens— \nnot sure what it holds",
   },
   {
     id: 19,
@@ -270,6 +280,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1,
     imagesCount: 7,
+    description:
+      "In Greek myth, the god\nPoseidon created them— \nbut I folded this",
   },
   {
     id: 27,
@@ -310,6 +322,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1,
     imagesCount: 5,
+    description:
+      "The blazing bird dies\nand rises from ashes again— \nloneliness remains",
   },
   {
     id: 31,
@@ -690,6 +704,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1,
     imagesCount: 5,
+    description:
+      "The Morningstar meets\nthe detective eyes, they are—\nthe Devil's desire",
   },
   {
     id: 69,
