@@ -14,6 +14,9 @@ export default defineNuxtComponent({
       case route.path.startsWith("/origami"):
         theme = "origami";
         break;
+      case route.path.startsWith("/projects"):
+        theme = "project";
+        break;
       default:
         theme = "index";
     }
@@ -70,6 +73,17 @@ body#origami-show {
 
   background: var(--black) url("/noise.avif");
   color: white;
+  font-family: var(--paragraph-font);
+}
+
+body#project {
+  --purple: #8b93ff;
+  --indigo: #1c1678;
+  --header-font: "Life Savers", serif;
+  --paragraph-font: "Wix Madefor Text", serif;
+
+  background: var(--purple) url("/noise.avif");
+  color: var(--indigo);
   font-family: var(--paragraph-font);
 }
 
