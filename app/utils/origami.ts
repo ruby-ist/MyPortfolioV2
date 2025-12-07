@@ -726,6 +726,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 0.75,
     imagesCount: 1,
+    description:
+      "From peacock to rose\nI sure was ready to fold—\nAsked for godzilla",
   },
   {
     id: 71,
@@ -746,6 +748,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 0.88,
     imagesCount: 1,
+    description:
+      "From bedrocks to our\nHearts, she could bend anything—\nLegacy of beifongs",
   },
   {
     id: 73,
@@ -766,6 +770,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 0.8,
     imagesCount: 5,
+    description:
+      "Watcher of the gates,\ngoodest boy of death’s domain—\npet of Lord Hades",
   },
   {
     id: 75,
@@ -936,6 +942,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 0.65,
     imagesCount: 6,
+    description:
+      "Through red mountains and\nBlue Valleys, crease pattern waits—\nFolded for first time",
   },
   {
     id: 92,
@@ -1036,6 +1044,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 0.87,
     imagesCount: 10,
+    description:
+      "Unholy offspring\nof Lightning and Death itself—\na fold well deserved",
   },
   {
     id: 102,

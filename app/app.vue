@@ -62,7 +62,7 @@ body#origami {
 body#origami-show {
   --black: #000;
   --medium-black: #1c1c1c;
-  --transparent-black: #1c1c1c44;
+  --transparent-black: #1c1c1c66;
   --header-font: "Life Savers", serif;
   --paragraph-font: "Wix Madefor Text", serif;
   --grey: #cccccc;
