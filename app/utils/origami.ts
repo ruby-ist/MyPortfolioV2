@@ -10,6 +10,11 @@ export interface OrigamiInfo {
   description?: string;
 }
 
+export interface PositionedOrigami extends OrigamiInfo {
+  top: number;
+  left: number;
+}
+
 export const ORIGAMI_INFO_ARRAY = [
   {
     id: 1,
@@ -842,6 +847,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 0.86,
     imagesCount: 8,
+    description:
+      "Helped me to be\nWith the rest of the clouds— my\nlittle Sky Bison",
   },
   {
     id: 82,
@@ -1004,6 +1011,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 0.52,
     imagesCount: 6,
+    description:
+      "Woman or machine,\nSpirit bound to hunt and guard— \nAlways the fox still",
   },
   {
     id: 98,
@@ -1014,6 +1023,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 0.73,
     imagesCount: 6,
+    description:
+      "In memory of\nHorse Woman, a Demon Knight— \nsaddle, magic, will",
   },
   {
     id: 99,
@@ -1146,6 +1157,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1,
     imagesCount: 6,
+    description:
+      "Tale of the wings which\nAlmost touched the top of clouds— \nThe fold's irony",
   },
   {
     id: 112,
@@ -1166,6 +1179,8 @@ export const ORIGAMI_INFO_ARRAY = [
     lastModifiedDate: "2025-11-29",
     height: 1.15,
     imagesCount: 2,
+    description:
+      "He too has desire\nof letting all desires go— \nthe contradiction",
   },
   {
     id: 114,

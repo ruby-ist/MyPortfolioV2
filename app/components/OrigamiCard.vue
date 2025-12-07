@@ -1,14 +1,13 @@
 <template>
   <a
-    ref="card"
-    class="origami flex column gap-12 w-250 pointer color-white"
+    class="flex column gap-12 w-250 pointer color-white absolute"
+    :style="{ left: `${origamiInfo.left}px`, top: `${origamiInfo.top}px` }"
     :href="`/origami/${origamiInfo.picFolderName}`"
   >
     <img
       :src="`/origami/${origamiInfo.picFolderName}/pic_1.webp`"
       :alt="origamiInfo.name"
       class="w-100p bd-rad-23"
-      :style="`height: ${origamiInfo.height}`"
       loading="lazy"
     />
     <div class="flex column gap-7">
@@ -38,44 +37,8 @@
 export default defineNuxtComponent({
   props: {
     origamiInfo: {
-      type: Object as PropType<OrigamiInfo>,
+      type: Object as PropType<PositionedOrigami>,
       required: true,
-    },
-    gridCount: {
-      type: Number,
-      required: true,
-    },
-  },
-
-  watch: {
-    gridCount: {
-      handler(newCount) {
-        this.updatePosition(newCount);
-      },
-    },
-  },
-
-  mounted() {
-    this.updatePosition(this.gridCount);
-  },
-
-  methods: {
-    updatePosition(columnCount: number) {
-      const card = this.$refs.card as HTMLElement;
-      const index = ORIGAMI_INFO_ARRAY.length - this.origamiInfo.id;
-      let id = 0;
-      let columnHeight = 0;
-      while (id !== index) {
-        if (id % columnCount === index % columnCount) {
-          const info = ORIGAMI_INFO_ARRAY[id];
-          if (info) columnHeight += info.height * 250 + 52 + 20;
-        }
-        id++;
-      }
-      card.style.top = `${columnHeight}px`;
-      const column = index % columnCount;
-      card.style.left = `${column * (250 + 20)}px`;
-      card.style.position = "absolute";
     },
   },
 });

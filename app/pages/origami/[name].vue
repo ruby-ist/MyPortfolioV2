@@ -23,7 +23,7 @@
             :datetime="origamiInfo.date"
           />
         </div>
-        <div
+        <em
           v-if="origamiInfo.description"
           class="p-60-0-40 flex align-i-center h-[calc(100%-50px)] lh-36"
           font="s-1.1rem"

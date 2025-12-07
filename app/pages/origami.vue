@@ -13,11 +13,10 @@
         class="max-w-80vw relative flex row wrap gap-20 p-0-10vw just-c-center"
       >
         <OrigamiCard
-          v-for="origamiInfo in ORIGAMI_INFO_ARRAY"
+          v-for="origamiInfo in origamiCards"
           :key="origamiInfo.id"
           ref="OrigamiCards"
           :origami-info="origamiInfo"
-          :grid-count="gridCount"
         />
       </div>
     </div>
@@ -28,6 +27,7 @@
 export default defineNuxtComponent({
   data: () => ({
     width: import.meta.client ? window.innerWidth : 0,
+    origamiCards: [] as PositionedOrigami[],
   }),
 
   computed: {
@@ -50,7 +50,6 @@ export default defineNuxtComponent({
 
   mounted() {
     if (this.modelName) return;
-    this.width = window.innerWidth;
     this.updateLayout();
     window.addEventListener("resize", this.updateLayout);
   },
@@ -62,9 +61,11 @@ export default defineNuxtComponent({
 
   methods: {
     updateLayout() {
+      this.width = window.innerWidth;
+      this.origamiCards = this.getPositionedCards(this.gridCount);
       this.updateWidth();
       this.updatePadding();
-      setTimeout(this.updateGridHeight, 100);
+      this.updateGridHeight();
     },
 
     updateWidth() {
@@ -74,17 +75,14 @@ export default defineNuxtComponent({
     updateGridHeight() {
       if (this.$refs.origamiGrid) {
         const grid = this.$refs.origamiGrid as HTMLElement;
+        let maxTop = 0;
 
-        const highest = [...grid.children]
-          .slice(-this.gridCount)
-          .reduce((a, b) =>
-            parseFloat(getComputedStyle(a).top) >
-            parseFloat(getComputedStyle(b).top)
-              ? a
-              : b,
-          ) as HTMLElement;
+        for (const card of this.origamiCards) {
+          const bottom = card.top + card.height * 250; // top + height
+          if (bottom > maxTop) maxTop = bottom;
+        }
 
-        grid.style.height = `${parseFloat(highest.style.top) + 250 + 52}px`;
+        grid.style.height = `${maxTop + 52 + 20}px`; // card content + spacing
       }
     },
 
@@ -93,6 +91,28 @@ export default defineNuxtComponent({
         const gridContainer = this.$refs.origamiGridContainer as HTMLElement;
         gridContainer.style.padding = `0 calc((100vw - ((250px * ${this.gridCount}) + (20px * ${this.gridCount - 1}))) / 2)`;
       }
+    },
+
+    getPositionedCards(
+      columnCount: number,
+      cardWidth = 250,
+      gap = 20,
+      infoHeight = 52 + 20, // card content + spacing
+    ): PositionedOrigami[] {
+      const columnHeights = Array(columnCount).fill(0);
+      const positioned: PositionedOrigami[] = [];
+
+      ORIGAMI_INFO_ARRAY.forEach((info, index) => {
+        const column = index % columnCount;
+        const heightPx = info.height * cardWidth;
+        const top = columnHeights[column];
+        const left = column * (cardWidth + gap);
+
+        positioned.push({ ...info, top, left });
+        columnHeights[column] += heightPx + infoHeight;
+      });
+
+      return positioned;
     },
   },
 });
