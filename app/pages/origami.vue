@@ -1,9 +1,16 @@
 <template>
   <main>
-    <h1 font="s-1.8rem f-header-font" class="p-40-80 m-0">
+    <h1
+      font="s-1.8rem f-header-font"
+      class="p-40-80 m-0 flex align-i-flex-end gap-14"
+    >
       Srira's Origami
-      <span v-if="modelName" class="color-grey" font="w-200 s-1.3rem">
-        &ensp;/&ensp;{{ modelName }}
+      <span
+        v-if="modelName"
+        class="color-grey"
+        font="w-200 s-1.3rem f-paragraph-font"
+      >
+        /&ensp;{{ modelName }}
       </span>
     </h1>
     <NuxtPage v-if="modelName" />

@@ -6,7 +6,10 @@
       <div class="w-480 grid place-i-center">
         <OrigamiCarousel :origami-info="origamiInfo" />
       </div>
-      <div class="description w-400 p-60-90" border="rad-25">
+      <div
+        class="description w-400 p-60-90"
+        border="rad-25 1px solid color-medium-black"
+      >
         <div class="flex just-c-space-between align-i-center">
           <div>
             <h3 class="m-0-0-10">Origami {{ origamiInfo.name }}</h3>
