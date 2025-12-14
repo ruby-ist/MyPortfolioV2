@@ -41,6 +41,12 @@ export default [
       [`grid-${axis}`]: `span ${value}`,
     }),
   ],
+  [
+    /^grid-(rows|columns)-(.+)$/,
+    ([, axis, value]) => ({
+      [`grid-template-${axis}`]: value.replaceAll("-", " "),
+    }),
+  ],
 
   // display rules
   ["inline-block", { display: "inline-block" }],

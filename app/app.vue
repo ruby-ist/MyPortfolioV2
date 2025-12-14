@@ -81,6 +81,7 @@ body#project {
   --indigo: #1c1678;
   --header-font: "Life Savers", serif;
   --paragraph-font: "Wix Madefor Text", serif;
+  --thick-font: "Tilt Warp", serif;
 
   background: var(--purple) url("/noise.avif");
   color: var(--indigo);
