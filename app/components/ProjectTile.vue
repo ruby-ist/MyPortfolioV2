@@ -6,12 +6,28 @@
         <a :href="project.url" class="color-indigo" font="s-1.1rem"> Open </a>
       </button>
     </div>
-    <img
-      :src="`/projects/${project.name}/pic_1.webp`"
-      alt="geobits screenshot"
-      class="w-100p"
-      border="rad-18 block"
-    />
+    <div class="flex just-c-space-between">
+      <img
+        :src="`/projects/${project.name}/pic_1.webp`"
+        alt="geobits screenshot"
+        :class="project.type === 'mobile' ? 'w-30p' : 'w-100p'"
+        border="rad-18"
+      />
+      <img
+        v-if="project.type === 'mobile'"
+        :src="`/projects/${project.name}/pic_2.webp`"
+        alt="geobits screenshot"
+        class="w-30p"
+        border="rad-18"
+      />
+      <img
+        v-if="project.type === 'mobile'"
+        :src="`/projects/${project.name}/pic_3.webp`"
+        alt="geobits screenshot"
+        class="w-30p"
+        border="rad-18"
+      />
+    </div>
     <p font="w-100p">
       {{ project.description }}
     </p>
