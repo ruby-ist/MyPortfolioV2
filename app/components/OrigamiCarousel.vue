@@ -9,7 +9,7 @@
         :pagination="paginatable"
         :pagination-clickable="paginatable"
         :loop="paginatable"
-        pagination-el=".origami-pagination"
+        pagination-el="#origami-pagination"
         class="w-480 relative"
       >
         <swiper-slide
@@ -31,7 +31,19 @@
         <button class="no-bg border-none" @click="swiperEl.prev()">
           <IconsLeftArrow class="w-16" />
         </button>
-        <div class="origami-pagination" />
+        <div
+          id="origami-pagination"
+          :class="
+            'flex just-c-center gap-10 ' +
+            '[&>.swiper-pagination-bullet-active]:w-8 ' +
+            '[&>.swiper-pagination-bullet-active]:h-8 ' +
+            '[&>.swiper-pagination-bullet]:bg-color-medium-black ' +
+            'strict:[&>.swiper-pagination-bullet-active]:bg-color-grey ' +
+            '[&>.swiper-pagination-bullet]:w-7 ' +
+            '[&>.swiper-pagination-bullet]:h-7 ' +
+            '[&>.swiper-pagination-bullet]:border-rad-25'
+          "
+        />
         <button class="no-bg border-none" @click="swiperEl.next()">
           <IconsRightArrow class="w-16" />
         </button>
@@ -61,24 +73,3 @@ const swiper = ref(null);
 const swiperEl = useSwiper(swiper);
 const paginatable = computed(() => props.origamiInfo.imagesCount > 1);
 </script>
-
-<style>
-.origami-pagination {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-
-  .swiper-pagination-bullet {
-    background: var(--medium-black);
-    width: 7px;
-    height: 7px;
-    border-radius: 25px;
-  }
-
-  .swiper-pagination-bullet-active {
-    background: var(--grey);
-    height: 8px;
-    width: 8px;
-  }
-}
-</style>

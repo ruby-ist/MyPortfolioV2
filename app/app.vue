@@ -79,6 +79,8 @@ body#origami-show {
 body#project {
   --purple: #8b93ff;
   --indigo: #1c1678;
+  --high-purple: #7752fe;
+  --transparent-black: #1c1c1c36;
   --header-font: "Life Savers", serif;
   --paragraph-font: "Wix Madefor Text", serif;
   --thick-font: "Tilt Warp", serif;

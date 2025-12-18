@@ -26,7 +26,7 @@ export const PROJECTS = [
     description:
       "Local Ledger is a minimal Progressive Web App (PWA) that helps you track expenses effortlessly. It works completely offline, with features like filters for organizing transactions, interactive graphs for visualizing spending, and import/export options for easy data management. With a clean, simple interface, it offers a secure and hassle-free way to manage your finances on your mobile.",
     url: "https://rubyonwasm.onrender.com",
-    imagesCount: 3,
+    imagesCount: 7,
     type: "mobile",
   },
   {
