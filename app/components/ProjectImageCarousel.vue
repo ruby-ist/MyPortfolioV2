@@ -25,7 +25,7 @@
       <div
         :id="`project-${project.name}-pagination`"
         :class="
-          'flex just-c-center gap-10 m-10-0 ' +
+          'flex just-c-center gap-10 m-10-0-20 ' +
           '[&>.swiper-pagination-bullet-active]:w-8 ' +
           '[&>.swiper-pagination-bullet-active]:h-8 ' +
           '[&>.swiper-pagination-bullet]:bg-color-transparent-black ' +

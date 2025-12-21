@@ -4,7 +4,7 @@
       font="s-1.8rem f-header-font"
       class="p-40-80 m-0 flex align-i-flex-end gap-14"
     >
-      Srira's Origami
+      <span><a class="color-white" href="/">Srira</a>'s Origami</span>
       <span
         v-if="modelName"
         class="color-grey"
