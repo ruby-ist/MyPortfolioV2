@@ -13,14 +13,14 @@
         <div class="flex just-c-space-between align-i-center">
           <div>
             <h3 class="m-0-0-10">Origami {{ origamiInfo.name }}</h3>
-            <div class="color-grey" font="s-0.8rem">
+            <div class="color-grey max-w-90p" font="s-0.8rem">
               {{ origamiInfo.author }}
             </div>
           </div>
           <NuxtTime
             font="s-0.9rem"
             month="short"
-            class="color-grey"
+            class="color-grey w-100 ta-right"
             day="2-digit"
             year="numeric"
             :datetime="origamiInfo.date"

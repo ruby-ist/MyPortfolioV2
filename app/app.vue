@@ -17,6 +17,9 @@ export default defineNuxtComponent({
       case route.path.startsWith("/projects"):
         theme = "project";
         break;
+      case route.path.startsWith("/blogs"):
+        theme = "blog";
+        break;
       default:
         theme = "index";
     }
@@ -88,6 +91,23 @@ body#project {
   --thick-font: "Tilt Warp", serif;
 
   background: var(--purple) url("/noise.avif");
+  color: var(--indigo);
+  font-family: var(--paragraph-font);
+}
+
+body#blog {
+  --white: #f0f3ff;
+  --purple: #836fff;
+  --indigo: #190482;
+  --high-purple: #7752fe;
+  --transparent-black: #1c1c1c36;
+  --translucent-black: #1c1c1c72;
+
+  --header-font: "Life Savers", serif;
+  --paragraph-font: "Wix Madefor Text", serif;
+  --thick-font: "Tilt Warp", serif;
+
+  background: var(--white) url("/noise.avif");
   color: var(--indigo);
   font-family: var(--paragraph-font);
 }
