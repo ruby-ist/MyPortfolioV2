@@ -6,7 +6,9 @@
     @mouseenter="colorize"
     @mouseleave="decolorize"
   >
-    <div class="w-69 h-69 grid place-i-center">
+    <div
+      class="w-[calc(80vw/6)] h-[calc(80vw/6)] md:w-69 md:h-69 lg:w-69 lg:h-69 grid place-i-center"
+    >
       <div ref="mono" class="inline-block">
         <slot name="mono" />
       </div>

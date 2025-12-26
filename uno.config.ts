@@ -52,4 +52,11 @@ export default defineConfig({
       });
     },
   ],
+  theme: {
+    breakpoints: {
+      sm: "320px",
+      md: "720px",
+      lg: "1080px",
+    },
+  },
 });

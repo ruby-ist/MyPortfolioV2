@@ -1,9 +1,14 @@
 <template>
-  <main class="flex h-100vh">
-    <div class="w-60p pt-12p pl-16p">
-      <div class="w-75p" font="s-1.45rem">
-        <h1 font="s-2.2rem f-header-font" class="mb-60">Sriram V</h1>
-        <p class="mb-40 lh-44px" font="f-paragraph-font">
+  <main class="grid h-100vh lg:grid-columns-1fr-auto">
+    <div class="p-60px-10p-18p md:p-12p-16p-0 lg:p-16p-21p">
+      <div font="s-1.38rem md:s-1.45rem lg:s-1.45rem">
+        <h1
+          font="s-1.6rem md:s-2.2rem lg:s-2.2rem f-header-font"
+          class="mb-48 md:mb-60 lg:mb-60"
+        >
+          Sriram V
+        </h1>
+        <p class="mb-40 lh-38px md:lh-44px lg:lh-44px" font="f-paragraph-font">
           I build elegant things with Ruby <em>and</em> Rails, mess around with
           Vue and Nuxt for fun, and fold
           <a class="relative color-brown" href="/origami">origami</a> when I’m
@@ -28,7 +33,7 @@
         </p>
       </div>
     </div>
-    <div class="grid place-i-end"><IconsGrid /></div>
+    <div class="p-0-10vw md:p-0 lg:p-0 grid place-i-end"><IconsGrid /></div>
   </main>
 </template>
 
