@@ -11,7 +11,7 @@
         border="rad-25 1px solid color-medium-black"
       >
         <div class="flex just-c-space-between align-i-center">
-          <div>
+          <div class="w-[calc(100%-100px)]">
             <h3 class="m-0-0-10">Origami {{ origamiInfo.name }}</h3>
             <div class="color-grey max-w-90p" font="s-0.8rem">
               {{ origamiInfo.author }}

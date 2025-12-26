@@ -28,7 +28,7 @@
         </p>
       </div>
     </div>
-    <div class="w-40p grid place-i-end"><IconsGrid /></div>
+    <div class="grid place-i-end"><IconsGrid /></div>
   </main>
 </template>
 

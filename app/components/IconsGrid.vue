@@ -1,5 +1,5 @@
 <template>
-  <table border-collapse="collapse">
+  <table style="border-collapse: collapse; border-spacing: 0">
     <tbody>
       <!-- ROW 1 -->
       <tr>

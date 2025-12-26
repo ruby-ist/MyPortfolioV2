@@ -1,16 +1,18 @@
 <template>
   <td
     ref="cell"
-    class="w-68 h-68 ta-center"
     border="1 solid color-medium-brown"
+    class="p-0"
     @mouseenter="colorize"
     @mouseleave="decolorize"
   >
-    <div ref="mono" class="inline-block">
-      <slot name="mono" />
-    </div>
-    <div ref="color" class="inline-block no-display">
-      <slot ref="color" name="color"> I </slot>
+    <div class="w-69 h-69 grid place-i-center">
+      <div ref="mono" class="inline-block">
+        <slot name="mono" />
+      </div>
+      <div ref="color" class="inline-block no-display">
+        <slot ref="color" name="color"> I </slot>
+      </div>
     </div>
   </td>
 </template>
