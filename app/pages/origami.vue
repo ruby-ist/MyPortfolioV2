@@ -2,9 +2,12 @@
   <main id="origami-main" ref="origamiMain">
     <h1
       font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-header-font"
-      class="p-40 md:p-40-80 lg:p-40-80 m-0 flex align-i-flex-end gap-14"
+      class="p-40 md:p-40-80 lg:p-40-80 m-0 flex align-i-flex-end gap-14 wrap"
     >
-      <span><a class="color-white" href="/">Srira</a>'s Origami</span>
+      <span>
+        <a class="color-white" href="/">Srira</a>'s
+        <a class="color-white" href="/origami">Origami</a>
+      </span>
       <span v-if="modelName" class="color-grey relative b-2" font="s-1.3rem">
         /&ensp;{{ modelName }}
       </span>

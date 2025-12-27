@@ -48,6 +48,10 @@ body {
   }
 }
 
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
 body#index {
   --beige: #f2e2b1;
   --brown: #7e6752;
@@ -77,6 +81,7 @@ body#origami-show {
   --black: #000;
   --medium-black: #1c1c1c;
   --transparent-black: #1c1c1c36;
+  --translucent-black: #1c1c1c72;
   --header-font: "Life Savers", serif;
   --paragraph-font: "Wix Madefor Text", serif;
   --grey: #cccccc;
