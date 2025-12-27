@@ -1,15 +1,11 @@
 <template>
-  <main>
+  <main id="origami-main" ref="origamiMain">
     <h1
-      font="s-1.8rem f-header-font"
-      class="p-40-80 m-0 flex align-i-flex-end gap-14"
+      font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-header-font"
+      class="p-40 md:p-40-80 lg:p-40-80 m-0 flex align-i-flex-end gap-14"
     >
       <span><a class="color-white" href="/">Srira</a>'s Origami</span>
-      <span
-        v-if="modelName"
-        class="color-grey"
-        font="w-200 s-1.3rem f-paragraph-font"
-      >
+      <span v-if="modelName" class="color-grey relative b-2" font="s-1.3rem">
         /&ensp;{{ modelName }}
       </span>
     </h1>
@@ -39,8 +35,18 @@ export default defineNuxtComponent({
 
   computed: {
     gridCount() {
-      return Math.floor((this.width * 0.8 + 20) / 270);
+      const possibleGridsWithoutGap = Math.floor(
+        (this.width * this.gridArea) / this.cardWidth,
+      );
+      const possibleGapsInRemainingSpace = Math.floor(
+        ((this.width * this.gridArea) % this.cardWidth) / this.cardsGap,
+      );
+
+      if (possibleGridsWithoutGap - possibleGapsInRemainingSpace <= 1)
+        return possibleGridsWithoutGap;
+      else return possibleGridsWithoutGap - 1;
     },
+
     modelName() {
       const route = useRoute();
       const modelName = route.params.name as string;
@@ -48,6 +54,37 @@ export default defineNuxtComponent({
         (origami) => origami.picFolderName === modelName,
       );
       return origami ? origami.name : null;
+    },
+
+    cardWidth(): number {
+      return parseInt(
+        this.getOrigamiMainComputedStyle.getPropertyValue("--card-width"),
+      );
+    },
+
+    cardsGap(): number {
+      return parseInt(
+        this.getOrigamiMainComputedStyle.getPropertyValue("--cards-gap"),
+      );
+    },
+
+    cardInfoHeight(): number {
+      return parseInt(
+        this.getOrigamiMainComputedStyle.getPropertyValue("--card-info-height"),
+      );
+    },
+
+    gridArea(): number {
+      return parseFloat(
+        this.getOrigamiMainComputedStyle.getPropertyValue("--grid-area"),
+      );
+    },
+
+    getOrigamiMainComputedStyle(): CSSStyleDeclaration {
+      const origamiMain = this.$refs.origamiMain as HTMLElement;
+      if (!origamiMain) return {} as CSSStyleDeclaration;
+
+      return getComputedStyle(origamiMain);
     },
   },
 
@@ -85,38 +122,33 @@ export default defineNuxtComponent({
         let maxTop = 0;
 
         for (const card of this.origamiCards) {
-          const bottom = card.top + card.height * 250; // top + height
+          const bottom = card.top + card.heightWidthRatio * this.cardWidth;
           if (bottom > maxTop) maxTop = bottom;
         }
 
-        grid.style.height = `${maxTop + 52 + 20}px`; // card content + spacing
+        grid.style.height = `${maxTop + this.cardInfoHeight + this.cardsGap}px`; // card content + spacing
       }
     },
 
     updatePadding() {
       if (this.$refs.origamiGridContainer) {
         const gridContainer = this.$refs.origamiGridContainer as HTMLElement;
-        gridContainer.style.padding = `0 calc((100vw - ((250px * ${this.gridCount}) + (20px * ${this.gridCount - 1}))) / 2)`;
+        gridContainer.style.padding = `0 calc((100vw - ((var(--card-width) * ${this.gridCount}) + (var(--cards-gap) * ${this.gridCount - 1}))) / 2)`;
       }
     },
 
-    getPositionedCards(
-      columnCount: number,
-      cardWidth = 250,
-      gap = 20,
-      infoHeight = 52 + 20, // card content + spacing
-    ): PositionedOrigami[] {
+    getPositionedCards(columnCount: number): PositionedOrigami[] {
       const columnHeights = Array(columnCount).fill(0);
       const positioned: PositionedOrigami[] = [];
 
       ORIGAMI_INFO_ARRAY.forEach((info, index) => {
         const column = index % columnCount;
-        const heightPx = info.height * cardWidth;
+        const heightPx = info.heightWidthRatio * this.cardWidth;
         const top = columnHeights[column];
-        const left = column * (cardWidth + gap);
+        const left = column * (this.cardWidth + this.cardsGap);
 
         positioned.push({ ...info, top, left });
-        columnHeights[column] += heightPx + infoHeight;
+        columnHeights[column] += heightPx + this.cardInfoHeight + this.cardsGap;
       });
 
       return positioned;
@@ -125,13 +157,24 @@ export default defineNuxtComponent({
 });
 </script>
 
-<style>
-:root {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+<style scoped>
+#origami-main {
+  --card-width: 250px;
+  --cards-gap: 20px;
+  --card-info-height: 52px;
+  --grid-area: 0.8;
+}
 
-  &::-webkit-scrollbar {
-    display: none;
+@media (max-width: 1080px) {
+  #origami-main {
+    --grid-area: 0.9;
+  }
+}
+
+@media (max-width: 720px) {
+  #origami-main {
+    --card-width: 288px;
+    --cards-gap: 40px;
   }
 }
 </style>

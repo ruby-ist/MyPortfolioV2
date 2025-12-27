@@ -1,13 +1,17 @@
 <template>
   <a
-    class="flex column gap-12 w-250 pointer color-white absolute"
-    :style="{ left: `${origamiInfo.left}px`, top: `${origamiInfo.top}px` }"
+    class="flex column gap-12 pointer color-white absolute"
+    :style="{
+      left: `${origamiInfo.left}px`,
+      top: `${origamiInfo.top}px`,
+      width: 'var(--card-width)',
+    }"
     :href="`/origami/${origamiInfo.picFolderName}`"
   >
     <img
       :src="`/origami/${origamiInfo.picFolderName}/pic_1.webp`"
       :alt="origamiInfo.name"
-      class="w-100p bd-rad-23"
+      class="w-100p bd-rad-15 md:bd-rad-23 lg:bd-rad-23"
       loading="lazy"
     />
     <div class="flex column gap-7">

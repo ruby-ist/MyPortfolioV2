@@ -5,7 +5,7 @@ export interface OrigamiInfo {
   author: string;
   date: Date;
   lastModifiedDate: string;
-  height: number;
+  heightWidthRatio: number;
   imagesCount: number;
   description?: string;
 }
@@ -23,7 +23,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "John Montroll, Stephen Weiss",
     date: new Date(2019, 5, 19),
     lastModifiedDate: "2025-11-29",
-    height: 0.74,
+    heightWidthRatio: 0.74,
     imagesCount: 1,
   },
   {
@@ -33,7 +33,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Dong Viet Thien",
     date: new Date(2019, 5, 25),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 4,
     description:
       "Thought this wingèd fold as\nMy greatest work at that time—\nTime did change my mind",
@@ -45,7 +45,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Para Nicolas",
     date: new Date(2019, 5, 27),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -55,7 +55,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Won Park, Kawahata Fumiaki",
     date: new Date(2019, 5, 30),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
     description:
       "Reminded the tale\nof Chelone from Greek myth—\nI was lazy too",
@@ -67,7 +67,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Zhou Xian Zong",
     date: new Date(2019, 6, 6),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -77,7 +77,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Yoo Tae Yong",
     date: new Date(2019, 6, 7),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -87,7 +87,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Won Park, Yoshihisa Kimura, Elmer A. Norvell",
     date: new Date(2019, 6, 10),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -97,7 +97,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kamiya Satoshi",
     date: new Date(2019, 6, 11),
     lastModifiedDate: "2025-11-29",
-    height: 0.84,
+    heightWidthRatio: 0.84,
     imagesCount: 2,
   },
   {
@@ -107,7 +107,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Riccardo Foschi",
     date: new Date(2019, 6, 27),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -117,7 +117,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Piotr Pluta",
     date: new Date(2019, 6, 28),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 4,
   },
   {
@@ -127,7 +127,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Won Park",
     date: new Date(2019, 7, 4),
     lastModifiedDate: "2025-11-29",
-    height: 0.76,
+    heightWidthRatio: 0.76,
     imagesCount: 5,
   },
   {
@@ -137,7 +137,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Sriram V",
     date: new Date(2019, 7, 7),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 4,
   },
   {
@@ -147,7 +147,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Saku B",
     date: new Date(2019, 7, 12),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 3,
     description:
       "Unholy offspring\nof Lightning and Death itself—\nmy terrible fold",
@@ -159,7 +159,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Sriram V",
     date: new Date(2019, 7, 16),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 3,
   },
   {
@@ -169,7 +169,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Sriram V",
     date: new Date(2019, 7, 18),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -179,7 +179,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Hagiwara Gen",
     date: new Date(2019, 7, 25),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 3,
   },
   {
@@ -189,7 +189,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Tran Trung Hieu",
     date: new Date(2019, 8, 1),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
     description:
       "The mortal who flew\nin the age of Greek gods— proud\nto fold Daedalus",
@@ -201,7 +201,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Jun Maekawa",
     date: new Date(2019, 8, 1),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 3,
     description:
       "Folded this three times,\nas a request from maidens— \nnot sure what it holds",
@@ -213,7 +213,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Crease Lightning Origami",
     date: new Date(2019, 8, 2),
     lastModifiedDate: "2025-11-29",
-    height: 0.85,
+    heightWidthRatio: 0.85,
     imagesCount: 1,
   },
   {
@@ -223,7 +223,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Miyamoto Chuya",
     date: new Date(2019, 8, 8),
     lastModifiedDate: "2025-11-29",
-    height: 0.83,
+    heightWidthRatio: 0.83,
     imagesCount: 4,
   },
   {
@@ -233,7 +233,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Winston Lee",
     date: new Date(2019, 8, 9),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 4,
   },
   {
@@ -243,7 +243,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Ta Trung Dong",
     date: new Date(2019, 8, 13),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 3,
   },
   {
@@ -253,7 +253,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Beth Johnson",
     date: new Date(2019, 8, 26),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -263,7 +263,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Roman Diaz",
     date: new Date(2019, 8, 29),
     lastModifiedDate: "2025-11-29",
-    height: 0.85,
+    heightWidthRatio: 0.85,
     imagesCount: 2,
   },
   {
@@ -273,7 +273,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Park Jong Woo",
     date: new Date(2019, 9, 3),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 5,
   },
   {
@@ -283,7 +283,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Jeong Jae Il",
     date: new Date(2019, 9, 6),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 7,
     description:
       "In Greek myth, the god\nPoseidon created them— \nbut I folded this",
@@ -295,7 +295,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Roman Diaz",
     date: new Date(2019, 9, 8),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -305,7 +305,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Dong Viet Thien, Roman Diaz, Jeong Jae Il",
     date: new Date(2019, 9, 8),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 1,
   },
   {
@@ -315,7 +315,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "John Montroll",
     date: new Date(2019, 9, 13),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 5,
   },
   {
@@ -325,7 +325,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "John Montroll",
     date: new Date(2019, 9, 13),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 5,
     description:
       "The blazing bird dies\nand rises from ashes again— \nloneliness remains",
@@ -337,7 +337,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Miyajima Noboru",
     date: new Date(2019, 9, 26),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 6,
   },
   {
@@ -347,7 +347,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kamiya Satoshi",
     date: new Date(2019, 9, 28),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 6,
   },
   {
@@ -357,7 +357,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Gerard Ty Sovann",
     date: new Date(2019, 10, 3),
     lastModifiedDate: "2025-11-29",
-    height: 0.8,
+    heightWidthRatio: 0.8,
     imagesCount: 5,
   },
   {
@@ -367,7 +367,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Traditional, Hadi Tahir",
     date: new Date(2019, 10, 11),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 10,
   },
   {
@@ -377,7 +377,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Lo Yu",
     date: new Date(2019, 10, 17),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 4,
   },
   {
@@ -387,7 +387,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Hadi Tahir, Yoo Tae Yong",
     date: new Date(2019, 11, 1),
     lastModifiedDate: "2025-11-29",
-    height: 0.83,
+    heightWidthRatio: 0.83,
     imagesCount: 1,
   },
   {
@@ -397,7 +397,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kawahata Fumiaki",
     date: new Date(2019, 11, 8),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 8,
   },
   {
@@ -407,7 +407,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Richard Galindo",
     date: new Date(2019, 11, 15),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 2,
   },
   {
@@ -417,7 +417,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kamiya Satoshi, Taon",
     date: new Date(2019, 11, 25),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 10,
   },
   {
@@ -427,7 +427,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kamiya Satoshi",
     date: new Date(2019, 11, 29),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 6,
   },
   {
@@ -437,7 +437,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Gerard Ty Sovann",
     date: new Date(2020, 1, 9),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -447,7 +447,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Eric Joisel",
     date: new Date(2020, 1, 9),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -457,7 +457,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Robert J. Lang",
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
-    height: 0.83,
+    heightWidthRatio: 0.83,
     imagesCount: 1,
   },
   {
@@ -467,7 +467,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Phong Tran",
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
-    height: 0.83,
+    heightWidthRatio: 0.83,
     imagesCount: 1,
   },
   {
@@ -477,7 +477,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Christophe Michel",
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
-    height: 0.83,
+    heightWidthRatio: 0.83,
     imagesCount: 1,
   },
   {
@@ -487,7 +487,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Phong Tran",
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
-    height: 0.83,
+    heightWidthRatio: 0.83,
     imagesCount: 1,
   },
   {
@@ -497,7 +497,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Paper Kawaii",
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -507,7 +507,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Jeremy Shafer",
     date: new Date(2020, 1, 14),
     lastModifiedDate: "2025-11-29",
-    height: 0.83,
+    heightWidthRatio: 0.83,
     imagesCount: 1,
   },
   {
@@ -517,7 +517,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Robert J. Lang",
     date: new Date(2020, 2, 2),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -527,7 +527,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kamiya Satoshi",
     date: new Date(2020, 2, 5),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -537,7 +537,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Ta Trung Dong",
     date: new Date(2020, 2, 9),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -547,7 +547,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Winston lee",
     date: new Date(2020, 2, 12),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -557,7 +557,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Traditional",
     date: new Date(2020, 2, 16),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -567,7 +567,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Ryan Weish",
     date: new Date(2020, 2, 25),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -577,7 +577,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Ryo Aoki",
     date: new Date(2020, 2, 27),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 3,
   },
   {
@@ -587,7 +587,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Tetsuya Gotani",
     date: new Date(2020, 3, 2),
     lastModifiedDate: "2025-11-29",
-    height: 0.82,
+    heightWidthRatio: 0.82,
     imagesCount: 2,
   },
   {
@@ -597,7 +597,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Yoo Tae Yong",
     date: new Date(2020, 3, 7),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 1,
   },
   {
@@ -607,7 +607,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Hoang Tien Quyet",
     date: new Date(2020, 3, 13),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -617,7 +617,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Hideo Komatsu",
     date: new Date(2020, 3, 26),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 2,
   },
   {
@@ -627,7 +627,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Sriram V",
     date: new Date(2020, 4, 5),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 3,
   },
   {
@@ -637,7 +637,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Modern",
     date: new Date(2020, 4, 16),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 4,
   },
   {
@@ -647,7 +647,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Robert J. Lang",
     date: new Date(2020, 4, 21),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -657,7 +657,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Issei Yoshino",
     date: new Date(2020, 4, 29),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 6,
   },
   {
@@ -667,7 +667,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Takaya Inoue",
     date: new Date(2020, 5, 1),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -677,7 +677,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Soren Grinsfeider",
     date: new Date(2020, 5, 21),
     lastModifiedDate: "2025-11-29",
-    height: 0.78,
+    heightWidthRatio: 0.78,
     imagesCount: 1,
   },
   {
@@ -687,7 +687,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Dave Brill",
     date: new Date(2020, 5, 29),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 6,
   },
   {
@@ -697,7 +697,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kyohei Katsuta",
     date: new Date(2020, 6, 5),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 4,
   },
   {
@@ -707,7 +707,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Sriram V",
     date: new Date(2020, 6, 6),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 5,
     description:
       "The Morningstar meets\nthe detective eyes, they are—\nthe Devil's desire",
@@ -719,7 +719,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kawahata Fumiaki",
     date: new Date(2020, 6, 10),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 5,
   },
   {
@@ -729,7 +729,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Seiji Nishikawa",
     date: new Date(2020, 6, 12),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 1,
     description:
       "From peacock to rose\nI sure was ready to fold—\nAsked for godzilla",
@@ -741,7 +741,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Roman Diaz",
     date: new Date(2020, 6, 14),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 3,
   },
   {
@@ -751,7 +751,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Mark Morden",
     date: new Date(2020, 6, 19),
     lastModifiedDate: "2025-11-29",
-    height: 0.88,
+    heightWidthRatio: 0.88,
     imagesCount: 1,
     description:
       "From bedrocks to our\nHearts, she could bend anything—\nLegacy of beifongs",
@@ -763,7 +763,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kyohei Katsuta",
     date: new Date(2020, 6, 22),
     lastModifiedDate: "2025-11-29",
-    height: 0.74,
+    heightWidthRatio: 0.74,
     imagesCount: 2,
   },
   {
@@ -773,7 +773,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Henry Pham",
     date: new Date(2020, 6, 24),
     lastModifiedDate: "2025-11-29",
-    height: 0.8,
+    heightWidthRatio: 0.8,
     imagesCount: 5,
     description:
       "Watcher of the gates,\ngoodest boy of death’s domain—\npet of Lord Hades",
@@ -785,7 +785,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Zhen-Ming Huang",
     date: new Date(2020, 6, 31),
     lastModifiedDate: "2025-11-29",
-    height: 0.83,
+    heightWidthRatio: 0.83,
     imagesCount: 4,
   },
   {
@@ -795,7 +795,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kunsulu Jilkishiyeva",
     date: new Date(2020, 7, 6),
     lastModifiedDate: "2025-11-29",
-    height: 0.79,
+    heightWidthRatio: 0.79,
     imagesCount: 4,
   },
   {
@@ -805,7 +805,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Marc Kirschenbaum",
     date: new Date(2020, 7, 8),
     lastModifiedDate: "2025-11-29",
-    height: 0.71,
+    heightWidthRatio: 0.71,
     imagesCount: 4,
   },
   {
@@ -815,7 +815,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Hitoshi Kakami",
     date: new Date(2020, 7, 11),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 6,
   },
   {
@@ -825,7 +825,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Ermakov Andrey",
     date: new Date(2020, 7, 17),
     lastModifiedDate: "2025-11-29",
-    height: 0.79,
+    heightWidthRatio: 0.79,
     imagesCount: 3,
   },
   {
@@ -835,7 +835,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kasumi Seishi",
     date: new Date(2020, 7, 19),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 2,
   },
   {
@@ -845,7 +845,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Sriram V",
     date: new Date(2020, 7, 21),
     lastModifiedDate: "2025-11-29",
-    height: 0.86,
+    heightWidthRatio: 0.86,
     imagesCount: 8,
     description:
       "Helped me to be\nWith the rest of the clouds— my\nlittle Sky Bison",
@@ -857,7 +857,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Naoto Horiguchi",
     date: new Date(2020, 7, 23),
     lastModifiedDate: "2025-11-29",
-    height: 0.78,
+    heightWidthRatio: 0.78,
     imagesCount: 4,
   },
   {
@@ -867,7 +867,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Xiao Xian Huang",
     date: new Date(2020, 7, 27),
     lastModifiedDate: "2025-11-29",
-    height: 0.61,
+    heightWidthRatio: 0.61,
     imagesCount: 4,
   },
   {
@@ -877,7 +877,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Jo Nakashima",
     date: new Date(2020, 8, 1),
     lastModifiedDate: "2025-11-29",
-    height: 0.77,
+    heightWidthRatio: 0.77,
     imagesCount: 5,
   },
   {
@@ -887,7 +887,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Raphael Maillot",
     date: new Date(2020, 8, 5),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -897,7 +897,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kazuhiro Tominaga",
     date: new Date(2020, 8, 9),
     lastModifiedDate: "2025-11-29",
-    height: 0.97,
+    heightWidthRatio: 0.97,
     imagesCount: 3,
   },
   {
@@ -907,7 +907,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kyohei Katsuta",
     date: new Date(2020, 8, 21),
     lastModifiedDate: "2025-11-29",
-    height: 0.8,
+    heightWidthRatio: 0.8,
     imagesCount: 5,
   },
   {
@@ -917,7 +917,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Hagiwara Gen",
     date: new Date(2020, 8, 27),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -927,7 +927,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Juston Hairgrove",
     date: new Date(2020, 9, 4),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 3,
   },
   {
@@ -937,7 +937,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Chen Xiao",
     date: new Date(2020, 9, 9),
     lastModifiedDate: "2025-11-29",
-    height: 0.56,
+    heightWidthRatio: 0.56,
     imagesCount: 5,
   },
   {
@@ -947,7 +947,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Yamamoto Taiga",
     date: new Date(2020, 9, 13),
     lastModifiedDate: "2025-11-29",
-    height: 0.65,
+    heightWidthRatio: 0.65,
     imagesCount: 6,
     description:
       "Through red mountains and\nBlue Valleys, crease pattern waits—\nFolded for first time",
@@ -959,7 +959,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Yamamoto Taiga, Juston Hairgrove, Hagiwara Gen, Chen Xiao",
     date: new Date(2020, 9, 16),
     lastModifiedDate: "2025-11-29",
-    height: 0.74,
+    heightWidthRatio: 0.74,
     imagesCount: 5,
   },
   {
@@ -969,7 +969,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Modern",
     date: new Date(2020, 9, 23),
     lastModifiedDate: "2025-11-29",
-    height: 0.77,
+    heightWidthRatio: 0.77,
     imagesCount: 7,
   },
   {
@@ -979,7 +979,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kashiwamura Takuro",
     date: new Date(2020, 9, 26),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 1,
   },
   {
@@ -989,7 +989,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Chen Xiao",
     date: new Date(2020, 9, 30),
     lastModifiedDate: "2025-11-29",
-    height: 0.88,
+    heightWidthRatio: 0.88,
     imagesCount: 1,
   },
   {
@@ -999,7 +999,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Chen Xiao",
     date: new Date(2020, 10, 1),
     lastModifiedDate: "2025-11-29",
-    height: 0.9,
+    heightWidthRatio: 0.9,
     imagesCount: 3,
   },
   {
@@ -1009,7 +1009,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Unknown",
     date: new Date(2020, 10, 6),
     lastModifiedDate: "2025-11-29",
-    height: 0.52,
+    heightWidthRatio: 0.52,
     imagesCount: 6,
     description:
       "Woman or machine,\nSpirit bound to hunt and guard— \nAlways the fox still",
@@ -1021,7 +1021,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Chen Xiao",
     date: new Date(2020, 10, 15),
     lastModifiedDate: "2025-11-29",
-    height: 0.73,
+    heightWidthRatio: 0.73,
     imagesCount: 6,
     description:
       "In memory of\nHorse Woman, a Demon Knight— \nsaddle, magic, will",
@@ -1033,7 +1033,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Chen Xiao",
     date: new Date(2020, 10, 23),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 5,
   },
   {
@@ -1043,7 +1043,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Tsuruta Yoshimasa",
     date: new Date(2020, 10, 29),
     lastModifiedDate: "2025-11-29",
-    height: 0.6,
+    heightWidthRatio: 0.6,
     imagesCount: 9,
   },
   {
@@ -1053,7 +1053,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Saku B",
     date: new Date(2020, 11, 5),
     lastModifiedDate: "2025-11-29",
-    height: 0.87,
+    heightWidthRatio: 0.87,
     imagesCount: 10,
     description:
       "Unholy offspring\nof Lightning and Death itself—\na fold well deserved",
@@ -1065,7 +1065,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Modern",
     date: new Date(2020, 11, 13),
     lastModifiedDate: "2025-11-29",
-    height: 0.83,
+    heightWidthRatio: 0.83,
     imagesCount: 7,
   },
   {
@@ -1075,7 +1075,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Seo Won Seon",
     date: new Date(2020, 11, 17),
     lastModifiedDate: "2025-11-29",
-    height: 0.86,
+    heightWidthRatio: 0.86,
     imagesCount: 4,
   },
   {
@@ -1085,7 +1085,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kamiya Satoshi, Hyo Ahn",
     date: new Date(2020, 11, 25),
     lastModifiedDate: "2025-11-29",
-    height: 0.66,
+    heightWidthRatio: 0.66,
     imagesCount: 6,
   },
   {
@@ -1095,7 +1095,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Seo Won Seon",
     date: new Date(2021, 0, 24),
     lastModifiedDate: "2025-11-29",
-    height: 0.68,
+    heightWidthRatio: 0.68,
     imagesCount: 2,
   },
   {
@@ -1105,7 +1105,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Meng Weining",
     date: new Date(2021, 1, 21),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 3,
   },
   {
@@ -1115,7 +1115,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Lee JaeGu",
     date: new Date(2021, 2, 28),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -1125,7 +1125,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Meng Weining",
     date: new Date(2021, 3, 14),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 3,
   },
   {
@@ -1135,7 +1135,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Meng Weining",
     date: new Date(2021, 4, 4),
     lastModifiedDate: "2025-11-29",
-    height: 0.64,
+    heightWidthRatio: 0.64,
     imagesCount: 4,
   },
   {
@@ -1145,7 +1145,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Kamiya Satoshi",
     date: new Date(2021, 4, 40),
     lastModifiedDate: "2025-11-29",
-    height: 0.61,
+    heightWidthRatio: 0.61,
     imagesCount: 2,
   },
   {
@@ -1155,7 +1155,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Takashi Hojyo",
     date: new Date(2021, 5, 6),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 6,
     description:
       "Tale of the wings which\nAlmost touched the top of clouds— \nThe fold's irony",
@@ -1167,7 +1167,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Sarjigami",
     date: new Date(2021, 11, 25),
     lastModifiedDate: "2025-11-29",
-    height: 0.8,
+    heightWidthRatio: 0.8,
     imagesCount: 1,
   },
   {
@@ -1177,7 +1177,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Takashi Hojyo",
     date: new Date(2023, 4, 6),
     lastModifiedDate: "2025-11-29",
-    height: 1.15,
+    heightWidthRatio: 1.15,
     imagesCount: 2,
     description:
       "He too has desire\nof letting all desires go— \nthe contradiction",
@@ -1189,7 +1189,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Won Park",
     date: new Date(2023, 7, 28),
     lastModifiedDate: "2025-11-29",
-    height: 0.75,
+    heightWidthRatio: 0.75,
     imagesCount: 8,
   },
   {
@@ -1199,7 +1199,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Yuta Katsuzaki",
     date: new Date(2023, 9, 29),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -1209,7 +1209,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Chris Heynan",
     date: new Date(2024, 6, 17),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 2,
   },
   {
@@ -1219,7 +1219,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Dang Viet Tan",
     date: new Date(2024, 6, 28),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 1,
   },
   {
@@ -1229,7 +1229,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Meng Weining",
     date: new Date(2024, 8, 8),
     lastModifiedDate: "2025-11-29",
-    height: 0.89,
+    heightWidthRatio: 0.89,
     imagesCount: 1,
   },
   {
@@ -1239,7 +1239,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Ivan Danny Handoko",
     date: new Date(2025, 1, 24),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 5,
   },
   {
@@ -1249,7 +1249,7 @@ export const ORIGAMI_INFO_ARRAY = [
     author: "Yami Yamauchi",
     date: new Date(2025, 2, 11),
     lastModifiedDate: "2025-11-29",
-    height: 1,
+    heightWidthRatio: 1,
     imagesCount: 3,
   },
 ].reverse() as OrigamiInfo[];

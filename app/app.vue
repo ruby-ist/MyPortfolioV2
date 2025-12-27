@@ -38,6 +38,14 @@ html,
 body {
   padding: 0;
   margin: 0;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body#index {

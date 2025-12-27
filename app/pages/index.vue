@@ -37,7 +37,7 @@
   </main>
 </template>
 
-<style>
+<style scoped>
 a::after {
   content: "";
   position: absolute;
