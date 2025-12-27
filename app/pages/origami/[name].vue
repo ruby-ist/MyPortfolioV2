@@ -1,10 +1,7 @@
 <template>
-  <div
-    v-if="origamiInfo"
-    class="md:min-h-[calc(100vh-115.5px)] grid place-i-center"
-  >
+  <div v-if="origamiInfo" class="grid place-i-center">
     <div
-      class="grid w-100p m-40-0-60 lg:m-0 lg:grid-columns-1fr-480px-1fr-3fr-1fr just-i-center align-i-center wrap relative lg:b-55"
+      class="grid w-100p m-40-0-60 lg:m-0 lg:grid-columns-1fr-480px-1fr-3fr-1fr just-i-center align-i-center wrap relative b-55"
     >
       <div />
       <div class="w-320 md:w-480 grid place-i-center">
@@ -18,7 +15,7 @@
       >
         <div>
           <div style="float: left">
-            <h3 class="m-0-0-10 break-word" font="s-1em md:s-1.18em">
+            <h3 class="m-0-0-10 break-word" font="s-0.9em md:s-1.18em">
               Origami {{ origamiInfo.name }}
             </h3>
             <div class="color-grey" font="s-0.8rem">

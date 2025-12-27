@@ -26,6 +26,7 @@
           <span>,</span>
           <a
             class="relative color-brown"
+            target="_blank"
             href="https://www.linkedin.com/in/sriravenkat/"
           >
             Linkedin

@@ -1,5 +1,9 @@
 <template>
-  <main id="origami-main" ref="origamiMain">
+  <main
+    id="origami-main"
+    ref="origamiMain"
+    class="h100dvh grid grid-rows-auto-1fr"
+  >
     <h1
       font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-header-font"
       class="p-40 md:p-40-80 lg:p-40-80 m-0 flex align-i-flex-end gap-14 wrap"
