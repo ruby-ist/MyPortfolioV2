@@ -1,35 +1,39 @@
 <template>
   <div v-if="origamiInfo" class="h-[calc(100vh-115.5px)] grid place-i-center">
     <div
-      class="flex row w-100p just-c-space-evenly align-i-center wrap relative b-55"
+      class="grid w-100p grid-columns-1fr-480px-1fr-3fr-1fr align-i-center wrap relative b-55"
     >
+      <div />
       <div class="w-480 grid place-i-center">
         <OrigamiCarousel :origami-info="origamiInfo" />
       </div>
+      <div />
       <div
-        class="description w-400 p-60-90"
+        class="description p-60-0 grid align-i-center grid-columns-16%-1fr-108px-16% grid-rows-auto"
         border="rad-25 1px solid color-medium-black"
       >
-        <div class="flex just-c-space-between align-i-center">
-          <div class="w-[calc(100%-100px)]">
-            <h3 class="m-0-0-10">Origami {{ origamiInfo.name }}</h3>
-            <div class="color-grey max-w-90p" font="s-0.8rem">
-              {{ origamiInfo.author }}
-            </div>
+        <div />
+        <div>
+          <h3 class="m-0-0-10 break-word">Origami {{ origamiInfo.name }}</h3>
+          <div class="color-grey" font="s-0.8rem">
+            {{ origamiInfo.author }}
           </div>
-          <NuxtTime
-            font="s-0.9rem"
-            month="short"
-            class="color-grey w-100 ta-right"
-            day="2-digit"
-            year="numeric"
-            :datetime="origamiInfo.date"
-          />
         </div>
+        <NuxtTime
+          font="s-0.9rem"
+          month="short"
+          class="color-grey ta-right"
+          day="2-digit"
+          year="numeric"
+          :datetime="origamiInfo.date"
+        />
+        <div />
+
         <em
           v-if="origamiInfo.description"
           class="p-60-0-40 flex align-i-center h-[calc(100%-50px)] lh-36"
           font="s-1.1rem"
+          style="grid-column: 2 / 4"
           v-html="origamiInfo.description.replaceAll(`\n`, `<br/>`)"
         />
       </div>
