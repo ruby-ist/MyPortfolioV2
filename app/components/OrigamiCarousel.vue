@@ -27,7 +27,7 @@
       </swiper-container>
       <div
         v-if="paginatable"
-        class="flex just-c-center align-i-center gap-24 absolute w-320 md:w-480 lg:t-105p t-90p z-1"
+        class="flex just-c-center align-i-center gap-24 absolute w-320 md:w-480 lg:-b-50px b-6p z-1"
       >
         <button
           class="no-display md:block no-bg border-none"
