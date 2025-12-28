@@ -10,8 +10,7 @@
         :pagination-clickable="paginatable"
         :loop="paginatable"
         pagination-el="#origami-pagination"
-        class="w-320 md:w-480 relative"
-        :style="{ height: `${picWidth * origamiInfo.heightWidthRatio}px` }"
+        class="w-320 md:w-480 relative -mb-4 md:-mb-4 lg:mb-0"
       >
         <swiper-slide
           v-for="index in Array.from(Array(origamiInfo.imagesCount).keys())"
@@ -22,6 +21,9 @@
             :alt="`${origamiInfo.picFolderName}_pic_${index + 1}`"
             class="w-100p"
             border="rad-20-20-0-0 lg:rad-15"
+            :style="{
+              'aspect-ratio': 1 / origamiInfo.heightWidthRatio,
+            }"
           />
         </swiper-slide>
       </swiper-container>
@@ -80,19 +82,4 @@ const props = defineProps<{
 const swiper = ref(null);
 const swiperEl = useSwiper(swiper);
 const paginatable = computed(() => props.origamiInfo.imagesCount > 1);
-const picWidth = computed((): number => {
-  return window.innerWidth > 720 ? 480 : 320;
-});
 </script>
-
-<style scoped>
-#origami-swiper {
-  --pic-width: 480px;
-}
-
-@media (max-width: 720px) {
-  #origami-swiper {
-    --pic-width: 320px;
-  }
-}
-</style>

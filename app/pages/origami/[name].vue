@@ -15,7 +15,10 @@
       >
         <div>
           <div style="float: left">
-            <h3 class="m-0-0-10 break-word" font="s-0.9em md:s-1.18em">
+            <h3
+              class="m-0-0-10 lg:m-0-0-14 break-word"
+              font="s-0.9em md:s-1.18em"
+            >
               Origami {{ origamiInfo.name }}
             </h3>
             <div class="color-grey" font="s-0.8rem">
