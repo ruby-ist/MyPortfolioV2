@@ -56,7 +56,7 @@ export default defineNuxtComponent({
 
     modelName() {
       const route = useRoute();
-      const modelName = route.params.name as string;
+      const modelName = route.params.slug as string;
       const origami = ORIGAMI_INFO_ARRAY.find(
         (origami) => origami.picFolderName === modelName,
       );

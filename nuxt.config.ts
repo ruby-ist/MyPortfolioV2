@@ -3,8 +3,24 @@ import { origamiLastMod, origamiRoutes } from "./app/utils/origami";
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: "github-light",
+          langs: ["ruby"],
+        },
+      },
+    },
+  },
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@unocss/nuxt", "@nuxtjs/sitemap", "nuxt-swiper"],
+  modules: [
+    "@nuxt/eslint",
+    "@unocss/nuxt",
+    "@nuxtjs/sitemap",
+    "nuxt-swiper",
+    "@nuxt/content",
+  ],
   nitro: {
     prerender: {
       crawlLinks: true,

@@ -51,7 +51,7 @@
 <script lang="ts">
 export default defineNuxtComponent({
   data: () => ({
-    modelName: useRoute().params.name,
+    modelName: useRoute().params.slug,
   }),
   computed: {
     origamiInfo() {
