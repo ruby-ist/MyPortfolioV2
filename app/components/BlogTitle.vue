@@ -6,7 +6,7 @@
       class="color-high-purple hover:color-purple"
       :href="blog.path"
     >
-      <h1 class="m-0" font="f-paragraph-font s-2rem">
+      <h1 class="m-0" font="f-thick-font s-2rem">
         {{ blog.title }}
       </h1>
     </a>

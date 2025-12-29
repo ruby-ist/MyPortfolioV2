@@ -118,7 +118,7 @@ body#blog {
   --light-blue: #c2d9ff;
 
   --header-font: "Life Savers", serif;
-  --paragraph-font: "Wix Madefor Text", serif;
+  --paragraph-font: "Inter", serif;
   --thick-font: "Tilt Warp", serif;
 
   background: var(--white) url("/noise.avif");

@@ -21,7 +21,13 @@ export default defineConfig({
     presetWebFonts({
       provider: "google",
       fonts: {
-        sans: ["Bellefair", "Life Savers", "Wix Madefor Text", "Tilt Warp"],
+        sans: [
+          "Bellefair",
+          "Life Savers",
+          "Wix Madefor Text",
+          "Tilt Warp",
+          "Inter",
+        ],
       },
     }),
   ],
