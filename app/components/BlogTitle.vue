@@ -6,9 +6,9 @@
       class="color-high-purple hover:color-purple"
       :href="blog.path"
     >
-      <h2 class="m-0" font="f-thick-font s-2rem">
+      <h1 class="m-0" font="f-paragraph-font s-2rem">
         {{ blog.title }}
-      </h2>
+      </h1>
     </a>
     <h2 v-else class="color-high-purple m-0" font="f-thick-font s-2rem">
       {{ blog.title }}
