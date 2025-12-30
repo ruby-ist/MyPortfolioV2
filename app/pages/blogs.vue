@@ -34,16 +34,19 @@ const { data: blogs } = await useAsyncData("blogs", () =>
   queryCollection("blogs").all(),
 );
 
-const toggleTheme = () => {
-  theme.value = theme.value === "dark" ? "light" : "dark";
+const toggleDarkClassInHTML = () => {
   if (theme.value === "dark") document.documentElement.classList.add("dark");
   else document.documentElement.classList.remove("dark");
+};
+
+const toggleTheme = () => {
+  theme.value = theme.value === "dark" ? "light" : "dark";
+  toggleDarkClassInHTML();
   localStorage.setItem("theme", theme.value);
 };
 
 onMounted(() => {
   theme.value = localStorage.getItem("theme") || "light";
-  if (theme.value === "dark") document.documentElement.classList.add("dark");
-  else document.documentElement.classList.remove("dark");
+  toggleDarkClassInHTML();
 });
 </script>

@@ -2,6 +2,18 @@
 import { origamiLastMod, origamiRoutes } from "./app/utils/origami";
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      script: [
+        {
+          src: "/theme.js",
+          type: "text/javascript",
+          tagPosition: "head",
+          defer: false,
+        },
+      ],
+    },
+  },
   compatibilityDate: "2025-07-15",
   content: {
     build: {
