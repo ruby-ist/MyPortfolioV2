@@ -79,7 +79,7 @@ Now, you will realize something is fishy here. I'll explain why but let's refres
 
 > `include` is used to mix in a module interface to any instances of a class. It can only be called from the scope of a class.
 
-> `prepend` works in the same way as `include` but the difference is that if you `prepend` a module, methods defined in that module will appear first in the method lookup path of instances instead of methods defined in the class. (it'll override the methods in the class)
+> `prepend` works in the same way as `include` but the difference is that if you prepend a module, methods defined in that module will appear first in the method lookup path of instances instead of methods defined in the class. (it'll override the methods in the class)
 
 > `extend` is used to mix in a module to a single object. It can either be class or object (_inner me is screaming both are same!_). After extending, methods defined in the extended module will appear first in the method lookup path of the object.
 
