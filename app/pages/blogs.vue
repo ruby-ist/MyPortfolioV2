@@ -9,7 +9,7 @@
     </h1>
     <NuxtPage v-if="blogName" />
     <div v-else class="flex just-c-center md:p-40">
-      <div class="flex column gap-32 md:gap-36 w-90p md:w-600">
+      <div class="flex column gap-14 md:gap-36 w-90p md:w-600">
         <BlogTitle v-for="blog in blogs" :key="blog.path" :blog="blog" link />
       </div>
     </div>

@@ -58,7 +58,7 @@ Quite useful, right?
 
 **No, it is not**
 
-Because you just shot yourself in the foot with a machine gun and you have no way to know it.
+Because you just shot yourself in the foot with a machine gun—and the most horrifying part is that it doesn’t hurt you.
 
 Try the following in the Rails console:
 
