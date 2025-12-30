@@ -6,7 +6,7 @@
       class="color-high-purple hover:color-purple"
       :href="blog.path"
     >
-      <h1 class="m-0" font="f-thick-font s-2rem">
+      <h1 class="m-0" font="f-thick-font s-1.6rem md:s-2rem">
         {{ blog.title }}
       </h1>
     </a>
@@ -17,7 +17,9 @@
       <span
         v-for="(tag, index) in blog.tags"
         :key="index"
-        class="bg-color-light-blue bd-rad-8 color-purple p-4-12"
+        class="bg-color-light-blue color-high-purple p-4-12"
+        border="1px solid color-purple rad-6"
+        font="s-0.8rem"
       >
         {{ tag }}
       </span>

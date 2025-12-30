@@ -116,10 +116,13 @@ body#blog {
   --transparent-black: #1c1c1c36;
   --translucent-black: #1c1c1c72;
   --light-blue: #c2d9ff;
+  --light-purple: #b8b5ff;
+  --translucent-light-blue: #c2d9ff82;
 
   --header-font: "Life Savers", serif;
-  --paragraph-font: "Inter", serif;
+  --paragraph-font: "Wix Madefor Text", serif;
   --thick-font: "Tilt Warp", serif;
+  --code-font: "JetBrains Mono", monospace;
 
   background: var(--white) url("/noise.avif");
   font-family: var(--paragraph-font);

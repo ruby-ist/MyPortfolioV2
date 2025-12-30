@@ -9,9 +9,8 @@
       </div>
       <div />
       <div
-        class="description w-320 md:w-480 lg:w-inherit p-36 md:p-54 lg:p-60-16p bd-t-0 lg:bd-t-1"
+        class="description w-320 md:w-480 lg:w-inherit p-36 md:p-54 lg:p-60-16p bd-t-0 lg:bd-t-1 box-size-border-box"
         border="rad-0-0-20-20 lg:rad-25 1px solid color-medium-black"
-        style="box-sizing: border-box"
       >
         <div>
           <div style="float: left">

@@ -27,6 +27,7 @@ export default defineConfig({
           "Wix Madefor Text",
           "Tilt Warp",
           "Inter",
+          "JetBrains Mono",
         ],
       },
     }),
