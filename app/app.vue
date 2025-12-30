@@ -43,6 +43,10 @@ body {
   scrollbar-width: none;
   scroll-behavior: smooth;
 
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
   &::-webkit-scrollbar {
     display: none;
   }
@@ -109,23 +113,42 @@ body#project {
 }
 
 body#blog {
-  --white: #f0f3ff;
-  --purple: #836fff;
-  --indigo: #190482;
-  --high-purple: #7752fe;
-  --transparent-black: #1c1c1c36;
-  --translucent-black: #1c1c1c72;
-  --light-blue: #c2d9ff;
-  --light-purple: #b8b5ff;
-  --translucent-light-blue: #c2d9ff82;
+  --text-color: #000;
+  --main-background: #f0f3ff;
+  --primary: #7752fe;
+  --secondary: #190482;
+  --tag-background: #c2d9ff;
+  --tag-border: #c2d9ff;
+  --pre-border: #190482;
+  --pre-background: #c2d9ff82;
+  --filename-background: #b8b5ff;
+  --filename-color: #190482;
+  --block-quote-border: #c2d9ff;
+  --link-hover: #836fff;
 
   --header-font: "Life Savers", serif;
   --paragraph-font: "Wix Madefor Text", serif;
   --thick-font: "Tilt Warp", serif;
   --code-font: "JetBrains Mono", monospace;
 
-  background: var(--white) url("/noise.avif");
+  background: var(--main-background) url("/noise.avif");
+  color: var(--text-color);
   font-family: var(--paragraph-font);
+}
+
+html.dark body#blog {
+  --text-color: #f0f3ff;
+  --main-background: #1c1c1c;
+  --primary: #836fff;
+  --secondary: #c2d9ff;
+  --tag-background: #141f32;
+  --tag-border: #836fff;
+  --pre-border: #323232;
+  --pre-background: #141f3282;
+  --filename-background: #000;
+  --filename-color: #c2d9ff82;
+  --block-quote-border: #c2d9ff;
+  --link-hover: #7752fe;
 }
 
 a {

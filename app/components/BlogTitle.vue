@@ -1,9 +1,11 @@
 <template>
   <div>
-    <div class="mb-16 color-indigo">{{ blog.date }}</div>
+    <div class="mb-16 color-secondary" font="s-0.9rem md:s-1rem">
+      {{ blog.date }}
+    </div>
     <a
       v-if="link"
-      class="color-high-purple hover:color-purple"
+      class="color-primary hover:color-link-hover"
       :href="blog.path"
     >
       <h1 class="m-0" font="f-thick-font s-1.6rem md:s-2rem w-400">
@@ -12,7 +14,7 @@
     </a>
     <h2
       v-else
-      class="color-high-purple m-0"
+      class="color-primary m-0"
       font="f-thick-font s-1.6rem md:s-2rem  w-400"
     >
       {{ blog.title }}
@@ -21,8 +23,8 @@
       <span
         v-for="(tag, index) in blog.tags"
         :key="index"
-        class="bg-color-light-blue color-high-purple p-4-12"
-        border=" rad-6"
+        class="bg-color-tag-background color-primary p-3-11"
+        border="1px solid color-tag-border rad-6"
         font="s-0.8rem"
       >
         {{ tag }}

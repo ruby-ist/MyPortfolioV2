@@ -1,12 +1,22 @@
 <template>
   <main>
-    <h1
-      font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-header-font"
-      class="p-40-5p md:p-40-80 lg:p-40-80 m-0 color-indigo"
-    >
-      <a class="color-indigo" href="/">Srira</a>'s
-      <a class="color-indigo" href="/blogs">Blogs</a>
-    </h1>
+    <nav class="flex align-i-center just-c-space-between">
+      <h1
+        font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-header-font"
+        class="p-40-5p md:p-40-80 m-0 color-secondary"
+      >
+        <a class="color-secondary" href="/">Srira</a>'s
+        <a class="color-secondary" href="/blogs">Blogs</a>
+      </h1>
+      <button
+        border="0.12rem solid color-primary rad-50"
+        class="p-4 h-16 mr-5p md:mr-80 no-bg box-size-content-box pointer"
+        @click="toggleTheme"
+      >
+        <IconsSun class="w-16" :class="{ hidden: theme == 'dark' }" />
+        <IconsMoon class="w-16" :class="{ hidden: theme == 'light' }" />
+      </button>
+    </nav>
     <NuxtPage v-if="blogName" />
     <div v-else class="flex just-c-center md:p-40">
       <div class="flex column gap-14 md:gap-36 w-90p md:w-600">
@@ -18,7 +28,22 @@
 
 <script setup lang="ts">
 const blogName = useRoute().params.slug;
+const theme = ref("light");
+
 const { data: blogs } = await useAsyncData("blogs", () =>
   queryCollection("blogs").all(),
 );
+
+const toggleTheme = () => {
+  theme.value = theme.value === "dark" ? "light" : "dark";
+  if (theme.value === "dark") document.documentElement.classList.add("dark");
+  else document.documentElement.classList.remove("dark");
+  localStorage.setItem("theme", theme.value);
+};
+
+onMounted(() => {
+  theme.value = localStorage.getItem("theme") || "light";
+  if (theme.value === "dark") document.documentElement.classList.add("dark");
+  else document.documentElement.classList.remove("dark");
+});
 </script>
