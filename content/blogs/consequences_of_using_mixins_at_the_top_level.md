@@ -20,7 +20,7 @@ A module is usually mixed into a class or in some weird use case to an object. T
 
 Most beginners will forget the former purpose and solely create modules for the latter. In our case, we have a module called `CommonHelper` created, as the name says, to be a common helper.
 
-After creating this module, considering its name and purpose, you might want it to be available everywhere and try to include it at the top level in some files. Let's say in the `application.rb` file.
+After creating this module, considering its name and purpose, you might want it to be available everywhere and try to include it at the top level in some files. Let's say in the `application.rb` file of a Rails application.
 
 ```ruby [config/application.rb]
 require_relative '../app/helpers/common_helper'

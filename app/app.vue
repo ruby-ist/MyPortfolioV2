@@ -146,7 +146,7 @@ html.dark body#blog {
   --pre-border: #323232;
   --pre-background: #141f3282;
   --filename-background: #000;
-  --filename-color: #c2d9ff82;
+  --filename-color: #c2d9ff9c;
   --block-quote-border: #c2d9ff;
   --link-hover: #7752fe;
 }
