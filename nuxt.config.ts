@@ -2,17 +2,8 @@
 import { origamiLastMod, origamiRoutes } from "./app/utils/origami";
 
 export default defineNuxtConfig({
-  app: {
-    head: {
-      script: [
-        {
-          src: "/theme.js",
-          type: "text/javascript",
-          tagPosition: "head",
-          defer: false,
-        },
-      ],
-    },
+  colorMode: {
+    preference: "light",
   },
   compatibilityDate: "2025-07-15",
   content: {
@@ -35,6 +26,7 @@ export default defineNuxtConfig({
     "@nuxtjs/sitemap",
     "nuxt-swiper",
     "@nuxt/content",
+    "@nuxtjs/color-mode",
   ],
   nitro: {
     prerender: {

@@ -17,7 +17,7 @@
       </span>
     </h1>
     <NuxtPage v-if="modelName" />
-    <div v-else ref="origamiGridContainer" class="m-40-0">
+    <div v-else ref="origamiGridContainer" class="m-0 md:m-40-0">
       <div
         ref="origamiGrid"
         class="max-w-80vw relative flex row wrap gap-20 p-0-10vw just-c-center"

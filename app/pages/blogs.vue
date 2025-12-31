@@ -8,14 +8,22 @@
         <a class="color-secondary" href="/">Srira</a>'s
         <a class="color-secondary" href="/blogs">Blogs</a>
       </h1>
-      <button
-        border="0.12rem solid color-primary rad-50"
-        class="p-4 h-16 mr-5p md:mr-80 no-bg box-size-content-box pointer"
-        @click="toggleTheme"
-      >
-        <IconsSun class="w-16" :class="{ hidden: theme == 'dark' }" />
-        <IconsMoon class="w-16" :class="{ hidden: theme == 'light' }" />
-      </button>
+      <ClientOnly fallback-tag="button">
+        <button
+          border="0.12rem solid color-primary rad-50"
+          class="p-4 h-16 mr-5p md:mr-80 no-bg box-size-content-box pointer"
+          @click="toggleTheme"
+        >
+          <IconsSun
+            class="w-16"
+            :class="{ hidden: colorMode.preference == 'dark' }"
+          />
+          <IconsMoon
+            class="w-16"
+            :class="{ hidden: colorMode.preference == 'light' }"
+          />
+        </button>
+      </ClientOnly>
     </nav>
     <NuxtPage v-if="blogName" />
     <div v-else class="flex just-c-center md:p-40">
@@ -28,20 +36,13 @@
 
 <script setup lang="ts">
 const blogName = useRoute().params.slug;
-const theme = ref("light");
+const colorMode = useColorMode();
 
 const { data: blogs } = await useAsyncData("blogs", () =>
   queryCollection("blogs").all(),
 );
 
 const toggleTheme = () => {
-  theme.value = theme.value === "dark" ? "light" : "dark";
-  if (theme.value === "dark") document.documentElement.classList.add("dark");
-  else document.documentElement.classList.remove("dark");
-  localStorage.setItem("theme", theme.value);
+  colorMode.preference = colorMode.preference === "light" ? "dark" : "light";
 };
-
-onMounted(() => {
-  theme.value = localStorage.getItem("theme") || "light";
-});
 </script>
