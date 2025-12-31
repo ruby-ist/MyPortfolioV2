@@ -143,6 +143,7 @@ body#blog {
   --filename-color: #190482;
   --block-quote-border: #c2d9ff;
   --link-hover: #836fff;
+  --theme-button: #836fff;
 
   --header-font: "Life Savers", serif;
   --paragraph-font: "Wix Madefor Text", serif;
@@ -167,6 +168,7 @@ html.dark body#blog {
   --filename-color: #c2d9ff9c;
   --block-quote-border: #c2d9ff;
   --link-hover: #7752fe;
+  --theme-button: #836fff;
 }
 
 a {

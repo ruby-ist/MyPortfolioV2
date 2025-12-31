@@ -10,7 +10,7 @@
       </h1>
       <ClientOnly fallback-tag="button">
         <button
-          border="0.12rem solid color-primary rad-50"
+          border="0.12rem solid color-theme-button rad-50"
           class="p-4 h-16 mr-5p md:mr-80 no-bg box-size-content-box pointer"
           @click="toggleTheme"
         >

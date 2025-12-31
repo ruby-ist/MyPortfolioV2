@@ -2,7 +2,7 @@
   <div>
     <button
       style="background-image: url(&quot;/noise.avif&quot;)"
-      class="bg-color-medium-black h-32 w-32 color-white grid place-i-center p-4 box-size-content-box strict:bd-b-0 pointer"
+      class="bg-color-medium-black h-36 md:h-32 w-36 md:w-32 color-white grid place-i-center p-4 box-size-content-box strict:bd-b-0 pointer"
       border="1px solid color-dark-grey rad-25-25-0-0"
       @click="scrollToTop"
     >
@@ -10,7 +10,7 @@
     </button>
     <button
       style="background-image: url(&quot;/noise.avif&quot;)"
-      class="bg-color-medium-black h-32 w-32 color-white grid place-i-center p-4 box-size-content-box pointer"
+      class="bg-color-medium-black h-36 md:h-32 w-36 md:w-32 color-white grid place-i-center p-4 box-size-content-box pointer"
       border="1px solid color-dark-grey rad-0-0-25-25"
       @click="scrollToBottom"
     >
