@@ -132,6 +132,6 @@ Calling `include` with any module in the top level will return `Object` as outpu
 
 In Ruby, everything is an object. By that rule, everything is inherited from `Object`. This is the reason why our method `current_time_in_chicago` was available for all objects, even `nil`. Because even `nil` is an instance of `Object`.
 
-A single one-line mistake can bloat all objects in Ruby, leading to unwanted methods available in all objects. It'll also mess up the method lookup path for all objects and lead to unexpected behaviors like a method that is supposed to call a super method, calling itself. (endless recursion). Other nightmares include overriding `to_param` and `method_missing` methods.
+A single one-line mistake can bloat all objects in Ruby, leading to unwanted methods available in all objects. It'll also mess up the method lookup path for all objects and lead to unexpected behaviors like a method that is supposed to call a super method, calling itself (endless recursion). Other nightmares include overriding `to_param` and `method_missing` methods.
 
 You might ask "Using `extend` at the top level is safe, right?". The answer is yes and no. Just because you can, you shouldn't. We are writing an Object-Oriented Program here. So it never makes sense to extend an interface outside of all the objects, not even for code organization or reusability.
