@@ -152,10 +152,10 @@
         </IconCell>
         <IconCell class="strict:bd-r-0" title="Nuxt JS">
           <template #mono>
-            <IconsMonochromeNuxt class="w-32 md:w-38 lg:w-38" />
+            <IconsMonochromeNuxt class="w-36 md:w-42 lg:w-42" />
           </template>
           <template #color>
-            <IconsColoredNuxt class="w-32 md:w-38 lg:w-38" />
+            <IconsColoredNuxt class="w-36 md:w-42 lg:w-42" />
           </template>
         </IconCell>
       </tr>
@@ -229,18 +229,18 @@
         <td />
         <IconCell title="Figma">
           <template #mono>
-            <IconsMonochromeFigma class="w-28 md:w-34 lg:w-34" />
+            <IconsMonochromeFigma class="w-30 md:w-36 lg:w-36" />
           </template>
           <template #color>
-            <IconsColoredFigma class="w-28 md:w-34 lg:w-34" />
+            <IconsColoredFigma class="w-30 md:w-36 lg:w-36" />
           </template>
         </IconCell>
         <IconCell title="Adobe Illustrator">
           <template #mono>
-            <IconsMonochromeIllustrator class="w-28 md:w-34 lg:w-34" />
+            <IconsMonochromeIllustrator class="w-30 md:w-36 lg:w-36" />
           </template>
           <template #color>
-            <IconsColoredIllustrator class="w-28 md:w-34 lg:w-34" />
+            <IconsColoredIllustrator class="w-30 md:w-36 lg:w-36" />
           </template>
         </IconCell>
         <td />

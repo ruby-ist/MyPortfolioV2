@@ -34,7 +34,7 @@
         </p>
       </div>
     </div>
-    <div class="p-0-10vw md:p-0 lg:p-0 grid place-i-end"><IconsGrid /></div>
+    <div class="grid place-i-center md:place-i-end"><IconsGrid /></div>
   </main>
 </template>
 
@@ -43,7 +43,7 @@ a::after {
   content: "";
   position: absolute;
   z-index: -1;
-  top: 65%;
+  top: 66%;
   left: -0.1em;
   right: -0.1em;
   bottom: 0;

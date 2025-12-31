@@ -33,7 +33,7 @@
       </ClientOnly>
     </nav>
     <NuxtPage v-if="blogName" />
-    <div v-else class="flex just-c-center md:p-40">
+    <div v-else class="flex just-c-center md:p-36-0">
       <div class="flex column gap-14 md:gap-36 w-90p md:w-600">
         <BlogTitle v-for="blog in blogs" :key="blog.path" :blog="blog" link />
       </div>
