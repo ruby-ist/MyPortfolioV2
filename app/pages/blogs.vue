@@ -23,6 +23,13 @@
             :class="{ hidden: colorMode.preference == 'light' }"
           />
         </button>
+        <template #fallback>
+          <button
+            border="0.12rem solid color-primary rad-50"
+            class="p-4 h-16 mr-5p w-32 md:mr-80 no-bg box-size-content-box pointer"
+            @click="toggleTheme"
+          />
+        </template>
       </ClientOnly>
     </nav>
     <NuxtPage v-if="blogName" />

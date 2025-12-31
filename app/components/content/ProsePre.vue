@@ -10,10 +10,11 @@
       </div>
       <button
         border="1px solid color-pre-border rad-4"
-        class="no-bg md:no-display hover:bg-color-pre-background p-4 h-14 w-14 box-size-content-box pointer"
+        class="no-bg md:no-display hover:bg-color-pre-background p-4 h-14 w-14 box-size-content-box pointer relative z-1"
+        @click="copyToClipBoard"
       >
         <IconsCopied v-if="copied" class="w-14" />
-        <IconsCopy v-else class="w-14" @click="copyToClipBoard" />
+        <IconsCopy v-else class="w-14" />
       </button>
     </div>
     <pre

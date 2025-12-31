@@ -54,12 +54,12 @@ body {
 
 :root,
 html {
-  height: 100%;
+  height: 100dvh;
   overflow: hidden;
 }
 
 body {
-  height: 100%;
+  height: 100dvh;
   overflow-y: auto;
   overscroll-behavior: none;
   -webkit-overflow-scrolling: touch;
@@ -156,7 +156,7 @@ html.dark body#blog {
   --secondary: #c2d9ff;
   --tag-background: #141f32;
   --tag-border: #836fff;
-  --pre-border: #323232;
+  --pre-border: #343434;
   --pre-background: #141f3282;
   --filename-background: #000;
   --filename-color: #c2d9ff9c;
