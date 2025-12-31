@@ -92,6 +92,7 @@ body#origami {
   --paragraph-font: "Wix Madefor Text", serif;
   --grey: #cccccc;
   --white: #fff;
+  --dark-grey: #343434;
 
   background: var(--medium-black);
   color: white;
