@@ -52,6 +52,19 @@ body {
   }
 }
 
+:root,
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: touch;
+}
+
 * {
   -webkit-tap-highlight-color: transparent;
 }
