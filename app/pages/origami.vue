@@ -17,7 +17,7 @@
       </span>
     </h1>
     <NuxtPage v-if="modelName" />
-    <div v-else ref="origamiGridContainer" class="m-0 md:m-40-0">
+    <div v-else ref="origamiGridContainer" class="m-0-0-40 md:m-40-0">
       <FastScrollButtons
         class="fixed z-1 b-69 md:b-54"
         style="right: var(--scroll-button-right-position)"
