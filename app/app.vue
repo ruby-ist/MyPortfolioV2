@@ -69,6 +69,10 @@ body {
   -webkit-tap-highlight-color: transparent;
 }
 
+main {
+  background: url("/noise.avif");
+}
+
 body#index {
   --beige: #f2e2b1;
   --brown: #7e6752;
@@ -78,7 +82,7 @@ body#index {
   --header-font: "Life Savers", serif;
   --paragraph-font: "Bellefair", serif;
 
-  background: var(--beige) url("/noise.avif");
+  background: var(--beige);
   color: var(--brown);
 }
 
@@ -89,7 +93,7 @@ body#origami {
   --grey: #cccccc;
   --white: #fff;
 
-  background: var(--medium-black) url("/noise.avif");
+  background: var(--medium-black);
   color: white;
   font-family: var(--paragraph-font);
 }
@@ -104,7 +108,7 @@ body#origami-show {
   --grey: #cccccc;
   --white: #fff;
 
-  background: var(--black) url("/noise.avif");
+  background: var(--black);
   color: white;
   font-family: var(--paragraph-font);
 }
@@ -120,7 +124,7 @@ body#project {
   --paragraph-font: "Wix Madefor Text", serif;
   --thick-font: "Tilt Warp", serif;
 
-  background: var(--purple) url("/noise.avif");
+  background: var(--purple);
   color: var(--indigo);
   font-family: var(--paragraph-font);
 }
@@ -144,7 +148,7 @@ body#blog {
   --thick-font: "Tilt Warp", serif;
   --code-font: "JetBrains Mono", monospace;
 
-  background: var(--main-background) url("/noise.avif");
+  background: var(--main-background);
   color: var(--text-color);
   font-family: var(--paragraph-font);
 }

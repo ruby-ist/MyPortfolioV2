@@ -1,5 +1,5 @@
 <template>
-  <main class="grid h-100vh lg:grid-columns-1fr-auto">
+  <main class="grid min-h-100vh lg:grid-columns-1fr-auto relative z-0">
     <div class="p-60px-10p-18p md:p-12p-16p-0 lg:p-16p-21p">
       <div font="s-1.38rem md:s-1.45rem lg:s-1.45rem">
         <h1

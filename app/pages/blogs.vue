@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="min-h-100dvh">
     <nav class="flex align-i-center just-c-space-between">
       <h1
         font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-header-font"

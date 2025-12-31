@@ -2,7 +2,7 @@
   <main
     id="origami-main"
     ref="origamiMain"
-    class="h100dvh grid grid-rows-auto-1fr"
+    class="min-h100dvh grid grid-rows-auto-1fr"
   >
     <h1
       font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-header-font"
