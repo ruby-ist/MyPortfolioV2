@@ -48,6 +48,15 @@ export default [
     },
   ],
 
+  // margin and padding variable rules
+  [
+    /^(m|p)-var-([\w-]+)$/,
+    ([, style, name]: string[]) => {
+      const property = style === "m" ? "margin" : "padding";
+      return { [property]: `var(--${name})` };
+    },
+  ],
+
   // height and weight shorthand rule
   [
     /^(h|w)-(\d+)(\w{1,3})?/,
