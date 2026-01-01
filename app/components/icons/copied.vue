@@ -16,6 +16,6 @@
 
 <style scoped>
 g {
-  stroke: var(--filename);
+  stroke: var(--icon);
 }
 </style>

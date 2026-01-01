@@ -30,3 +30,9 @@ const toggleTheme = () => {
   colorMode.preference = colorMode.preference === "light" ? "dark" : "light";
 };
 </script>
+
+<style scoped>
+button {
+  --icon: var(--theme-button);
+}
+</style>

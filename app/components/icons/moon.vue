@@ -9,6 +9,6 @@
 
 <style scoped>
 .path {
-  fill: var(--theme-button);
+  fill: var(--icon);
 }
 </style>

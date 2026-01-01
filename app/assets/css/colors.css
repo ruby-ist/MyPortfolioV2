@@ -50,6 +50,7 @@ main {
     --code-block-background: #c2d9ff82;
     --filename-background: #b8b5ff;
     --filename: #190482;
+    --icon: #190482;
     --block-quote-border: #c2d9ff;
     --link-hover: #836fff;
     --theme-button: #836fff;
@@ -70,6 +71,7 @@ html.dark main {
     --code-block-background: #141f3282;
     --filename-background: #000;
     --filename: #c2d9ff9c;
+    --icon: #c2d9ff9c;
     --block-quote-border: #c2d9ff9c;
     --link-hover: #7752fe;
     --theme-button: #836fff;
