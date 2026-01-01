@@ -9,8 +9,8 @@
       </div>
       <div />
       <div
-        class="description w-320 md:w-480 lg:w-inherit p-36 md:p-54 lg:p-60-16p bd-t-0 lg:bd-t-1 box-size-border-box"
-        border="rad-0-0-20-20 lg:rad-25 1px solid color-medium-black"
+        class="bg-color-description-background noisy-background w-320 md:w-480 lg:w-inherit p-36 md:p-54 lg:p-60-16p bd-t-0 lg:bd-t-1 box-size-border-box"
+        border="rad-0-0-20-20 lg:rad-25 1px solid color-description-border"
       >
         <div>
           <div style="float: left">
@@ -20,14 +20,14 @@
             >
               Origami {{ origamiInfo.name }}
             </h3>
-            <div class="color-grey" font="s-0.8rem">
+            <div class="color-secondary-text" font="s-0.8rem">
               {{ origamiInfo.author }}
             </div>
           </div>
           <NuxtTime
             font="s-0.8rem md:s-0.9rem"
             month="short"
-            class="relative t-16 w-100 color-grey ta-right"
+            class="relative t-16 w-100 color-secondary-text ta-right"
             day="2-digit"
             year="numeric"
             style="float: right"
@@ -61,9 +61,3 @@ export default defineNuxtComponent({
   },
 });
 </script>
-
-<style scoped>
-.description {
-  background: var(--transparent-black) url("/noise.avif");
-}
-</style>

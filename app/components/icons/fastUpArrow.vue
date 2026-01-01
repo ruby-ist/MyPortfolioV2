@@ -17,6 +17,6 @@
 
 <style scoped>
 path {
-  stroke: var(--grey);
+  stroke: var(--icon);
 }
 </style>

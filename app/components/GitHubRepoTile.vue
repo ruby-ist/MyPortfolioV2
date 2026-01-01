@@ -1,6 +1,6 @@
 <template>
-  <div class="pb-20" border-b="1px solid color-indigo">
-    <a :href="gitHubRepo.url" target="_blank" class="color-indigo">
+  <div class="pb-20" border-b="1px solid color-primary-text">
+    <a :href="gitHubRepo.url" target="_blank" class="color-primary-text">
       <h2>{{ gitHubRepo.title }}</h2>
     </a>
     <p>{{ gitHubRepo.description }}</p>

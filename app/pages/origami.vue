@@ -1,18 +1,23 @@
 <template>
   <main
-    id="origami-main"
+    :id="modelName ? 'origami-show' : 'origami'"
     ref="origamiMain"
-    class="min-h100dvh grid grid-rows-auto-1fr"
+    class="min-h100dvh grid grid-rows-auto-1fr bg-color-main-background color-primary-text noisy-background"
+    font="f-paragraph-font"
   >
     <h1
-      font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-header-font"
+      font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-name-font"
       class="p-40 md:p-40-80 lg:p-40-80 m-0 flex align-i-flex-end gap-14 wrap"
     >
       <span>
-        <a class="color-white" href="/">Srira</a>'s
-        <a class="color-white" href="/origami">Origami</a>
+        <a class="color-primary-text" href="/">Srira</a>'s
+        <a class="color-primary-text" href="/origami">Origami</a>
       </span>
-      <span v-if="modelName" class="color-grey relative b-2" font="s-1.3rem">
+      <span
+        v-if="modelName"
+        class="color-secondary-text relative b-2"
+        font="s-1.3rem"
+      >
         /&ensp;{{ modelName }}
       </span>
     </h1>
@@ -169,7 +174,7 @@ export default defineNuxtComponent({
 </script>
 
 <style scoped>
-#origami-main {
+#origami {
   --card-width: 250px;
   --cards-gap: 20px;
   --card-info-height: 52px;

@@ -1,7 +1,7 @@
 <template>
   <td
     ref="cell"
-    border="1 solid color-medium-brown"
+    border="1 solid color-icon-cell-border"
     class="p-0"
     @mouseenter="colorize"
     @mouseleave="decolorize"
@@ -29,7 +29,7 @@ export default defineNuxtComponent({
       if (!(this.$refs.mono && this.$refs.color && this.$refs.cell)) return;
 
       if (this.timerId) clearTimeout(this.timerId);
-      (this.$refs.cell as HTMLElement).classList.add("no-bg");
+      (this.$refs.cell as HTMLElement).classList.add("strict:no-bg");
       (this.$refs.mono as HTMLElement).classList.add("no-display");
       (this.$refs.color as HTMLElement).classList.remove("no-display");
     },
@@ -37,7 +37,7 @@ export default defineNuxtComponent({
       if (!(this.$refs.mono && this.$refs.color && this.$refs.cell)) return;
 
       this.timerId = setTimeout(() => {
-        (this.$refs.cell as HTMLElement).classList.remove("no-bg");
+        (this.$refs.cell as HTMLElement).classList.remove("strict:no-bg");
         (this.$refs.mono as HTMLElement).classList.remove("no-display");
         (this.$refs.color as HTMLElement).classList.add("no-display");
       }, 2000);

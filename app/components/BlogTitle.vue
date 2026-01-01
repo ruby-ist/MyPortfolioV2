@@ -8,14 +8,14 @@
       class="color-primary hover:color-link-hover"
       :href="blog.path"
     >
-      <h1 class="m-0" font="f-thick-font s-1.6rem md:s-2rem w-400">
+      <h1 class="m-0" font="f-header-font s-1.6rem md:s-2rem w-400">
         {{ blog.title }}
       </h1>
     </a>
     <h2
       v-else
       class="color-primary m-0"
-      font="f-thick-font s-1.6rem md:s-2rem  w-400"
+      font="f-header-font s-1.6rem md:s-2rem  w-400"
     >
       {{ blog.title }}
     </h2>

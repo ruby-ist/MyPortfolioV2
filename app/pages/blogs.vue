@@ -1,8 +1,12 @@
 <template>
-  <main class="min-h-100dvh">
+  <main
+    id="blogs"
+    class="min-h-100dvh bg-color-main-background color-primary-text noisy-background"
+    font="f-paragraph-font"
+  >
     <nav class="flex align-i-center just-c-space-between">
       <h1
-        font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-header-font"
+        font="s-1.6rem md:s-1.8rem lg:s-1.8rem f-name-font"
         class="p-40-5p md:p-40-80 m-0 color-secondary"
       >
         <a class="color-secondary" href="/">Srira</a>'s

@@ -1,6 +1,6 @@
 <template>
   <a
-    class="flex column gap-12 pointer color-white absolute"
+    class="flex column gap-12 pointer color-primary-text absolute"
     :style="{
       left: `${origamiInfo.left}px`,
       top: `${origamiInfo.top}px`,
@@ -20,7 +20,7 @@
         <NuxtTime
           font="s-0.75rem"
           month="short"
-          class="color-grey"
+          class="color-secondary-text"
           day="2-digit"
           year="numeric"
           :datetime="origamiInfo.date"
@@ -28,7 +28,7 @@
       </div>
       <div
         font="s-0.75rem"
-        class="color-grey w-250 oflow-x-hidden"
+        class="color-secondary-text w-250 oflow-x-hidden"
         style="white-space: nowrap; text-overflow: ellipsis"
       >
         {{ origamiInfo.author }}

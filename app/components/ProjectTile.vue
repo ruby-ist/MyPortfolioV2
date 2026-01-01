@@ -4,7 +4,7 @@
       <h2 class="m-0">{{ project.title }}</h2>
       <a
         :href="project.url"
-        class="color-indigo visit-btn p-10-32 pointer"
+        class="color-primary-text bg-color-visit-button-background noisy-background p-10-32 pointer"
         border="none rad-10"
         font="w-400 s-1.1rem"
         target="_blank"
@@ -25,7 +25,7 @@
         <a
           v-if="project.description.length > 440"
           ref="descriptionToggle"
-          class="color-translucent-black pointer"
+          class="color-show-more-text pointer"
           font="s-1rem w-400"
           @click="hideDescription = !hideDescription"
         >
@@ -50,9 +50,3 @@ export default defineNuxtComponent({
   }),
 });
 </script>
-
-<style scoped>
-.visit-btn {
-  background: var(--high-purple) url("/noise.avif");
-}
-</style>

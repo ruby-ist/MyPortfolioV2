@@ -10,8 +10,8 @@
 
 <style scoped>
 .cls-1 {
-  fill: var(--grey);
-  stroke: var(--grey);
+  fill: var(--icon);
+  stroke: var(--icon);
   stroke-miterlimit: 10;
 }
 </style>

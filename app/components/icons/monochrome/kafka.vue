@@ -12,6 +12,6 @@
 
 <style scoped>
 .cls-1 {
-  fill: var(--medium-brown);
+  fill: var(--icon);
 }
 </style>

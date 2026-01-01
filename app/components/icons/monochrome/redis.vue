@@ -62,12 +62,12 @@
 }
 .cls-1,
 .cls-2 {
-  stroke: var(--medium-brown);
+  stroke: var(--icon);
   stroke-miterlimit: 10;
 }
 .cls-2,
 .cls-3 {
-  fill: var(--medium-brown);
+  fill: var(--icon);
 }
 .cls-2 {
   stroke-width: 0.25px;

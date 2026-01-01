@@ -43,9 +43,8 @@
             'flex just-c-center gap-10 ' +
             '[&>.swiper-pagination-bullet-active]:w-8 ' +
             '[&>.swiper-pagination-bullet-active]:h-8 ' +
-            'lg:[&>.swiper-pagination-bullet]:bg-color-medium-black ' +
-            '[&>.swiper-pagination-bullet]:bg-color-translucent-black ' +
-            'strict:[&>.swiper-pagination-bullet-active]:bg-color-grey ' +
+            '[&>.swiper-pagination-bullet]:bg-color-carousel-pagination-bullet ' +
+            'strict:[&>.swiper-pagination-bullet-active]:bg-color-carousel-active-pagination-bullet ' +
             '[&>.swiper-pagination-bullet]:w-7 ' +
             '[&>.swiper-pagination-bullet]:h-7 ' +
             '[&>.swiper-pagination-bullet]:border-rad-25'

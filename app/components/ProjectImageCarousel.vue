@@ -28,8 +28,8 @@
           'flex just-c-center gap-10 m-10-0-20 ' +
           '[&>.swiper-pagination-bullet-active]:w-8 ' +
           '[&>.swiper-pagination-bullet-active]:h-8 ' +
-          '[&>.swiper-pagination-bullet]:bg-color-transparent-black ' +
-          'strict:[&>.swiper-pagination-bullet-active]:bg-color-high-purple ' +
+          '[&>.swiper-pagination-bullet]:bg-color-carousel-pagination-bullet ' +
+          'strict:[&>.swiper-pagination-bullet-active]:bg-color-carousel-active-pagination-bullet ' +
           '[&>.swiper-pagination-bullet]:w-7 ' +
           '[&>.swiper-pagination-bullet]:h-7 ' +
           '[&>.swiper-pagination-bullet]:border-rad-25'

@@ -1,5 +1,8 @@
 <template>
-  <table border-collapse="collapse">
+  <table
+    border-collapse="collapse"
+    class="noisy-highlighted-background [&_td]:bg-color-main-background [&_td]:noisy-background"
+  >
     <tbody>
       <!-- ROW 1 -->
       <tr>
@@ -248,14 +251,3 @@
     </tbody>
   </table>
 </template>
-
-<style>
-table {
-  background:
-    url("/noise.avif"), linear-gradient(115deg, var(--beach), var(--sea-green));
-}
-
-td {
-  background: var(--beige) url("/noise.avif");
-}
-</style>
