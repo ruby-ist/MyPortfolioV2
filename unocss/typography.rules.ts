@@ -49,4 +49,11 @@ export default [
   ["no-underline", { "text-decoration": "none" }],
   ["transform-none", { "text-transform": "none" }],
   ["break-word", { "word-break": "break-word" }],
+  ["ellipsis", { "text-overflow": "ellipsis" }],
+  [
+    /^ws-(\w+)$/,
+    ([, value]) => ({
+      "white-space": value,
+    }),
+  ],
 ] as Rule[];

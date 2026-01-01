@@ -5,7 +5,7 @@
       border="1px solid color-code-block-border b-0 rad-8-8-0-0"
       font="s-0.75rem"
     >
-      <div class="w-90p oflow-x-auto" style="white-space: nowrap">
+      <div class="w-90p oflow-x-auto ws-nowrap">
         {{ filename }}
       </div>
       <button

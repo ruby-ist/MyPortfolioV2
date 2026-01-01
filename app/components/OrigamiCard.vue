@@ -1,11 +1,6 @@
 <template>
   <a
-    class="flex column gap-12 pointer color-primary-text absolute"
-    :style="{
-      left: `${origamiInfo.left}px`,
-      top: `${origamiInfo.top}px`,
-      width: 'var(--card-width)',
-    }"
+    class="flex column gap-12 pointer color-primary-text w-var-card-width absolute l-var-card-left-position t-var-card-top-position"
     :href="`/origami/${origamiInfo.picFolderName}`"
   >
     <img
@@ -28,8 +23,7 @@
       </div>
       <div
         font="s-0.75rem"
-        class="color-secondary-text w-250 oflow-x-hidden"
-        style="white-space: nowrap; text-overflow: ellipsis"
+        class="color-secondary-text w-250 oflow-x-hidden ws-nowrap ellipsis"
       >
         {{ origamiInfo.author }}
       </div>
@@ -45,5 +39,21 @@ export default defineNuxtComponent({
       required: true,
     },
   },
+  computed: {
+    cardLeftPosition() {
+      return `${this.origamiInfo.left}px`;
+    },
+
+    cardTopPosition() {
+      return `${this.origamiInfo.top}px`;
+    },
+  },
 });
 </script>
+
+<style scoped>
+a {
+  --card-left-position: v-bind(cardLeftPosition);
+  --card-top-position: v-bind(cardTopPosition);
+}
+</style>

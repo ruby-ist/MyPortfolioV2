@@ -15,21 +15,36 @@
         <p class="mb-40 lh-38px md:lh-44px lg:lh-44px" font="f-info-font">
           I build elegant things with Ruby <em>and</em> Rails, mess around with
           Vue and Nuxt for fun, and fold
-          <a class="relative color-brown" href="/origami">origami</a> when I’m
-          not debugging reality. I also write
-          <a class="relative color-brown" href="/blogs">blogs</a> about what I
-          learn and find interesting, and build
-          <a class="relative color-brown" href="/projects">projects</a> to show
-          where curiosity takes me.
+          <a
+            class="relative color-brown [&::after]:highlighted-decoration"
+            href="/origami"
+            >origami</a
+          >
+          when I’m not debugging reality. I also write
+          <a
+            class="relative color-brown [&::after]:highlighted-decoration"
+            href="/blogs"
+            >blogs</a
+          >
+          about what I learn and find interesting, and build
+          <a
+            class="relative color-brown [&::after]:highlighted-decoration"
+            href="/projects"
+            >projects</a
+          >
+          to show where curiosity takes me.
         </p>
         <p font="f-info-font">
           Contact:&ensp;
-          <a class="relative color-brown" href="mailto:srira.venkat@gmail.com">
+          <a
+            class="relative color-brown [&::after]:highlighted-decoration"
+            href="mailto:srira.venkat@gmail.com"
+          >
             Email
           </a>
           <span>,</span>
           <a
-            class="relative color-brown"
+            class="relative color-brown [&::after]:highlighted-decoration"
             target="_blank"
             href="https://www.linkedin.com/in/sriravenkat/"
           >
@@ -41,18 +56,3 @@
     <div class="grid place-i-center md:place-i-end"><IconsGrid /></div>
   </main>
 </template>
-
-<style scoped>
-a::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 66%;
-  left: -0.1em;
-  right: -0.1em;
-  bottom: 0;
-  border-radius: 4px;
-  height: 8px;
-  background-image: url("/noise.avif"), var(--highlight-background);
-}
-</style>

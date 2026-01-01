@@ -19,11 +19,8 @@
           <img
             :src="`/origami/${origamiInfo.picFolderName}/pic_${index + 1}.webp`"
             :alt="`${origamiInfo.picFolderName}_pic_${index + 1}`"
-            class="w-100p"
+            class="w-100p aspect-ratio-var-swiper-slide-aspect-ratio"
             border="rad-20-20-0-0 lg:rad-15"
-            :style="{
-              'aspect-ratio': 1 / origamiInfo.heightWidthRatio,
-            }"
           />
         </swiper-slide>
       </swiper-container>
@@ -81,4 +78,13 @@ const props = defineProps<{
 const swiper = ref(null);
 const swiperEl = useSwiper(swiper);
 const paginatable = computed(() => props.origamiInfo.imagesCount > 1);
+const swiperSlideAspectRatio = computed(
+  () => 1 / props.origamiInfo.heightWidthRatio,
+);
 </script>
+
+<style scoped>
+#origami-swiper {
+  --swiper-slide-aspect-ratio: v-bind(swiperSlideAspectRatio);
+}
+</style>

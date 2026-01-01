@@ -1180,7 +1180,7 @@ export const ORIGAMI_INFO_ARRAY = [
     heightWidthRatio: 1.15,
     imagesCount: 2,
     description:
-      "He too has desire\nof letting all desires go— \nthe contradiction",
+      "He too had desire\nof letting all desires go— \nthe contradiction",
   },
   {
     id: 114,

@@ -24,8 +24,7 @@
     <NuxtPage v-if="modelName" />
     <div v-else ref="origamiGridContainer" class="m-0-0-40 md:m-40-0">
       <FastScrollButtons
-        class="fixed z-1 b-69 md:b-54"
-        style="right: var(--scroll-button-right-position)"
+        class="fixed z-1 b-69 md:b-54 r-var-scroll-button-right-position"
       />
       <div
         ref="origamiGrid"
@@ -183,20 +182,20 @@ export default defineNuxtComponent({
 }
 
 @media (max-width: 1080px) {
-  #origami-main {
+  #origami {
     --grid-area: 0.9;
   }
 }
 
 @media (max-width: 720px) {
-  #origami-main {
+  #origami {
     --card-width: 288px;
     --cards-gap: 40px;
   }
 }
 
 @media (max-width: 684px) {
-  #origami-main {
+  #origami {
     --scroll-button-right-position: calc(((100vw - 288px) / 2) - 23px);
   }
 }
