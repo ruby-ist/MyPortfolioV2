@@ -12,29 +12,7 @@
         <a class="color-secondary" href="/">Srira</a>'s
         <a class="color-secondary" href="/blogs">Blogs</a>
       </h1>
-      <ClientOnly fallback-tag="button">
-        <button
-          border="0.12rem solid color-theme-button rad-50"
-          class="p-4 h-16 mr-5p md:mr-80 no-bg box-size-content-box pointer"
-          @click="toggleTheme"
-        >
-          <IconsSun
-            class="w-16"
-            :class="{ hidden: colorMode.preference == 'dark' }"
-          />
-          <IconsMoon
-            class="w-16"
-            :class="{ hidden: colorMode.preference == 'light' }"
-          />
-        </button>
-        <template #fallback>
-          <button
-            border="0.12rem solid color-primary rad-50"
-            class="p-4 h-16 mr-5p w-32 md:mr-80 no-bg box-size-content-box pointer"
-            @click="toggleTheme"
-          />
-        </template>
-      </ClientOnly>
+      <BlogThemeSwitcher />
     </nav>
     <NuxtPage v-if="blogName" />
     <div v-else class="flex just-c-center md:p-36-0">
@@ -47,13 +25,7 @@
 
 <script setup lang="ts">
 const blogName = useRoute().params.slug;
-const colorMode = useColorMode();
-
 const { data: blogs } = await useAsyncData("blogs", () =>
   queryCollection("blogs").all(),
 );
-
-const toggleTheme = () => {
-  colorMode.preference = colorMode.preference === "light" ? "dark" : "light";
-};
 </script>
