@@ -230,7 +230,7 @@
         <td />
         <td />
         <td />
-        <IconCell title="Figma">
+        <IconCell class="strict:bd-b-0" title="Figma">
           <template #mono>
             <IconsMonochromeFigma class="w-30 md:w-36 lg:w-36" />
           </template>
@@ -238,7 +238,7 @@
             <IconsColoredFigma class="w-30 md:w-36 lg:w-36" />
           </template>
         </IconCell>
-        <IconCell title="Adobe Illustrator">
+        <IconCell class="strict:bd-b-0" title="Adobe Illustrator">
           <template #mono>
             <IconsMonochromeIllustrator class="w-30 md:w-36 lg:w-36" />
           </template>

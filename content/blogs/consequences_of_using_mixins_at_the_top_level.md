@@ -4,7 +4,7 @@ date: 29/12/2025
 tags: ["ruby", "rails"]
 ---
 
-Have you ever seen or included a module at the top level, outside of all classes and modules? If yes, you've already regretted it, removed it, or you're going to regret it. Let's see why.
+Have you ever seen or included a module at the top level outside of all classes and modules? If yes, you've already regretted it, removed it, or you're going to regret it. Let's see why.
 
 Consider a module named `CommonHelper`:
 
@@ -75,11 +75,11 @@ All of them will return the current time in Chicago. If that hasn't weirded you 
 nil.current_time_in_chicago
 ```
 
-Now, you will realize something is fishy here. I'll explain why but let's refresh how mixins work first.
+Now you will realize something is fishy here. I'll explain why but let's refresh how mixins work first.
 
 > `include` is used to mix in a module interface to any instances of a class. It can only be called from the scope of a class.
 
-> `prepend` works in the same way as `include` but the difference is that if you prepend a module, methods defined in that module will appear first in the method lookup path of instances instead of methods defined in the class. (it'll override the methods in the class)
+> `prepend` works in the same way as `include` but the difference is that if you prepend a module, methods defined in that module will appear first in the method lookup path of instances, instead of methods defined in the class. (it'll override the methods defined in the class)
 
 > `extend` is used to mix in a module to a single object. It can either be class or object (_inner me is screaming both are same!_). After extending, methods defined in the extended module will appear first in the method lookup path of the object.
 
