@@ -2,6 +2,18 @@
 import { origamiLastMod, origamiRoutes } from "./app/utils/origami";
 
 export default defineNuxtConfig({
+  app: {
+    head: {
+      link: [
+        { rel: "preconnect", href: "https://fonts.googleapis.com" },
+        {
+          rel: "preconnect",
+          href: "https://fonts.gstatic.com",
+          crossorigin: "",
+        },
+      ],
+    },
+  },
   colorMode: {
     preference: "light",
   },
