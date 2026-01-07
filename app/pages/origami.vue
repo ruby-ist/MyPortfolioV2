@@ -42,6 +42,15 @@
 
 <script lang="ts">
 export default defineNuxtComponent({
+  setup() {
+    if (useRoute().params.slug) return;
+
+    useSeoMeta({
+      title: "Srira's Origami",
+      ogTitle: "Srira's Origami",
+    });
+  },
+
   data: () => ({
     width: import.meta.client ? window.innerWidth : 0,
     gridHeight: "100dvh",
@@ -66,10 +75,7 @@ export default defineNuxtComponent({
     modelName() {
       const route = useRoute();
       const modelName = route.params.slug as string;
-      const origami = ORIGAMI_INFO_ARRAY.find(
-        (origami) => origami.picFolderName === modelName,
-      );
-      return origami ? origami.name : null;
+      return findOrigamiByModelName(modelName)?.name;
     },
 
     cardWidth(): number {

@@ -36,3 +36,14 @@
     </div>
   </main>
 </template>
+
+<script lang="ts">
+export default defineNuxtComponent({
+  setup() {
+    useSeoMeta({
+      title: "Srira's Projects",
+      ogTitle: "Srira's Projects",
+    });
+  },
+});
+</script>

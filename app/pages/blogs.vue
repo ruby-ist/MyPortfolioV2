@@ -28,4 +28,11 @@ const blogName = useRoute().params.slug;
 const { data: blogs } = await useAsyncData("blogs", () =>
   queryCollection("blogs").all(),
 );
+
+if (!blogName) {
+  useSeoMeta({
+    title: "Srira's Blogs",
+    ogTitle: "Srira's Blogs",
+  });
+}
 </script>

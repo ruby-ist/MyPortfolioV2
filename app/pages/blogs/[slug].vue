@@ -12,4 +12,10 @@ const slug = useRoute().params.slug;
 const { data: blog } = await useAsyncData(`blog-${slug}`, () => {
   return queryCollection("blogs").path(`/blogs/${slug}`).first();
 });
+useSeoMeta({
+  title: `${blog.value.title} | Blog by Sriram V`,
+  description: blog.value.description,
+  ogTitle: `${blog.value.title} | Blog by Sriram V`,
+  ogDescription: blog.value.description,
+});
 </script>

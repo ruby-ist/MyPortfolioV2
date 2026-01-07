@@ -1262,3 +1262,21 @@ export const origamiLastMod = ORIGAMI_INFO_ARRAY.map((origami) => ({
   loc: `/origami/${origami.picFolderName}`,
   lastmod: origami.lastModifiedDate,
 }));
+
+export function findOrigamiByModelName(modelName: string) {
+  return ORIGAMI_INFO_ARRAY.find(
+    (origami) => origami.picFolderName === modelName,
+  );
+}
+type OrigamiSeoMetaInput = Parameters<typeof useSeoMeta>[0];
+
+export function createSeoMetaForOrigami(
+  origami: OrigamiInfo,
+): OrigamiSeoMetaInput {
+  return {
+    title: `Origami ${origami?.name} | Srira's Origami`,
+    description: `Origami ${origami?.name} designed by ${origami?.author} folded by Sriram V on ${origami?.date.toDateString()}`,
+    ogTitle: `Origami ${origami?.name} | Srira's Origami`,
+    ogDescription: `Origami ${origami?.name} designed by ${origami?.author} folded by Sriram V on ${origami?.date.toDateString()}`,
+  };
+}

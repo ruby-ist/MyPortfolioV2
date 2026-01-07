@@ -1,5 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { origamiLastMod, origamiRoutes } from "./app/utils/origami";
+import { blogLastMod, blogRoutes } from "./app/utils/blogs";
 
 export default defineNuxtConfig({
   app: {
@@ -43,7 +44,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      routes: [...origamiRoutes],
+      routes: [...origamiRoutes, ...blogRoutes],
     },
   },
   site: {
@@ -57,6 +58,7 @@ export default defineNuxtConfig({
         lastmod: "2025-11-29",
       },
       ...origamiLastMod,
+      ...blogLastMod,
     ],
   },
   vue: {

@@ -26,7 +26,6 @@ export default defineConfig({
           "Life Savers",
           "Wix Madefor Text",
           "Tilt Warp",
-          "Inter",
           "JetBrains Mono",
         ],
       },

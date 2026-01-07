@@ -8,3 +8,14 @@
     <div class="grid place-i-center md:place-i-end"><IconsGrid /></div>
   </main>
 </template>
+
+<script lang="ts">
+export default defineNuxtComponent({
+  setup() {
+    useSeoMeta({
+      title: "Sriram V's Portfolio",
+      ogTitle: "Srira's Portfolio",
+    });
+  },
+});
+</script>
