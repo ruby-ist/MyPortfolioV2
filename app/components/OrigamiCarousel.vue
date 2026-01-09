@@ -16,7 +16,7 @@
           v-for="index in Array.from(Array(origamiInfo.imagesCount).keys())"
           :key="index"
         >
-          <img
+          <cdnImage
             :src="`/origami/${origamiInfo.picFolderName}/pic_${index + 1}.webp`"
             :alt="`${origamiInfo.picFolderName}_pic_${index + 1}`"
             class="w-100p aspect-ratio-var-swiper-slide-aspect-ratio"
@@ -57,7 +57,7 @@
     </div>
     <template #fallback>
       <div>
-        <img
+        <cdnImage
           v-for="index in Array.from(Array(origamiInfo.imagesCount).keys())"
           :key="index"
           :src="`/origami/${origamiInfo.picFolderName}/pic_${index + 1}.webp`"

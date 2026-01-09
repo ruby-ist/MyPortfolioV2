@@ -1,5 +1,5 @@
 <template>
-  <div font="f-code-font" class="m-14-0">
+  <div font="f-code-font" class="m-14-0 [&_span]:font-f-code-font">
     <div
       class="bg-color-filename-background noisy-background m-0 p-12-8-12-12 color-filename flex align-i-center just-c-space-between h-14 [&_button]:hover:block"
       border="1px solid color-code-block-border b-0 rad-8-8-0-0"

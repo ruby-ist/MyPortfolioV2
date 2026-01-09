@@ -14,7 +14,7 @@
           v-for="index in Array.from(Array(project.imagesCount).keys())"
           :key="index"
         >
-          <img
+          <cdnImage
             :src="`/projects/${project.name}/pic_${index + 1}.webp`"
             :alt="`${project.name}_pic_${index + 1}`"
             class="w-100p"
@@ -38,7 +38,7 @@
     </div>
     <template #fallback>
       <div>
-        <img
+        <cdnImage
           v-for="index in Array.from(Array(project.imagesCount).keys())"
           :key="index"
           :src="`/projects/${project.name}/pic_${index + 1}.webp`"

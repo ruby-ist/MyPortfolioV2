@@ -3,7 +3,7 @@
     class="flex column gap-12 pointer color-primary-text w-var-card-width absolute l-var-card-left-position t-var-card-top-position"
     :href="`/origami/${origamiInfo.picFolderName}`"
   >
-    <img
+    <cdnImage
       :src="`/origami/${origamiInfo.picFolderName}/pic_1.webp`"
       :alt="origamiInfo.name"
       class="w-100p bd-rad-15 md:bd-rad-23 lg:bd-rad-23"
