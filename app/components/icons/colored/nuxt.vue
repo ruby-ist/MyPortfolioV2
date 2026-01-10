@@ -1,5 +1,5 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148.03779 99.48026">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 100">
     <g id="s2DyCh.tif">
       <path
         class="cls-1"

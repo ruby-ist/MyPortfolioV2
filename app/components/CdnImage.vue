@@ -1,11 +1,5 @@
 <template>
-  <img
-    class="bg-color-primary-text"
-    :src="cdnSrc"
-    :alt="alt"
-    :loading="loadingSafe"
-    @error="switchToLocal"
-  />
+  <img :src="cdnSrc" :alt="alt" :loading="loadingSafe" @error="switchToLocal" />
 </template>
 
 <script lang="ts">
