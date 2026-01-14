@@ -6,6 +6,7 @@ export interface Project {
   url: string;
   imagesCount: number;
   type: "responsive" | "mobile";
+  heightWidthRatio: number;
 }
 
 export interface GitHubRepo {
@@ -31,6 +32,7 @@ export const PROJECTS = [
     url: "https://geobits.onrender.com",
     imagesCount: 5,
     type: "responsive",
+    heightWidthRatio: 0.63,
   },
   {
     id: 2,
@@ -44,6 +46,7 @@ export const PROJECTS = [
     url: "https://rubyonwasm.onrender.com",
     imagesCount: 7,
     type: "mobile",
+    heightWidthRatio: 2.35,
   },
   {
     id: 3,
@@ -58,6 +61,7 @@ export const PROJECTS = [
     url: "https://rubyonwasm.onrender.com",
     imagesCount: 3,
     type: "responsive",
+    heightWidthRatio: 0.63,
   },
 ] as Project[];
 
