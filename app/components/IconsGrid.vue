@@ -17,14 +17,15 @@
         </IconCell>
         <td />
         <td />
-        <IconCell class="strict:bd-t-0" title="Kafka">
+        <!-- <IconCell class="strict:bd-t-0" title="Kafka">
           <template #mono>
             <IconsMonochromeKafka class="w-14 md:w-20 lg:w-20" />
           </template>
           <template #color>
             <IconsColoredKafka class="w-14 md:w-20 lg:w-20" />
           </template>
-        </IconCell>
+        </IconCell> -->
+        <td />
         <td />
       </tr>
 
@@ -55,7 +56,7 @@
             <IconsColoredWebsocket class="w-30 md:w-36 lg:w-36" />
           </template>
         </IconCell>
-        <IconCell title="gRPC">
+        <!-- <IconCell title="gRPC">
           <template #mono>
             <IconsMonochromeGrpc class="w-36 md:w-42 lg:w-42" />
           </template>
@@ -70,7 +71,9 @@
           <template #color>
             <IconsColoredGo class="w-34 md:w-40 lg:w-40" />
           </template>
-        </IconCell>
+        </IconCell> -->
+        <td />
+        <td />
       </tr>
 
       <!-- ROW 3 -->
