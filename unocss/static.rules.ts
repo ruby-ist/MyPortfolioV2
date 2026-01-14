@@ -10,4 +10,5 @@ export default [
     "eased-theme-transition",
     { transition: "background-color 0.2s ease, color 0.2s ease" },
   ],
+  ["image-loaded-transition", { transition: "opacity 0.2s ease-in-out" }],
 ] as Rule[];

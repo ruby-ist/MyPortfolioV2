@@ -1,5 +1,11 @@
 <template>
-  <img :src="cdnSrc" :alt="alt" :loading="loadingSafe" @error="switchToLocal" />
+  <img
+    :src="cdnSrc"
+    :alt="alt"
+    :loading="loadingSafe"
+    @error="switchToLocal"
+    @load="$emit('imageLoad')"
+  />
 </template>
 
 <script lang="ts">
@@ -18,9 +24,13 @@ export default defineNuxtComponent({
       default: "eager",
     },
   },
+
+  emits: ["imageLoad"],
+
   data: () => ({
     loaded: false,
   }),
+
   computed: {
     cdnSrc() {
       return `https://cdn.jsdelivr.net/gh/ruby-ist/MyPortfolioV2@main/public${this.src}`;

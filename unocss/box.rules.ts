@@ -144,7 +144,10 @@ export default [
   [
     /^backdrop-blur-(\d+)(\w{1,3})?$/,
     ([, value, unit]: string[]) => {
-      return { "backdrop-filter": `blur(${value}${mapUnit(unit)})` };
+      return {
+        "backdrop-filter": `blur(${value}${mapUnit(unit)})`,
+        "-webkit-backdrop-filter": `blur(${value}${mapUnit(unit)})`,
+      };
     },
   ],
 
