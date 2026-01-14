@@ -16,11 +16,11 @@
           v-for="index in Array.from(Array(origamiInfo.imagesCount).keys())"
           :key="index"
         >
-          <cdnImage
+          <ImageWithLoader
             :src="`/origami/${origamiInfo.picFolderName}/pic_${index + 1}.webp`"
             :alt="`${origamiInfo.picFolderName}_pic_${index + 1}`"
             class="w-100p aspect-ratio-var-swiper-slide-aspect-ratio"
-            border="rad-20-20-0-0 lg:rad-15"
+            border-class="bd-rad-20-20-0-0 lg:bd-rad-15"
           />
         </swiper-slide>
       </swiper-container>
@@ -57,13 +57,13 @@
     </div>
     <template #fallback>
       <div>
-        <cdnImage
+        <ImageWithLoader
           v-for="index in Array.from(Array(origamiInfo.imagesCount).keys())"
           :key="index"
           :src="`/origami/${origamiInfo.picFolderName}/pic_${index + 1}.webp`"
           :alt="`${origamiInfo.picFolderName}_pic_${index + 1}`"
-          border="rad-15"
-          class="w-100p"
+          border-class="bd-rad-20-20-0-0 lg:bd-rad-15"
+          class="w-100p aspect-ratio-var-swiper-slide-aspect-ratio"
           :class="{ 'no-display': index !== 0 }"
         />
       </div>

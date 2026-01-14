@@ -14,11 +14,11 @@
           v-for="index in Array.from(Array(project.imagesCount).keys())"
           :key="index"
         >
-          <cdnImage
+          <ImageWithLoader
             :src="`/projects/${project.name}/pic_${index + 1}.webp`"
             :alt="`${project.name}_pic_${index + 1}`"
             class="w-100p"
-            border="rad-15"
+            border-class="bd-rad-15"
           />
         </swiper-slide>
       </swiper-container>
@@ -38,14 +38,15 @@
     </div>
     <template #fallback>
       <div>
-        <cdnImage
+        <ImageWithLoader
           v-for="index in Array.from(Array(project.imagesCount).keys())"
           :key="index"
           :src="`/projects/${project.name}/pic_${index + 1}.webp`"
           :alt="`${project.name}_pic_${index + 1}`"
-          border="rad-15"
-          class="w-100p"
-          :class="{ 'no-display': index !== 0 }"
+          border-class="bd-rad-15"
+          :class="`${project.type === 'mobile' ? 'w-30p mr-3p inline-block' : 'w-100p'}
+                   ${project.type === 'mobile' && index > 2 ? 'no-display' : ''}
+                   ${project.type === 'responsive' && index !== 0 ? 'no-display' : ''}`"
         />
       </div>
     </template>
