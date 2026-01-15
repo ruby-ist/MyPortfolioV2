@@ -46,6 +46,7 @@
               :key="origamiInfo.id"
               ref="OrigamiCards"
               :origami-info="origamiInfo"
+              server-side
             />
           </div>
         </template>

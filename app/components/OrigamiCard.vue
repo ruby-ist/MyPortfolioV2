@@ -1,6 +1,9 @@
 <template>
   <a
-    class="flex column gap-12 pointer color-primary-text w-var-card-width absolute l-var-card-left-position t-var-card-top-position"
+    class="flex column gap-12 pointer color-primary-text w-var-card-width"
+    :class="{
+      'absolute l-var-card-left-position t-var-card-top-position': !serverSide,
+    }"
     :href="`/origami/${origamiInfo.picFolderName}`"
   >
     <ImageWithLoader
@@ -40,6 +43,10 @@ export default defineNuxtComponent({
     origamiInfo: {
       type: Object as PropType<PositionedOrigami>,
       required: true,
+    },
+    serverSide: {
+      type: Boolean,
+      default: false,
     },
   },
   computed: {
