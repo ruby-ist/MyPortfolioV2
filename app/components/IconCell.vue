@@ -5,6 +5,7 @@
     class="p-0"
     @mouseenter="colorize"
     @mouseleave="decolorize"
+    @mouseup="decolorize"
   >
     <div
       class="w-[calc(80vw/6)] h-[calc(80vw/6)] md:w-69 md:h-69 lg:w-69 lg:h-69 grid place-i-center"
