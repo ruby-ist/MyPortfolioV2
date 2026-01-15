@@ -3,5 +3,10 @@ body {
   --info-font: "Bellefair", serif;
   --paragraph-font: "Wix Madefor Text", sans-serif;
   --header-font: "Tilt Warp", serif;
-  --code-font: "Monaco", monospace;
+  --code-font: Monaco, monospace;
+}
+
+@font-face {
+  font-family: Monaco;
+  src: url("~/assets/fonts/Monaco.ttf");
 }
