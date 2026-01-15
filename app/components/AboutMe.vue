@@ -1,7 +1,7 @@
 <template>
   <div font="s-1.38rem md:s-1.45rem lg:s-1.45rem">
     <h1
-      font="w-400 s-1.6rem md:s-2.2rem lg:s-2.2rem f-name-font"
+      font="md:w-400 s-1.6rem md:s-2.2rem lg:s-2.2rem f-name-font"
       class="mb-48 md:mb-60 lg:mb-60"
     >
       Sriram V
