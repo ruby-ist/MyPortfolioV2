@@ -26,5 +26,8 @@
     "eslint": "^9.0.0",
     "serve": "^14.2.5",
     "unocss": "^66.5.4"
+  },
+  "overrides": {
+    "estree-walker": "2.0.2"
   }
 }
