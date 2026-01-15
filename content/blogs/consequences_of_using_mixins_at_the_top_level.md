@@ -1,5 +1,6 @@
 ---
 title: Consequences of using mixins at the top level
+description: Exploring why including Ruby modules at the top level is risky, how it pollutes objects, and introduces unwanted behaviors.
 date: 29/12/2025
 tags: ["ruby", "rails"]
 ---

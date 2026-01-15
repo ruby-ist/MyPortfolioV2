@@ -33,6 +33,10 @@ if (!blogName) {
   useSeoMeta({
     title: "Srira's Blogs",
     ogTitle: "Srira's Blogs",
+    description:
+      "A collection of technical blog posts by Sriram V on web development, Ruby, Rails, and things learned along the way.",
+    ogDescription:
+      "A collection of technical blog posts by Sriram V on web development, Ruby, Rails, and things learned along the way.",
   });
 }
 </script>

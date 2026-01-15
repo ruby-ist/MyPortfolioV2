@@ -43,6 +43,10 @@ export default defineNuxtComponent({
     useSeoMeta({
       title: "Srira's Projects",
       ogTitle: "Srira's Projects",
+      description:
+        "A showcase of web development projects built by Sriram V to explore ideas and solve problems.",
+      ogDescription:
+        "A showcase of web development projects built by Sriram V to explore ideas and solve problems.",
     });
   },
 });

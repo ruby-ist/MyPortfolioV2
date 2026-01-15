@@ -15,6 +15,10 @@ export default defineNuxtComponent({
     useSeoMeta({
       title: "Sriram V's Portfolio",
       ogTitle: "Srira's Portfolio",
+      description:
+        "I’m Sriram V, a backend developer building elegant systems, specializing in Ruby and Rails. I write technical blogs, build projects, explore Vue and Nuxt, and fold origami.",
+      ogDescription:
+        "I’m Sriram V, a backend developer building elegant systems, specializing in Ruby and Rails. I write technical blogs, build projects, explore Vue and Nuxt, and fold origami.",
     });
   },
 });

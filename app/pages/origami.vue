@@ -48,6 +48,8 @@ export default defineNuxtComponent({
     useSeoMeta({
       title: "Srira's Origami",
       ogTitle: "Srira's Origami",
+      description: "Gallery of origami models folded by Sriram V",
+      ogDescription: "Gallery of origami models folded by Sriram V",
     });
   },
 

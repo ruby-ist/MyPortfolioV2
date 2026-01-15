@@ -53,10 +53,10 @@ export default defineNuxtConfig({
   },
   sitemap: {
     urls: [
-      { loc: "/", lastmod: "2026-01-08" },
-      { loc: "/origami", lastmod: "2025-11-29" },
-      { loc: "/projects", lastmod: "2026-01-08" },
-      { loc: "/blogs", lastmod: "2026-01-08" },
+      { loc: "/", lastmod: "2026-01-15" },
+      { loc: "/origami", lastmod: "2026-01-15" },
+      { loc: "/projects", lastmod: "2026-01-15" },
+      { loc: "/blogs", lastmod: "2026-01-15" },
       ...origamiLastMod,
       ...blogLastMod,
     ],
