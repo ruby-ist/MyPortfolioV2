@@ -26,16 +26,30 @@
       <FastScrollButtons
         class="fixed z-1 b-69 md:b-54 r-var-scroll-button-right-position"
       />
-      <div
-        class="max-w-80vw relative flex row wrap gap-20 just-c-center h-var-grid-height"
-      >
-        <OrigamiCard
-          v-for="origamiInfo in origamiCards"
-          :key="origamiInfo.id"
-          ref="OrigamiCards"
-          :origami-info="origamiInfo"
-        />
-      </div>
+      <ClientOnly fallback-tag="div">
+        <div
+          class="max-w-80vw relative flex row wrap gap-20 just-c-center h-var-grid-height"
+        >
+          <OrigamiCard
+            v-for="origamiInfo in origamiCards"
+            :key="origamiInfo.id"
+            ref="OrigamiCards"
+            :origami-info="origamiInfo"
+          />
+        </div>
+        <template #fallback>
+          <div
+            class="max-w-80vw relative flex row wrap gap-20 just-c-center h-var-grid-height"
+          >
+            <OrigamiCard
+              v-for="origamiInfo in getOrigamiPositionedCards(4, 250, 20, 52)"
+              :key="origamiInfo.id"
+              ref="OrigamiCards"
+              :origami-info="origamiInfo"
+            />
+          </div>
+        </template>
+      </ClientOnly>
     </div>
   </main>
 </template>
@@ -56,7 +70,7 @@ export default defineNuxtComponent({
   data: () => ({
     width: import.meta.client ? window.innerWidth : 0,
     gridHeight: "100dvh",
-    gridPadding: "10%",
+    gridPadding: "0 10%",
     origamiCards: [] as PositionedOrigami[],
   }),
 
@@ -130,7 +144,12 @@ export default defineNuxtComponent({
   methods: {
     updateLayout() {
       this.width = window.innerWidth;
-      this.origamiCards = this.getPositionedCards(this.gridCount);
+      this.origamiCards = getOrigamiPositionedCards(
+        this.gridCount,
+        this.cardWidth,
+        this.cardsGap,
+        this.cardInfoHeight,
+      );
       this.updateWidth();
       this.updateGridPadding();
       this.updateGridHeight();
@@ -153,23 +172,6 @@ export default defineNuxtComponent({
 
     updateGridPadding() {
       this.gridPadding = `0 calc((100vw - ((var(--card-width) * ${this.gridCount}) + (var(--cards-gap) * ${this.gridCount - 1}))) / 2)`;
-    },
-
-    getPositionedCards(columnCount: number): PositionedOrigami[] {
-      const columnHeights = Array(columnCount).fill(0);
-      const positioned: PositionedOrigami[] = [];
-
-      ORIGAMI_INFO_ARRAY.forEach((info, index) => {
-        const column = index % columnCount;
-        const heightPx = info.heightWidthRatio * this.cardWidth;
-        const top = columnHeights[column];
-        const left = column * (this.cardWidth + this.cardsGap);
-
-        positioned.push({ ...info, top, left });
-        columnHeights[column] += heightPx + this.cardInfoHeight + this.cardsGap;
-      });
-
-      return positioned;
     },
   },
 });

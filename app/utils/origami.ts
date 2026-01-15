@@ -1290,3 +1290,25 @@ export function createSeoMetaForOrigami(
     ogDescription: `Origami ${origami?.name} designed by ${origami?.author} folded by Sriram V on ${origami?.date.toDateString()}`,
   };
 }
+
+export function getOrigamiPositionedCards(
+  columnCount: number,
+  width: number,
+  gap: number,
+  infoHeight: number,
+): PositionedOrigami[] {
+  const columnHeights = Array(columnCount).fill(0);
+  const positioned: PositionedOrigami[] = [];
+
+  ORIGAMI_INFO_ARRAY.forEach((info, index) => {
+    const column = index % columnCount;
+    const heightPx = info.heightWidthRatio * width;
+    const top = columnHeights[column];
+    const left = column * (width + gap);
+
+    positioned.push({ ...info, top, left });
+    columnHeights[column] += heightPx + infoHeight + gap;
+  });
+
+  return positioned;
+}
