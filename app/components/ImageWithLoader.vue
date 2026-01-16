@@ -2,7 +2,7 @@
   <div class="relative aspect-ratio-var-image-aspect-ratio">
     <div
       ref="loader"
-      class="backdrop-blur-20 w-100p h-100p noisy-background absolute"
+      class="loader backdrop-blur-20 w-100p h-100p noisy-background absolute"
       :class="borderClass"
     />
     <cdnImage

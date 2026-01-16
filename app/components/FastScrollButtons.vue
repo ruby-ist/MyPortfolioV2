@@ -2,7 +2,7 @@
   <div>
     <button
       class="bg-color-main-background noisy-background h-36 md:h-32 w-36 md:w-32 grid place-i-center p-4 box-size-content-box strict:bd-b-0 pointer"
-      border="1px solid color-scroll-button-border rad-25-25-0-0"
+      border="1px solid color-primary-border rad-25-25-0-0"
       aria-label="Scroll to top"
       @click="scrollToTop"
     >
@@ -10,7 +10,7 @@
     </button>
     <button
       class="bg-color-main-background noisy-background h-36 md:h-32 w-36 md:w-32 grid place-i-center p-4 box-size-content-box pointer"
-      border="1px solid color-scroll-button-border rad-0-0-25-25"
+      border="1px solid color-primary-border rad-0-0-25-25"
       aria-label="Scroll to bottom"
       @click="scrollToBottom"
     >

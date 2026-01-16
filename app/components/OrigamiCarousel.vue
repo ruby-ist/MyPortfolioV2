@@ -19,7 +19,7 @@
           <ImageWithLoader
             :src="`/origami/${origamiInfo.picFolderName}/pic_${index + 1}.webp`"
             :alt="`${origamiInfo.picFolderName}_pic_${index + 1}`"
-            class="w-100p aspect-ratio-var-swiper-slide-aspect-ratio"
+            class="w-100p aspect-ratio-var-swiper-slide-aspect-ratio [&_.loader]:box-size-border-box [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-border"
             border-class="bd-rad-20-20-0-0 lg:bd-rad-15"
           />
         </swiper-slide>
@@ -65,7 +65,7 @@
           :src="`/origami/${origamiInfo.picFolderName}/pic_${index + 1}.webp`"
           :alt="`${origamiInfo.picFolderName}_pic_${index + 1}`"
           border-class="bd-rad-20-20-0-0 lg:bd-rad-15"
-          class="w-100p aspect-ratio-var-swiper-slide-aspect-ratio"
+          class="w-100p aspect-ratio-var-swiper-slide-aspect-ratio [&_.loader]:box-size-border-box [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-border"
           :class="{ 'no-display': index !== 0 }"
         />
       </div>

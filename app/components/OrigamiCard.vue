@@ -10,7 +10,7 @@
       :alt="origamiInfo.name"
       :src="`/origami/${origamiInfo.picFolderName}/pic_1.webp`"
       loading="lazy"
-      class="w-100p aspect-ratio-var-image-aspect-ratio"
+      class="w-100p aspect-ratio-var-image-aspect-ratio [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-border"
       border-class="bd-rad-15 md:bd-rad-23"
     />
     <div class="flex column gap-7">

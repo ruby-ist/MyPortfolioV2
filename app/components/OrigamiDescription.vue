@@ -1,7 +1,7 @@
 <template>
   <div
     class="bg-color-description-background noisy-background w-320 md:w-480 lg:w-inherit p-36 md:p-54 lg:p-60-16p bd-t-0 lg:bd-t-1 box-size-border-box"
-    border="rad-0-0-20-20 lg:rad-25 1px solid color-description-border"
+    border="rad-0-0-20-20 lg:rad-25 1px solid color-primary-border"
   >
     <div>
       <div class="float-left">

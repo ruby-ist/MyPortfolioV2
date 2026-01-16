@@ -11,7 +11,7 @@ main {
     --main-background: #1c1c1c;
     --primary-text: #f0f3ff;
     --secondary-text: #cccccc;
-    --scroll-button-border: #343434;
+    --primary-border: #343434;
     --icon: #cccccc;
   }
 
@@ -21,7 +21,7 @@ main {
     --secondary-text: #cccccc;
     --icon: #cccccc;
     --description-background: #1c1c1c36;
-    --description-border: #1c1c1c;
+    --primary-border: #1c1c1c;
     --carousel-pagination-bullet: #1c1c1c;
     --carousel-active-pagination-bullet: #cccccc;
 
