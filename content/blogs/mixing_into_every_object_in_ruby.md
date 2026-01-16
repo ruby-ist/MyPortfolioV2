@@ -5,7 +5,7 @@ date: 29/12/2025
 tags: ["ruby", "rails"]
 ---
 
-Have you ever seen or included a module at the top level outside of all classes and modules? If yes, you've already regretted it, removed it, or you're going to regret it. Let's see why.
+In Ruby, mixins provide a convenient way to extract shared logic into modules for reuse. At some point, most codebases try to make that shared logic widely accessible. That decision, if carried out without knowing the consequences, can haunt your application like a glitch in the fabric of your codebase
 
 Consider a module named `CommonHelper`:
 
