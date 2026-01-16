@@ -1,6 +1,6 @@
 body {
   --name-font: "Life Savers", serif;
-  --info-font: "Bellefair", serif;
+  --info-font: Bellefair, serif;
   --paragraph-font: "Wix Madefor Text", sans-serif;
   --header-font: "Tilt Warp", serif;
   --code-font: Monaco, monospace;
@@ -8,5 +8,8 @@ body {
 
 @font-face {
   font-family: Monaco;
-  src: url("~/assets/fonts/Monaco.ttf");
+  src:
+    local(Monaco),
+    url("https://cdn.jsdelivr.net/gh/ruby-ist/MyPortfolioV2@main/public/fonts/Monaco.ttf"),
+    url("/fonts/Monaco.ttf");
 }
