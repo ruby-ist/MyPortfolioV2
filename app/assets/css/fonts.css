@@ -12,4 +12,5 @@ body {
     local(Monaco),
     url("https://cdn.jsdelivr.net/gh/ruby-ist/MyPortfolioV2@main/public/fonts/Monaco.ttf"),
     url("/fonts/Monaco.ttf");
+  font-display: swap;
 }

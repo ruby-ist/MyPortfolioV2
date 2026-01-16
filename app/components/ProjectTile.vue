@@ -27,6 +27,7 @@
           ref="descriptionToggle"
           class="color-show-more-text pointer"
           font="s-1rem w-400"
+          href="#"
           @click="hideDescription = !hideDescription"
         >
           {{ hideDescription ? "...Show more" : " Show less" }}

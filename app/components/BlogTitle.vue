@@ -23,7 +23,7 @@
       <span
         v-for="(tag, index) in blog.tags"
         :key="index"
-        class="bg-color-tag-background color-primary p-3-11"
+        class="bg-color-tag-background color-tag p-3-11"
         border="1px solid color-tag-border rad-6"
         font="s-0.8rem"
       >

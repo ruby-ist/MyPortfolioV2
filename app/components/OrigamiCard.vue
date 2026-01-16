@@ -15,7 +15,7 @@
     />
     <div class="flex column gap-7">
       <div class="flex align-i-center just-c-space-between">
-        <h5 class="m-0" font="w-400">{{ origamiInfo.name }}</h5>
+        <div class="m-0" font="s-0.87rem w-400">{{ origamiInfo.name }}</div>
         <NuxtTime
           font="s-0.75rem"
           month="short"

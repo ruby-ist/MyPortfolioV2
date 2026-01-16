@@ -43,7 +43,7 @@ export const PROJECTS = [
       "It works completely offline, with features like filters for organizing transactions, " +
       "interactive graphs for visualizing spending, and import/export options for easy data management. " +
       "With a clean, simple interface, it offers a secure and hassle-free way to manage your finances on your mobile.",
-    url: "https://rubyonwasm.onrender.com",
+    url: "https://local-ledger.onrender.com",
     imagesCount: 7,
     type: "mobile",
     heightWidthRatio: 2.35,

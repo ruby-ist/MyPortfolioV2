@@ -1,10 +1,19 @@
 import type { Rule } from "unocss";
 
 export default [
-  ["noisy-background", { "background-image": 'url("/noise.avif")' }],
+  [
+    "noisy-background",
+    {
+      "background-image":
+        'url("https://cdn.jsdelivr.net/gh/ruby-ist/MyPortfolioV2@main/public/noise.avif")',
+    },
+  ],
   [
     "noisy-highlighted-background",
-    { "background-image": 'url("/noise.avif"), var(--highlight-background)' },
+    {
+      "background-image":
+        'url("https://cdn.jsdelivr.net/gh/ruby-ist/MyPortfolioV2@main/public/noise.avif"), var(--highlight-background)',
+    },
   ],
   [
     "eased-theme-transition",

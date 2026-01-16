@@ -11,6 +11,7 @@
       <button
         border="1px solid color-code-block-border rad-4"
         class="no-bg md:no-display hover:bg-color-code-block-background p-4 h-14 w-14 box-size-content-box pointer relative z-1"
+        aria-label="Copy code snippet"
         @click="copyToClipBoard"
       >
         <IconsCopied v-if="copied" class="w-14" />

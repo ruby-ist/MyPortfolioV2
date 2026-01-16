@@ -46,6 +46,7 @@ main {
     --secondary: #190482;
     --tag-background: #c2d9ff;
     --tag-border: #c2d9ff;
+    --tag: #3d1abd;
     --code-block-border: #190482;
     --code-block-background: #c2d9ff82;
     --filename-background: #b8b5ff;
@@ -67,6 +68,7 @@ html.dark main {
     --secondary: #c2d9ff;
     --tag-background: #141f32;
     --tag-border: #836fff;
+    --tag: #836fff;
     --code-block-border: #343434;
     --code-block-background: #141f3282;
     --filename-background: #000;

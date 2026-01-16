@@ -3,15 +3,16 @@
     <button
       border="0.12rem solid color-theme-button rad-50"
       class="p-4 h-16 mr-5p md:mr-80 no-bg box-size-content-box pointer"
+      :aria-label="colorMode.preference === 'dark' ? 'light mode' : 'dark mode'"
       @click="toggleTheme"
     >
       <IconsSun
         class="w-16"
-        :class="{ hidden: colorMode.preference == 'dark' }"
+        :class="{ hidden: colorMode.preference === 'dark' }"
       />
       <IconsMoon
         class="w-16"
-        :class="{ hidden: colorMode.preference == 'light' }"
+        :class="{ hidden: colorMode.preference === 'light' }"
       />
     </button>
     <template #fallback>

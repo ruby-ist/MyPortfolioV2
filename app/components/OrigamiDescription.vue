@@ -5,9 +5,12 @@
   >
     <div>
       <div class="float-left">
-        <h3 class="m-0-0-10 lg:m-0-0-14 break-word" font="s-0.9em md:s-1.18em">
+        <div
+          class="m-0-0-10 lg:m-0-0-14 break-word"
+          font="s-0.9em w-600 md:s-1.18em"
+        >
           Origami {{ origamiInfo.name }}
-        </h3>
+        </div>
         <div class="color-secondary-text" font="s-0.8rem">
           {{ origamiInfo.author }}
         </div>

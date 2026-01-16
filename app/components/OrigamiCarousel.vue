@@ -30,6 +30,7 @@
       >
         <button
           class="no-display md:block no-bg border-none"
+          aria-label="Swipe Left"
           @click="swiperEl.prev()"
         >
           <IconsLeftArrow class="w-16" />
@@ -49,6 +50,7 @@
         />
         <button
           class="no-display md:block no-bg border-none"
+          aria-label="Swipe Right"
           @click="swiperEl.next()"
         >
           <IconsRightArrow class="w-16" />
