@@ -17,7 +17,7 @@
           <ImageWithLoader
             :src="`/projects/${project.name}/pic_${index + 1}.webp`"
             :alt="`${project.name}_pic_${index + 1}`"
-            class="w-100p aspect-ratio-var-image-aspect-ratio"
+            class="w-100p aspect-ratio-var-image-aspect-ratio [&_.loader]:w-[calc(100%-2px)] [&_.loader]:box-size-border-box [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-text"
             border-class="bd-rad-15"
           />
         </swiper-slide>
@@ -44,7 +44,7 @@
           :src="`/projects/${project.name}/pic_${index + 1}.webp`"
           :alt="`${project.name}_pic_${index + 1}`"
           border-class="bd-rad-15"
-          class="aspect-ratio-var-image-aspect-ratio"
+          class="w-100p aspect-ratio-var-image-aspect-ratio [&_.loader]:w-[calc(100%-2px)] [&_.loader]:box-size-border-box [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-text"
           :class="`${project.type === 'mobile' ? 'w-30p mr-3p inline-block' : 'w-100p'}
                    ${project.type === 'mobile' && index > 2 ? 'no-display' : ''}
                    ${project.type === 'responsive' && index !== 0 ? 'no-display' : ''}`"
