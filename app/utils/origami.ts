@@ -576,7 +576,7 @@ export const ORIGAMI_INFO_ARRAY = [
     picFolderName: "adt-x_plane",
     author: "Ryo Aoki",
     date: new Date(2020, 2, 27),
-    lastModifiedDate: "2026-01-15",
+    lastModifiedDate: "2026-01-16",
     heightWidthRatio: 1,
     imagesCount: 3,
   },
