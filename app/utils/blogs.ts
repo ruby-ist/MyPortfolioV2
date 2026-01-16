@@ -2,7 +2,7 @@ export type { BlogsCollectionItem } from "@nuxt/content";
 
 export const blogLastMod = [
   {
-    loc: "/blogs/consequences_of_using_mixins_at_the_top_level",
+    loc: "/blogs/mixing_into_every_object_in_ruby",
     lastmod: "2026-01-16",
   },
 ];
