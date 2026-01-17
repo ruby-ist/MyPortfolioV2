@@ -1,6 +1,6 @@
 ---
 title: Mixing into every Object in Ruby (Without Realizing It!)
-description: Exploring why including Ruby modules at the top level is risky, how it pollutes objects, and introduces unwanted behaviors.
+description: Exploring how a one-line mistake can pollute all objects and cause unusual behaviors across a Ruby application.
 date: 29/12/2025
 tags: ["ruby", "rails"]
 ---
