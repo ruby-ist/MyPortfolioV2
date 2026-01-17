@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-16 color-secondary" font="s-0.9rem md:s-1rem">
-      {{ blog.date }}
+      {{ toLocaleDate(blog.date) }}
     </div>
     <a
       v-if="link"

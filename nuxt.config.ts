@@ -36,7 +36,7 @@ export default defineNuxtConfig({
             default: "github-light",
             dark: "github-dark",
           },
-          langs: ["ruby"],
+          langs: ["ruby", "bash"],
         },
       },
     },

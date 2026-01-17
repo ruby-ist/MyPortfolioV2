@@ -8,3 +8,11 @@ export const blogLastMod = [
 ];
 
 export const blogRoutes = blogLastMod.map((blog) => blog.loc);
+
+export function toLocaleDate(date: string) {
+  return new Date(date).toLocaleDateString("en-IN", {
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
+  });
+}
