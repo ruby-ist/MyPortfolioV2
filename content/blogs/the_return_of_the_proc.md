@@ -106,7 +106,11 @@ end
 some_method # => "prints this!"
 ```
 
-A `return` statement inside a `proc`, on the other hand, _returns from the method context where the `proc` was defined_. In other words, a non-local return.
+A `return` statement inside a `proc`, on the other hand, returns from the context where the `proc` was defined. In other words, a non-local return.
+
+::prose-blockquote{type="note"}
+A return is non-local if it exits a scope other than the one in which it is written.
+::
 
 ```ruby [IRB console]
 def some_method
@@ -118,7 +122,23 @@ end
 some_method # => nil
 ```
 
-When I first read about this, I shrugged it off, thinking it wasn’t something to worry about. Later, when I tried to take advantage of it, it threw a brick in my face—and thus, we arrive at the title of this blog.
+Here, the return inside the `proc` performs a non-local return of the enclosing `#some_method`.
+
+When I said context earlier, I didn’t mean only a method’s context, but any returnable context. For example, consider a `proc` defined inside the context of a `lambda`:
+
+```ruby [IRB console]
+la = lambda do
+  pr = proc { return }
+  pr.call
+  p "does not print this!"
+end
+
+la.call # => nil
+```
+
+This also means that you can't call a `proc` with `return` statement from top level execution or from console. Because there is no return target for those contexts.
+
+When I first read about this, I shrugged it off, thinking it wasn’t something big to watch out for. Later, when I tried to take advantage of it's non-local return behaviour, it threw a brick in my face—and thus, we arrive at the title of this blog.
 
 ---
 
@@ -148,7 +168,7 @@ Now run it (_and brace yourself for the brick_):
 'block in Object#create_a_doubler_proc': unexpected return (LocalJumpError)
 ```
 
-Why??
+Why?
 
 Because the `return` is triggered for the method `#create_a_doubler_proc`—where the `proc` was defined—not for `#double_it`, where the `proc` was used.
 
