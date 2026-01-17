@@ -5,16 +5,16 @@ date: 2026-01-17
 tags: ["ruby", "closures"]
 ---
 
-Have you ever been asked what are the differences between `proc` and `lambda`? I'm sure the devs who got intrigued by Ruby closures's have been asked and are capable of answering that question. Let's talk about the differences and take a closer look at one in particular.
+Have you ever been asked what the differences between `proc` and `lambda` are? I’m sure the devs who got intrigued by Ruby closures have been asked this—and are probably capable of answering it. Let’s talk about those differences and take a closer look at one in particular.
 
-There are three main differences (or two if you don't consider the first one worthy):
+There are three main differences (or two, if you don’t consider the first one worthy):
 
 1. Instantiation
-2. Arity Check
+2. Arity check
 3. Return behavior
 
 ::prose-blockquote{type="note"}
-If you already know the basic about the differences, go the [main section](/blogs/the_return_of_the_proc#the-return-of-the-proc) of this blog.
+If you already know the basics of these differences, skip ahead to the [main section](/blogs/the_return_of_the_proc#the-return-of-the-proc) of this blog.
 ::
 
 ### 1. Instantiation
@@ -31,9 +31,9 @@ lambda { |x| x * 2 }
 ->(x) { x * 2 }
 ```
 
-Though the syntax differs, that's not their only differentiation in instantiation. These are explicit instantiations. When coming to implicit ones, we have two scenarios.
+Although the syntax differs, that’s not the only distinction in instantiation. These are explicit instantiations. When it comes to implicit ones, we have two scenarios.
 
-First one is when you pass a `block` (not `proc` or `lambda` but `block`) to a method, it'll always gets converted to `proc`.
+The first is when you pass a `block` (not a `proc` or `lambda`, but a `block`) to a method, it always gets converted to a `proc`.
 
 ```ruby [IRB console]
 def what_am_i_giving_you(&block)
@@ -43,58 +43,58 @@ end
 what_am_i_giving_you { |x| x * 2 } # => #<Proc:0x000000010cb7df88>
 ```
 
-However if you explicitly convert a `proc` or `lambda` to a `block` by `&` indicator in _method call_, the flavor remains as it is.
+However, if you explicitly convert a `proc` or `lambda` to a `block` using the `&` indicator in a method call, the flavor remains the same.
 
 ```ruby [IRB console]
 pr = proc { |x| x * 2 }
 la = lambda { |x| x * 2 }
 
-what_am_i_giving_you(&pr)  #=> #<Proc:0x000000010cf51330>
-what_am_i_giving_you(&la)  #=> #<Proc:0x000000010cf51268 (lambda)>
+what_am_i_giving_you(&pr) # => #<Proc:0x000000010cf51330>
+what_am_i_giving_you(&la) # => #<Proc:0x000000010cf51268 (lambda)>
 ```
 
-The second one is that when you call `to_proc` on any method, it will always return a `lambda`
+The second scenario is when you call `#to_proc` on a `Method`. It will always return a `lambda`.
 
 ```ruby [IRB console]
 def double_it(x) = x * 2
-method(:double_it).to_proc #<Proc:0x0000000109bfc390 (lambda)>
+method(:double_it).to_proc # => #<Proc:0x0000000109bfc390 (lambda)>
 ```
 
-The reason for this different type of implicit conversions brings us to our second differnce...
+The reason for these different implicit conversions brings us to our second difference…
 
 ### 2. Arity Check
 
 ::prose-blockquote{type="note"}
-`arity` of a method is an indication of the number of arguments accepted by it
+The `arity` of a method indicates the number of arguments it accepts.
 ::
 
-`lambda` is strict about its _arity_ while the `proc`... doesn't care!
+A `lambda` is strict about its arity, while a `proc`… doesn’t care.
 
 ```ruby [IRB console]
 la = lambda { |x| x * 2 }
 la.call(2) # => 4
 la.call() # => wrong number of arguments (given 0, expected 1) (ArgumentError)
-la.call(1,2,3) # => wrong number of arguments (given 3, expected 1) (ArgumentError)
+la.call(1, 2, 3) # => wrong number of arguments (given 3, expected 1) (ArgumentError)
 ```
 
 ```ruby [IRB console]
 pr = proc { |x| x * 2 }
 pr.call(2) # => 4
 pr.call() # => undefined method '*' for nil (NoMethodError)
-pr.call(1,2,3) # => 2
+pr.call(1, 2, 3) # => 2
 ```
 
-No matter how many or less arguments you pass to a `proc`, it'll only take what it needs. If it doesn't have enough to take, it'll assume the value for it's arguments as `nil`.
+No matter how many (or how few) arguments you pass to a `proc`, it’ll take only what it needs. If it doesn’t have enough, it assumes `nil` for the missing arguments.
 
-This is one of the reason why `to_proc` on `Method`, returns a `lambda` because a method should assume `nil` values for its arguments unless given a default values.
+This is one of the reasons why calling `#to_proc` on a `Method` returns a `lambda`: a method should not silently assume `nil` values for its arguments unless defaults are explicitly defined.
 
-The absence of arity check on a `proc` makes it suitable for `block` to `proc` conversion as there are use cases where we might not need all the arguments yielded to the `block`.
+The lack of strict arity checking also makes `proc` suitable for block-to-proc conversion, since there are use cases where we don’t need all the arguments yielded to a `block`.
 
-### 3. Return behaviour
+### 3. Return Behavior
 
-I'll first go with `lambda` because it is easy to explain.
+Let’s start with `lambda`, because it’s easier to explain.
 
-A `return` statement inside a `lambda` will return the flow to where `lambda` is initially called.
+A `return` statement inside a `lambda` returns control to the place where the `lambda` was called.
 
 ```ruby [IRB console]
 def some_method
@@ -103,12 +103,12 @@ def some_method
   p "prints this!"
 end
 
-some_method # => prints this!
+some_method # => "prints this!"
 ```
 
-A `return` statement inside a `proc` will _return from the scope where proc was defined_.
+A `return` statement inside a `proc`, on the other hand, _returns from the scope where the `proc` was defined_.
 
-```ruby [IRB Console]
+```ruby [IRB console]
 def some_method
   pr = proc { return }
   pr.call
@@ -118,15 +118,15 @@ end
 some_method # => nil
 ```
 
-When I first read about this, I shrugged it off thinking it is not something to worry about. But later when I tried to take advantage of it, it threw a brick in my face and thus, we come to the title of this blog...
+When I first read about this, I shrugged it off, thinking it wasn’t something to worry about. Later, when I tried to take advantage of it, it threw a brick in my face—and thus, we arrive at the title of this blog.
 
 ---
 
 ### The Return of the Proc
 
-Try to guess the output of this code
+Try to guess the output of this code:
 
-```ruby [IRB Console]
+```ruby [IRB console]
 def create_a_doubler_proc
   proc { |x| return x * 2 }
 end
@@ -140,23 +140,25 @@ end
 double_it(4)
 ```
 
-Instead of copying and executing it, let's try to reason with it first. You are calling a method which is calling an another method to get a `proc` and calling that returned `proc` with an argument passed to it. So, `return` should be triggered for `#double_it` and will return 8 and does not print anything, right?
+Instead of copying and executing it, let’s reason it out first. You’re calling a method that calls another method to get a `proc`, then calling that returned `proc` with an argument. So the `return` should be triggered inside `#double_it`, return `8`, and print nothing… right?
 
-Now run it: (_and be ready for the brick_)
+Now run it (and brace yourself for the brick):
 
-```[IRB Console]
+```[IRB console]
 'block in Object#create_a_doubler_proc': unexpected return (LocalJumpError)
 ```
 
-Why?? Because `return` is triggered for the method `#create_a_doubler_proc` (where `proc` was defined), not for the method `#double_it` (where `proc` was used).
+Why??
 
-By the time it is triggered, there is no `#create_a_doubler_proc` in the current stock to return as it is already executed and returned from the stock before `proc#call` is called.
+Because the `return` is triggered for the method `#create_a_doubler_proc`—where the `proc` was defined—not for `#double_it`, where the `proc` was used.
 
-However if you removed `return` statement, it'll not try to return anything by force, the value last statement inside the `proc` will return to where the `proc#call` was called. (like `lambda`'s `return` behaviour)
+By the time the `proc#call` is called, `#create_a_doubler_proc` has already finished executing and returned. there is no `#create_a_doubler_proc` in the current stock, which is why the error was raised.
 
-This annoying behaviour makes the `proc` to be used with extra care!
+If you remove the `return` statement, the `proc` won’t try to force a return. Instead, the value of the last expression inside the `proc` will be returned to where `proc#call` was invoked—similar to a `lambda`’s `return` behavior.
 
-In fact, you can never use a `proc`, with an explicit `return` statement, which is returned by some other method. You also cannot call `return` statement inside the body of a method (i.e, `block` accepted by the method).
+This annoying behavior makes the `proc` to be used with extra care.
+
+In fact, you can never use a `proc` with an explicit `return` if that `proc` is returned by another method. It's also why you cannot use `return` inside the body of a method’s `block`.
 
 ```ruby [IRB console]
 def yielder
@@ -164,17 +166,17 @@ def yielder
 end
 
 yielder do
-  return true # unexpected return (LocalJumpError)
+  return true # => unexpected return (LocalJumpError)
 end
 ```
 
-If you **have to** use a `proc` and also needs a explicit return statement, you can use the `next` statement.
+If you **have to** use a `proc` and also need an explicit `return`-like behavior, you can use the `next` statement instead.
 
 ::prose-blockquote{type="note"}
-`next` statement not only moves to next iteration, but it returns the current iteration (i.e, current scope). It can even be called with arguments like the `return` statement.
+The `next` statement not only moves to the next iteration, but also returns a value from the current scope. Like `return`, it can also be called with arguments.
 ::
 
-The `next` statement inside a `proc`, `lambda` and `block` will work just like `lambda`'s `return` statement.
+Inside a `proc`, `lambda`, or `block`, `next` behaves much like a `lambda`’s `return`.
 
 ```ruby [IRB console]
 def yielder
@@ -186,13 +188,13 @@ yielder do
 end # => true
 ```
 
-...
+…
 
-**However,** if you choose to give in to your dark side and want to write a code like an unreadable spell, you can utilize the `proc`'s return behavior in some places.
+**However,** if you decide to embrace your dark side and write code like an unreadable spell, you _can exploit a `proc`’s `return` behavior_ in certain cases.
 
-For example, when you want to a jump like `throw` or `raise` but not quite want to use `throw` or `raise` (_like a psychopath_)
+For example, when you want something like `throw` or `raise`, but not quite—or don’t actually want to use either (_like a psychopath!_).
 
-```ruby [IRB Console]
+```ruby [IRB console]
 def call_a_proc(func, arg)
   result = func.call(arg)
   p "prints it only for odd numbers"
@@ -214,7 +216,7 @@ ensure
 end
 ```
 
-```ruby [IRB Console]
+```ruby [IRB console]
 double_only_if_odd(2)
 # "prints it for all numbers"
 # => nil
@@ -225,6 +227,8 @@ double_only_if_odd(3)
 # => 6
 ```
 
-The above flow can easily and cleanly be implemented with `raise`, `throw` or with just some `if` conditions.
+This flow can be implemented far more cleanly using `raise`, `throw`, or simple `if` conditions.
 
-This weird `return` behavior of `proc` is always stated out but not explained enough. But that doesn't make `proc` completely unusable. A `proc` does have its own purpose. Like I said, you just have to be extra careful when returning from a `proc`. (_and make sure no bricks are thrown to your face ^\_^_)
+The weird `return` behavior of `proc` is often mentioned, but rarely explained in depth. But that doesn’t make `proc` unusable. A `proc` has its own purposes and valid use cases.
+
+Like I said, you just have to be extra careful when returning from a `proc`. (_—and lookout for flying bricks \*\_\*_)
