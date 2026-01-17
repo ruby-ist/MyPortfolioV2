@@ -1,7 +1,7 @@
 ---
 title: Mixing into every Object in Ruby (Without Realizing It!)
 description: Exploring how a one-line mistake can pollute all objects and cause unusual behaviors across a Ruby application.
-date: 29/12/2025
+date: 2025-12-29
 tags: ["ruby", "rails"]
 ---
 

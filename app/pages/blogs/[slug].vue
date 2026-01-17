@@ -1,7 +1,7 @@
 <template>
   <div class="flex just-c-center">
     <div class="w-90p md:w-600">
-      <BlogTitle class="mb-32 md:mb-48" :blog="blog" />
+      <BlogTitle class="mb-32" :blog="blog" />
       <ContentRenderer class="[&_p]:m-20-0 pb-80" :value="blog" />
     </div>
   </div>

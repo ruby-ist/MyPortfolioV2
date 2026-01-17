@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mb-16 color-secondary" font="s-0.9rem md:s-1rem">
-      {{ blog.date }}
+      {{ toLocaleDate(blog.date) }}
     </div>
     <a
       v-if="link"
@@ -15,7 +15,7 @@
     <h2
       v-else
       class="color-primary m-0"
-      font="f-header-font s-1.6rem md:s-2rem  w-400"
+      font="f-header-font s-1.6rem md:s-2rem w-400"
     >
       {{ blog.title }}
     </h2>
