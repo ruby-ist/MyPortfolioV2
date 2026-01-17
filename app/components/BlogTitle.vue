@@ -15,7 +15,7 @@
     <h2
       v-else
       class="color-primary m-0"
-      font="f-header-font s-1.6rem md:s-2rem  w-400"
+      font="f-header-font s-1.6rem md:s-2rem w-400"
     >
       {{ blog.title }}
     </h2>

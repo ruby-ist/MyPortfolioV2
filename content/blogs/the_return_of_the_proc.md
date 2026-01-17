@@ -231,4 +231,4 @@ This flow can be implemented far more cleanly using `raise`, `throw`, or simple 
 
 The weird `return` behavior of `proc` is often mentioned, but rarely explained in depth. But that doesn’t make `proc` unusable—it just means it has sharp edges. A `proc` has its own purposes and valid use cases.
 
-Like I said, you just have to be extra careful when returning from a `proc` (_and lookout for flying bricks \*\_\*_).
+Like I said, you just have to be extra careful when returning from a `proc` (_and lookout for flying bricks >\_<_).
