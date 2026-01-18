@@ -3,7 +3,7 @@
     <div class="w-90p md:w-600">
       <BlogTitle class="mb-32" :blog="blog" />
       <ContentRenderer
-        class="[&_p]:m-20-0 pb-80 [&_h3_a]:color-primary [&_h3]:m-40-0-24 [&_hr]:color-horizontal-line"
+        class="[&_p]:m-20-0 pb-80 [&_h3_a]:color-primary [&_h3]:m-24-0-20 [&_h3]:font-f-header-font [&_h3]:font-w-400 [&_hr]:color-horizontal-line"
         :value="blog"
       />
     </div>
