@@ -37,7 +37,7 @@
       />
     </div>
     <template #fallback>
-      <div id="project-carousel">
+      <div id="project-carousel" class="flex just-c-space-between">
         <ImageWithLoader
           v-for="index in Array.from(Array(project.imagesCount).keys())"
           :key="index"
@@ -45,7 +45,7 @@
           :alt="`${project.name}_pic_${index + 1}`"
           border-class="bd-rad-15"
           class="w-100p aspect-ratio-var-image-aspect-ratio [&_.loader]:w-[calc(100%-2px)] [&_.loader]:box-size-border-box [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-text"
-          :class="`${project.type === 'mobile' ? 'w-30p mr-3p inline-block' : 'w-100p'}
+          :class="`${project.type === 'mobile' ? 'w-30p' : 'w-100p'}
                    ${project.type === 'mobile' && index > 2 ? 'no-display' : ''}
                    ${project.type === 'responsive' && index !== 0 ? 'no-display' : ''}`"
         />
