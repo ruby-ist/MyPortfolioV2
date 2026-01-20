@@ -33,16 +33,17 @@ main {
   &#projects {
     --main-background: #8b93ff;
     --primary-text: #1c1678;
-    --visit-button-background: #7752fe;
+    --visit-button-background: #6a41fe;
+    --header: #6a41fe;
     --show-more-text: #1c1c1c72;
     --carousel-pagination-bullet: #1c1c1c36;
-    --carousel-active-pagination-bullet: #7752fe;
+    --carousel-active-pagination-bullet: #6a41fe;
   }
 
   &#blogs {
     --primary-text: #000;
     --main-background: #f0f3ff;
-    --primary: #7752fe;
+    --primary: #754ffe;
     --secondary: #190482;
     --tag-background: #c2d9ff;
     --tag-border: #c2d9ff;
@@ -75,7 +76,7 @@ html.dark main {
     --filename: #c2d9ff9c;
     --icon: #c2d9ff9c;
     --block-quote-border: #c2d9ff9c;
-    --link-hover: #7752fe;
+    --link-hover: #754ffe;
     --theme-button: #836fff;
   }
 }

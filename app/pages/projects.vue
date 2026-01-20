@@ -16,7 +16,7 @@
     >
       <div />
       <div class="min-w-0">
-        <h1 class="mt-20 mb-60" font="f-header-font">Websites</h1>
+        <h1 class="mt-20 mb-60" font="f-header-font w-400">Websites</h1>
         <ProjectTile
           v-for="project in PROJECTS"
           :key="project.id"
@@ -25,7 +25,7 @@
       </div>
       <div />
       <div>
-        <h1 class="mt-20 mb-60" font="f-header-font">GitHub</h1>
+        <h1 class="mt-20 mb-60" font="f-header-font w-400">GitHub</h1>
         <GitHubRepoTile
           v-for="gitHubRepo in GITHUB_REPOS"
           :key="gitHubRepo.id"
