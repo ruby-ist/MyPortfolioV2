@@ -43,7 +43,7 @@ main {
   &#blogs {
     --primary-text: #000;
     --main-background: #f0f3ff;
-    --primary: #754ffe;
+    --primary: #7650fe;
     --secondary: #190482;
     --tag-background: #c2d9ff;
     --tag-border: #c2d9ff;
@@ -76,7 +76,7 @@ html.dark main {
     --filename: #c2d9ff9c;
     --icon: #c2d9ff9c;
     --block-quote-border: #c2d9ff9c;
-    --link-hover: #754ffe;
+    --link-hover: #7650fe;
     --theme-button: #836fff;
   }
 }
