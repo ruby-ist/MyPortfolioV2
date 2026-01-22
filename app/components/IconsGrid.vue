@@ -42,10 +42,10 @@
         </IconCell>
         <IconCell title="Redis">
           <template #mono>
-            <IconsMonochromeRedis class="w-30 md:w-36 lg:w-36" />
+            <IconsMonochromeRedis class="w-30 h-32 md:w-36 md:h-38" />
           </template>
           <template #color>
-            <IconsColoredRedis class="w-30 md:w-36 lg:w-36" />
+            <IconsColoredRedis class="w-30 h-32 md:w-36 md:h-38" />
           </template>
         </IconCell>
         <IconCell title="WebSocket">
@@ -104,10 +104,10 @@
         </IconCell>
         <IconCell title="GraphQL">
           <template #mono>
-            <IconsMonochromeGraphql class="w-24 md:w-30 lg:w-30" />
+            <IconsMonochromeGraphql class="w-24 h-26 md:w-30 md:h-32" />
           </template>
           <template #color>
-            <IconsColoredGraphql class="w-24 md:w-30 lg:w-30" />
+            <IconsColoredGraphql class="w-24 h-26 md:w-30 md:h-32" />
           </template>
         </IconCell>
         <td />
@@ -158,10 +158,10 @@
         </IconCell>
         <IconCell class="strict:bd-r-0" title="Nuxt JS">
           <template #mono>
-            <IconsMonochromeNuxt class="w-36 md:w-42 lg:w-42" />
+            <IconsMonochromeNuxt class="w-36 h-38 md:w-42 md:h-44" />
           </template>
           <template #color>
-            <IconsColoredNuxt class="w-36 md:w-42 lg:w-42" />
+            <IconsColoredNuxt class="w-36 h-38 md:w-42 md:h-44" />
           </template>
         </IconCell>
       </tr>
@@ -203,10 +203,10 @@
         </IconCell>
         <IconCell title="CSS">
           <template #mono>
-            <IconsMonochromeCss class="w-28 md:w-34 lg:w-34" />
+            <IconsMonochromeCss class="w-28 h-30 md:w-34 md:h-36" />
           </template>
           <template #color>
-            <IconsColoredCss class="w-28 md:w-34 lg:w-34" />
+            <IconsColoredCss class="w-28 h-30 md:w-34 md:h-36" />
           </template>
         </IconCell>
         <IconCell title="HTML5">
@@ -235,18 +235,18 @@
         <td />
         <IconCell class="strict:bd-b-0" title="Figma">
           <template #mono>
-            <IconsMonochromeFigma class="w-30 md:w-36 lg:w-36" />
+            <IconsMonochromeFigma class="w-30 h-32 md:w-36 md:h-38" />
           </template>
           <template #color>
-            <IconsColoredFigma class="w-30 md:w-36 lg:w-36" />
+            <IconsColoredFigma class="w-30 h-32 md:w-36 md:h-38" />
           </template>
         </IconCell>
-        <IconCell class="strict:bd-b-0" title="Adobe Illustrator">
+        <IconCell class="strict:bd-b-0" title="Affinity">
           <template #mono>
-            <IconsMonochromeIllustrator class="w-30 md:w-36 lg:w-36" />
+            <IconsMonochromeAffinity class="w-30 h-32 md:w-36 md:h-38" />
           </template>
           <template #color>
-            <IconsColoredIllustrator class="w-30 md:w-36 lg:w-36" />
+            <IconsColoredAffinity class="w-30 h-32 md:w-36 md:h-38" />
           </template>
         </IconCell>
         <td />

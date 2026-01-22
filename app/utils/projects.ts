@@ -4,6 +4,7 @@ export interface Project {
   name: string;
   description: string;
   url: string;
+  gitHubLink: string;
   imagesCount: number;
   type: "responsive" | "mobile";
   heightWidthRatio: number;
@@ -14,6 +15,8 @@ export interface GitHubRepo {
   title: string;
   description: string;
   url: string;
+  publishedAt?: string;
+  publishedLink?: string;
 }
 
 export const PROJECTS = [
@@ -33,6 +36,7 @@ export const PROJECTS = [
     imagesCount: 5,
     type: "responsive",
     heightWidthRatio: 0.63,
+    gitHubLink: "https://github.com/ruby-ist/BITsMap",
   },
   {
     id: 2,
@@ -47,6 +51,7 @@ export const PROJECTS = [
     imagesCount: 7,
     type: "mobile",
     heightWidthRatio: 2.35,
+    gitHubLink: "https://github.com/ruby-ist/Local-Ledger",
   },
   {
     id: 3,
@@ -62,6 +67,7 @@ export const PROJECTS = [
     imagesCount: 3,
     type: "responsive",
     heightWidthRatio: 0.63,
+    gitHubLink: "https://github.com/ruby-ist/Ruby-on-Wasm",
   },
 ] as Project[];
 
@@ -75,6 +81,8 @@ export const GITHUB_REPOS = [
       "Vector database and Retrieval augmented generation (RAG) to your " +
       "Ruby/Rails application.",
     url: "https://github.com/ruby-ist/weaviate_record",
+    publishedAt: "rubygems",
+    publishedLink: "https://rubygems.org/gems/weaviate_record",
   },
   {
     id: 2,
@@ -87,5 +95,7 @@ export const GITHUB_REPOS = [
       "strings. After adding the edges, the shortest path between any two " +
       "edges can be easily calculated.",
     url: "https://github.com/ruby-ist/dijkstra_trace",
+    publishedAt: "rubygems",
+    publishedLink: "https://rubygems.org/gems/dijkstra_trace",
   },
 ];
