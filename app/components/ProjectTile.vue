@@ -1,6 +1,6 @@
 <template>
   <div class="mb-60">
-    <div class="flex just-c-space-between align-i-center mb-30">
+    <div class="h-44 flex just-c-space-between align-i-center mb-30">
       <a :href="project.gitHubLink" class="color-primary-text">
         <h2 class="m-0" font="f-header-font w-400">{{ project.title }}</h2>
       </a>
