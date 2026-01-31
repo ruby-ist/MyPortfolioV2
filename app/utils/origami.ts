@@ -1203,6 +1203,16 @@ export const ORIGAMI_INFO_ARRAY = [
     imagesCount: 2,
   },
   {
+    id: 122,
+    name: "Swan",
+    picFolderName: "swan",
+    author: "Traditional",
+    date: new Date(2024, 0, 28),
+    lastModifiedDate: "2026-01-25",
+    heightWidthRatio: 1,
+    imagesCount: 2,
+  },
+  {
     id: 116,
     name: "Frog",
     picFolderName: "frog",
