@@ -3,7 +3,7 @@ export type { BlogsCollectionItem } from "@nuxt/content";
 export const blogLastMod = [
   {
     loc: "/blogs/mixing_into_every_object_in_ruby",
-    lastmod: "2026-01-20",
+    lastmod: "2026-01-31",
   },
 ];
 
