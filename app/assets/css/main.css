@@ -5,12 +5,6 @@ body {
   margin: 0;
   height: 100dvh;
   overflow: hidden;
-
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  &::-webkit-scrollbar {
-    display: none;
-  }
 }
 
 body {
