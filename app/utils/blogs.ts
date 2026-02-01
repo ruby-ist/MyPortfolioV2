@@ -9,6 +9,10 @@ export const blogLastMod = [
     loc: "/blogs/the_return_of_the_proc",
     lastmod: "2026-02-01",
   },
+  {
+    loc: "/blogs/refining_refine_use_cases",
+    lastmod: "2026-02-01",
+  },
 ];
 
 export const blogRoutes = blogLastMod.map((blog) => blog.loc);
