@@ -1,7 +1,7 @@
 ---
 title: The Return of the Proc
 description: Understand the real differences between Ruby proc and lambda, including arity, instantiation, and the infamous non-local return, plus its workarounds.
-date: 2026-02-01
+date: 2026-02-09
 tags: ["ruby", "closures"]
 ---
 
