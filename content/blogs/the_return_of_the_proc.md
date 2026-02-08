@@ -1,7 +1,7 @@
 ---
 title: The Return of the Proc
 description: Understand the real differences between Ruby proc and lambda, including arity, instantiation, and the infamous non-local return, plus its workarounds.
-date: 2026-02-09
+date: 2026-02-08
 tags: ["ruby", "closures"]
 ---
 
@@ -88,7 +88,7 @@ No matter how many (or how few) arguments you pass to a `proc`, it takes only wh
 
 This is the reasons why calling `#to_proc` on a `Method` returns a `lambda` because it must preserve method semantics such as strict arity and return behavior
 
-The lack of strict arity checking also makes `proc` suitable for block-to-proc conversion, since there are use cases where we don’t need all the arguments yielded to a `block`.
+The lack of strict arity checking also makes `proc` suitable for implicit block-to-proc conversion, since there are use cases where we don’t need all the arguments yielded to a `block`.
 
 ### 3. Return Behavior
 
