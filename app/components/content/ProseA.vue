@@ -1,5 +1,5 @@
 <template>
-  <a :href="props.href" target="_blank" class="color-primary">
+  <a :href="props.href" :target="target as string" class="color-primary">
     <slot />
   </a>
 </template>

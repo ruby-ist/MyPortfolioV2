@@ -57,6 +57,7 @@ main {
     --block-quote-border: #c2d9ff;
     --link-hover: #836fff;
     --theme-button: #836fff;
+    --horizontal-line: #c2d9ff9c;
   }
 }
 
@@ -79,5 +80,6 @@ html.dark main {
     --block-quote-border: #c2d9ff9c;
     --link-hover: #7650fe;
     --theme-button: #836fff;
+    --horizontal-line: #c2d9ff9c;
   }
 }
