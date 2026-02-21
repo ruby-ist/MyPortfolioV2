@@ -1,7 +1,7 @@
 ---
 title: Refinements and the Chamber of Edge Cases
-description: "Learn how Ruby refinements work: lexical scope, inheritance and block edge cases, top-level usage, and when to prefer them over monkey patching"
-date: 2026-02-07
+description: "Learn how Ruby refinements work, including lexical scope, inheritance and block edge cases, top-level usage, and when to prefer them over monkey patching."
+date: 2026-02-22
 tags: ["ruby", "closures"]
 ---
 
