@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mb-16 color-secondary" font="s-0.9rem md:s-1rem">
+    <div class="mb-16 color-secondary" font="s-0.9rem">
       {{ toLocaleDate(blog.date) }}
     </div>
     <a
@@ -8,7 +8,7 @@
       class="color-primary hover:color-link-hover"
       :href="blog.path"
     >
-      <h1 class="m-0" font="f-header-font s-1.6rem md:s-1.9rem w-400">
+      <h1 class="m-0" font="f-header-font s-1.6rem w-400">
         {{ blog.title }}
       </h1>
     </a>
@@ -25,7 +25,7 @@
         :key="index"
         class="bg-color-tag-background color-tag p-3-11"
         border="1px solid color-tag-border rad-6"
-        font="s-0.8rem"
+        font="s-0.8rem md:s-0.7rem"
       >
         {{ tag }}
       </span>
