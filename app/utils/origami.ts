@@ -1272,6 +1272,16 @@ export const ORIGAMI_INFO_ARRAY = [
     heightWidthRatio: 1,
     imagesCount: 1,
   },
+  {
+    id: 123,
+    name: "Marten",
+    picFolderName: "marten",
+    author: "Andrey Ermakov",
+    date: new Date(2026, 1, 1),
+    lastModifiedDate: "2026-02-01",
+    heightWidthRatio: 0.57,
+    imagesCount: 8,
+  },
 ].reverse() as OrigamiInfo[];
 
 export const origamiRoutes = ORIGAMI_INFO_ARRAY.map(

@@ -7,7 +7,7 @@ export const blogLastMod = [
   },
   {
     loc: "/blogs/the_return_of_the_proc",
-    lastmod: "2026-02-01",
+    lastmod: "2026-02-08",
   },
   {
     loc: "/blogs/refinements_and_the_chamber_of_edge_cases",
