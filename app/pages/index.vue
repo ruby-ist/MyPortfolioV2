@@ -20,6 +20,15 @@ export default defineNuxtComponent({
       ogDescription:
         "I’m Sriram V, a backend developer building elegant systems, specializing in Ruby and Rails. I write technical blogs, build projects, explore Vue and Nuxt, and fold origami.",
     });
+
+    useHead({
+      meta: [
+        {
+          name: "google-site-verification",
+          content: "X6JC6m9T4EBAI7XtPp5j21o4P44ud5DOBOAN17_Y7Hk",
+        },
+      ],
+    });
   },
 });
 </script>
