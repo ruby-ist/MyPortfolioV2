@@ -2,7 +2,7 @@
 title: Refinements and the Chamber of Edge Cases
 description: "Learn how Ruby refinements work, including lexical scope, inheritance and block edge cases, top-level usage, and when to prefer them over monkey patching."
 date: 2026-02-22
-tags: ["ruby", "closures"]
+tags: ["ruby"]
 ---
 
 One of the most featured alternatives to monkey patching in Ruby is [Refinements](https://docs.ruby-lang.org/en/3.4/syntax/refinements_rdoc.html){:target="\_blank"}, with the help of the `refine` and `using` methods.
