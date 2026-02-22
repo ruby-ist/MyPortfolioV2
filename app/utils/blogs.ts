@@ -11,7 +11,7 @@ export const blogLastMod = [
   },
   {
     loc: "/blogs/refinements_and_the_chamber_of_edge_cases",
-    lastmod: "2026-02-21",
+    lastmod: "2026-02-22",
   },
 ];
 
