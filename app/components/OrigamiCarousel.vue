@@ -18,7 +18,7 @@
         >
           <ImageWithLoader
             :src="`/origami/${origamiInfo.picFolderName}/pic_${index + 1}.webp`"
-            :alt="`${origamiInfo.picFolderName}_pic_${index + 1}`"
+            :alt="`Picture ${index + 1} of Origami ${origamiInfo.name} designed by ${origamiInfo.author} and folded by Sriram V`"
             class="w-100p aspect-ratio-var-swiper-slide-aspect-ratio [&_.loader]:box-size-border-box [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-border"
             border-class="bd-rad-20-20-0-0 lg:bd-rad-15"
           />

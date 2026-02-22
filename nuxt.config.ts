@@ -1,5 +1,9 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { origamiLastMod, origamiRoutes } from "./app/utils/origami";
+import {
+  origamiLastMod,
+  origamiRoutes,
+  OrigamiIndexImagesSitemap,
+} from "./app/utils/origami";
 import { blogLastMod, blogRoutes } from "./app/utils/blogs";
 
 export default defineNuxtConfig({
@@ -63,7 +67,11 @@ export default defineNuxtConfig({
   sitemap: {
     urls: [
       { loc: "/", lastmod: "2026-01-22" },
-      { loc: "/origami", lastmod: "2026-02-01" },
+      {
+        loc: "/origami",
+        lastmod: "2026-02-22",
+        images: OrigamiIndexImagesSitemap,
+      },
       { loc: "/projects", lastmod: "2026-02-01" },
       { loc: "/blogs", lastmod: "2026-02-21" },
       ...origamiLastMod,
