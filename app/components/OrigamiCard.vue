@@ -7,7 +7,7 @@
     :href="`/origami/${origamiInfo.picFolderName}`"
   >
     <ImageWithLoader
-      :alt="origamiInfo.name"
+      :alt="`Origami ${origamiInfo.name} designed by ${origamiInfo.author} and folded by Sriram V`"
       :src="`/origami/${origamiInfo.picFolderName}/pic_1.webp`"
       loading="lazy"
       class="w-100p aspect-ratio-var-image-aspect-ratio [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-border"
