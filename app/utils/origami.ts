@@ -1284,6 +1284,16 @@ export const ORIGAMI_INFO_ARRAY = [
     heightWidthRatio: 0.57,
     imagesCount: 8,
   },
+  {
+    id: 124,
+    name: "Geosternbergia",
+    picFolderName: "geosternbergia",
+    author: "Nguyen Hung Cuong",
+    date: new Date(2026, 1, 25),
+    lastModifiedDate: "2026-02-25",
+    heightWidthRatio: 0.75,
+    imagesCount: 8,
+  },
 ].reverse() as OrigamiInfo[];
 
 export const origamiRoutes = ORIGAMI_INFO_ARRAY.map(
