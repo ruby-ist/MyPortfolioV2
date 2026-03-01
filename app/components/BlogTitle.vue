@@ -2,16 +2,19 @@
   <div :class="{ 'md:flex row': link }">
     <div
       class="mb-16 color-secondary min-w-86"
-      :class="{ 'md:mt-6': link }"
+      :class="{ 'md:mt-4': link }"
       font="s-0.9rem"
     >
       {{ toLocaleDate(blog.date) }}
     </div>
-    <div class="no-display" :class="{ 'md:flex column align-i-center': link }">
+    <div
+      class="no-display"
+      :class="{ 'md:flex column align-i-center gap-16 relative': link }"
+    >
       <IconsShuriken class="h-28 m-0-16" />
       <div
-        class="h-[calc(100%-28px)] w-0"
-        border="0.05em solid color-timeline-border"
+        class="h-[calc(100%-61px)] w-0"
+        border="0.05em dashed color-timeline-border"
       />
     </div>
     <div :style="{ marginBottom: link ? spacing + 'px' : '0px' }">
