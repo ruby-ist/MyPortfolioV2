@@ -9,6 +9,7 @@
       <a
         :href="gitHubRepo.publishedLink"
         target="_blank"
+        :aria-label="`Rubygems link for ${gitHubRepo.title}`"
         class="color-primary-text"
       >
         <IconsRubygems
