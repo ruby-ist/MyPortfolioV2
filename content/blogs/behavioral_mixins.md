@@ -22,7 +22,7 @@ In this blog, I want to talk about few of such modules:
 
 `Forwardable` is useful when you want the interface of the composed object to be available on composing object. Unlike other modules, this need to be mixed with `extend` instead of `include`.
 
-Consider an example of `Card` of [Brawlhalla](https://www.brawlhalla.com/) characters and `Deck` of those cards:
+Consider an example of `Card` of [Brawlhalla](https://www.brawlhalla.com/) characters (_why? Because I play Brawlhalla like a mad lad!_) and `Deck` of those cards:
 
 ```ruby [card.rb]
 class Card
@@ -50,29 +50,29 @@ class Deck
 end
 ```
 
+Here we are _delegating_ the methods that is expected on an array to the instance variable `@cards`, which is an actual array, inside the `Deck` object.
+
+By doing so, we can call the delegated method directly on the `Deck` object instead of chaining method calls.
+
 ```ruby [IRB Console]
 require_relative 'deck'
 
 deck = Deck.new
 
-deck << Card.new(name: 'Thatch', strength: 4, defense: 5)
-deck << Card.new(name: 'Scarlet', strength: 8, defense: 7)
-deck << Card.new(name: 'Diana', strength: 6, defense: 3)
+deck << Card.new(name: 'Thatch', strength: 7, defense: 3)
+deck << Card.new(name: 'Scarlet', strength: 8, defense: 5)
+deck << Card.new(name: 'Diana', strength: 5, defense: 5)
 
-pp deck.count             #=> 3
-pp deck[0]                #=> #<Card:0x0000000129967178 @defense=5, @name="Thatch", @strength=4>
-deck.each { pp _1.name }  #=> "Thatch", "Scarlet", "Diana"
+pp deck.count                     #=> 3
+pp deck[0]                        #=> <Card:0x0000000125221a20 @defense=3, @name="Thatch", @strength=7>
+deck.each { print "#{_1.name} " } #=> Thatch Scarlet Diana
 ```
 
-Here we are _delegating_ the methods that is expected on an array to the instance variable `@cards`, which is an actual array, inside the `Deck` class.
-
-By doing so, when we call the delegated method directly on the card object instead of chaining method calls.
-
-The first argument of `#def_delegators` doesn't have to be instance variables but can also be any method name that returns an object to delegate to.
-
 ::prose-blockquote{type="note"}
-The `Forwardable` module contains methods (i.e. `#def_delegators`, etc) that is meant to be invoked in the scope of a class. These kind of extendable modules can provide a behaviors or class interfaces that helps to define the interface for the objects.
+The first argument of `#def_delegators` doesn't have to be instance variables but can also be any method name that returns an object to delegate to.
 ::
+
+The `Forwardable` module contains methods (i.e. `#def_delegators`, etc) that is meant to be invoked in the scope of a class. These kind of extendable modules can provide a behaviors or class interfaces that helps to define the interface for the objects.
 
 ### Comparable
 
@@ -82,13 +82,13 @@ Ruby makes it easier with the `Comparable` module and the spaceship operator `<=
 
 When you include the `Comparable` module on a class and define a method for the `spaceship` operator, any two objects of that class can be compared with any comparison operator.
 
-The result of the `spaceship` operator can either be of three value: `-1, 0, 1`. The negative one means lower self value, zero means equal and one means greater self value.
+The result of the `spaceship` operator can either be of three value: `-1, 0, 1`. The negative one means lower self value, positive zero means equal and one means greater self value.
 
 ::prose-blockquote{type="note"}
 When you define a `spaceship` operator for your class, it has to return an `Integer` value. Otherwise when you use a comparison operator on the object of that class, you will get an `ArgumentError`. In ruby, the `spaceship` operator has already been defined for the built-in data types.
 ::
 
-Coming to our example, let's say you want to compare the character in a order of `strength` > `dexterity` (Not that it is how things works in the game, but let's compare it this way for the sake of an example).
+Coming to our example, let's say you want to compare the character in a order of `strength` > `dexterity` (Not that it is how things works in the game, but let's compare the cards this way for the sake of an example).
 
 We can modify our `Card` class so that it defines such comparison logic.
 
@@ -114,23 +114,23 @@ end
 ```ruby [IRB Console]
 require_relative 'card'
 
-thatch = Card.new(name: 'Thatch', strength: 4, defense: 5)
-scarlet = Card.new(name: 'Scarlet', strength: 8, defense: 7)
-diana = Card.new(name: 'Diana', strength: 6, defense: 3)
+thatch = Card.new(name: 'Thatch', strength: 7, defense: 3)
+scarlet = Card.new(name: 'Scarlet', strength: 8, defense: 5)
+diana = Card.new(name: 'Diana', strength: 5, defense: 5)
 
-pp thatch < scarlet
-pp thatch <= scarlet
-pp thatch > scarlet
-pp thatch >= scarlet
-pp thatch == scarlet
-pp thatch == thatch
-pp thatch > diana
+pp thatch < scarlet   #=> true
+pp thatch <= scarlet  #=> true
+pp thatch > scarlet   #=> false
+pp thatch >= scarlet  #=> false
+pp thatch == scarlet  #=> false
+pp thatch == thatch   #=> true
+pp thatch > diana     #=> true
 ```
 
 By defining single `spaceship` operator, the module includes the definition for five different comparison operators (`<`, `>`, `==`, `<=`, `>=`) and even throws in couple of comparison helpers like `#between?` and `#clamp`.
 
 ::prose-blockquote{type="note"}
-The not-equal-to operator (`!=`) will not use the `spaceship` operator when you include the `comparable` module. It'll still return false when you check the two diffrent `Card` object with same stats. It'll only return false when both of the operands are **same object**.
+The not-equal-to operator (`!=`) will not use the `spaceship` operator even when you include the `comparable` module. It'll still return false when you check the two diffrent `Card` object with same stats. It'll only return false when both of the operands are **same object**.
 ::
 
 ### Enumerable
@@ -178,22 +178,32 @@ require_relative 'deck'
 
 deck = Deck.new
 
-deck << Card.new(name: 'Thatch', strength: 4, defense: 5)
-deck << Card.new(name: 'Scarlet', strength: 8, defense: 7)
-deck << Card.new(name: 'Diana', strength: 6, defense: 3)
+deck << Card.new(name: 'Thatch', strength: 7, defense: 3)
+deck << Card.new(name: 'Scarlet', strength: 8, defense: 5)
+deck << Card.new(name: 'Diana', strength: 5, defense: 5)
 
-deck.filter { _1.strength > 6 }
-deck.map { _1.name }
-deck.find { _1.name == 'Thatch' }
+pp deck.filter { _1.defense > 3  }.count  #=> 2
+pp deck.map { _1.name }                   #=> ["Thatch", "Scarlet", "Diana"]
+pp deck.find { _1.name == 'Thatch' }      #=> #<Card:0x0000000124d7f918 @defense=3, @name="Thatch", @strength=7>
 ```
 
 ### Observable
 
 The `Observable` module is handy way to implement the **Observer pattern** from the design patterns.
 
-This module adds a state to your object which is used to track if the object is changed or not. Based on that, it also provides a interface to add observers to current object (`#add_observer`) and method to notify those observers `#notify_observers`.
+This module adds a state to your object which is used to track if the object is changed or not and based on that state, it also provides interfaces to add observers to that object (`#add_observer`) and method to notify those observers (`#notify_observers`) too.
 
-Now let's new observable class called `Player`
+To you use the `Observable` module, you have to require the `observer` in your file.
+
+Now let's create new observable class called `Player` with some game logic:
+
+- Let's say a `Player` can be initialized with a name and deck of cards.
+- The player will have a single public interface `brawl` which takes another player as an argument.
+- Then, we choose a random card from each player's deck.
+- The chosen card's character's `strength` and `defense` can be used to calculate attack power on the opponent player's card.
+- The attack will repeat until either one of the player's life becomes zero or negative.
+
+The player who still has life will be the winner and his victory will be announced to be observers!
 
 ```ruby [player.rb]
 require_relative 'deck'
@@ -280,10 +290,12 @@ end
 Here we are using the `changed` and `notify_observers` methods to track the change in object and notify that change to observers.
 
 ::prose-blockquote{type=note}
-The notification will only happen if the observable's state is changed. After notifying the observers the changed state will automatically becomes `false`.
+The notification will only happen if the observable's state is `changed`. After notifying the observers the `changed` state will automatically becomes `false`.
 ::
 
-However, to listen to that notification, we need more classes. Consider the class `WinCounts`:
+In the `#after_win_callback` method, the player's state is changed and that change along with some other data like player details and card details is broadcasted to all the observers.
+
+However, to listen to that notification, we need some more classes. Consider the class `WinCounts` which tracks how many times a character has won:
 
 ```ruby [win_counts.rb]
 class WinCounts
@@ -302,15 +314,17 @@ class WinCounts
 end
 ```
 
-Now let's orchestrate them all. Create a necessary objects:
+Here, we have the default argument for player as `nil`, so that it can be initialized to track the win counts of all players throughout the game.
+
+Now let's orchestrate them all. First, Create a necessary objects:
 
 ```ruby [IRB Console]
 require_relative 'player'
 require_relative 'win_counts'
 
-thatch = Card.new(name: 'Thatch', strength: 4, defense: 5)
-scarlet = Card.new(name: 'Scarlet', strength: 8, defense: 7)
-diana = Card.new(name: 'Diana', strength: 6, defense: 3)
+thatch = Card.new(name: 'Thatch', strength: 7, defense: 3)
+scarlet = Card.new(name: 'Scarlet', strength: 8, defense: 5)
+diana = Card.new(name: 'Diana', strength: 5, defense: 5)
 lady_vera = Card.new(name: 'Lady Vera', strength: 6, defense: 3)
 ransom = Card.new(name: 'Ransom', strength: 6, defense: 3)
 
@@ -325,7 +339,7 @@ player_one_win_counts_tracker = WinCounts.new(player: player_one)
 player_two_win_counts_tracker = WinCounts.new(player: player_two)
 ```
 
-Now add observers and lets the brawl begin:
+Now add the `WinCounts` tracker as observers to the players and lets the brawl begin:
 
 ```ruby [IRB Console]
 player_one.add_observer(global_win_counts_tracker)
@@ -340,8 +354,30 @@ puts "Player One Wins: #{player_one_win_counts_tracker.counts}"
 puts "Player Two Wins: #{player_two_win_counts_tracker.counts}"
 ```
 
-Once we added the `global_wins_count` and `player_one_wins_count` as observers to player one, the `#notify_observers` method call on player_one will call the `#update` method on those two objects.
+Once we added the observers to players, each time they win, the `#notify_observers` method will call the `#update` method on tracker objects.
 
+::prose-blockquote{type="note"}
 The notification receiver method need not to be a method named `#update`. If you want it to be a different method, you have to specify its name to `#add_observer` method call via `func:` keyword.
+::
 
-Conclusion?
+Based on how the game went, the output would be something like this:
+
+```csv [Output]
+Player Two wins
+Player One wins
+Player Two wins
+Player One wins
+Player One wins
+Player Two wins
+Player Two wins
+Player One wins
+Player Two wins
+Player One wins
+Overall Wins: {"Scarlet" => 7, "Ransom" => 1, "Thatch" => 1, "Diana" => 1}
+Player One Wins: {"Scarlet" => 4, "Thatch" => 1}
+Player Two Wins: {"Scarlet" => 3, "Ransom" => 1, "Diana" => 1}
+```
+
+(_Yes, my girl Scarlet is OP_)
+
+All of these module brings in lot of interfaces that is not tied up to any of the classes. Even more interesting thing is that they don't have all the logic themselves, instead they rely on mixed-in class to define the part of the logic as a way of communicating with those objects. This kind of communicatable interfaces is what makes mixins truly powerful.
