@@ -31,14 +31,14 @@ body {
   }
 
   &:has(main#projects) {
-    --main-background: #6775ff;
-    --primary-text: #090369;
+    --main-background: #8b93ff;
+    --primary-text: #1c1678;
     --visit-button-background: #6a41fe;
     --header: #6a41fe;
     --show-more-text: #1c1c1c72;
     --carousel-pagination-bullet: #1c1c1c36;
     --carousel-active-pagination-bullet: #6a41fe;
-    --icon: #090369;
+    --icon: #1c1678;
   }
 
   &:has(main#blogs) {
