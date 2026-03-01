@@ -1,5 +1,5 @@
-main {
-  &#index {
+body {
+  &:has(main#index) {
     --main-background: #f2e2b1;
     --primary-text: #7e6752;
     --icon: #998267;
@@ -7,7 +7,7 @@ main {
     --highlight-background: linear-gradient(115deg, #d0f5be, #7fe9de);
   }
 
-  &#origami {
+  &:has(main#origami) {
     --main-background: #1c1c1c;
     --primary-text: #f0f3ff;
     --secondary-text: #cccccc;
@@ -15,7 +15,7 @@ main {
     --icon: #cccccc;
   }
 
-  &#origami-show {
+  &:has(main#origami-show) {
     --main-background: #000;
     --primary-text: #f0f3ff;
     --secondary-text: #cccccc;
@@ -30,8 +30,8 @@ main {
     }
   }
 
-  &#projects {
-    --main-background: #8b93ff;
+  &:has(main#projects) {
+    --main-background: #6775ff;
     --primary-text: #1c1678;
     --visit-button-background: #6a41fe;
     --header: #6a41fe;
@@ -41,7 +41,7 @@ main {
     --icon: #1c1678;
   }
 
-  &#blogs {
+  &:has(main#blogs) {
     --primary-text: #000;
     --main-background: #f0f3ff;
     --primary: #7650fe;
@@ -59,12 +59,14 @@ main {
     --theme-button: #836fff;
     --horizontal-line: #c2d9ff9c;
   }
+
+  background: var(--main-background);
 }
 
 /* Dark Mode */
 
-html.dark main {
-  &#blogs {
+html.dark body {
+  &:has(main#blogs) {
     --primary-text: #f0f3ff;
     --main-background: #1c1c1c;
     --primary: #836fff;

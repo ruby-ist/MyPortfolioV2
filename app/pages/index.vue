@@ -1,7 +1,7 @@
 <template>
   <main
     id="index"
-    class="grid min-h-100vh lg:grid-columns-1fr-auto relative z-0 bg-color-main-background color-primary-text noisy-background"
+    class="grid min-h-100vh lg:grid-columns-1fr-auto relative z-0 color-primary-text noisy-background"
     font="f-paragraph-font"
   >
     <div class="p-60px-10p-18p md:p-12p-16p-0 lg:p-20dvh-20p"><AboutMe /></div>

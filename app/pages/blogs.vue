@@ -1,7 +1,7 @@
 <template>
   <main
     id="blogs"
-    class="min-h-100dvh bg-color-main-background color-primary-text noisy-background eased-theme-transition"
+    class="min-h-100dvh color-primary-text noisy-background eased-theme-transition"
     font="f-paragraph-font"
   >
     <nav class="flex align-i-center just-c-space-between">

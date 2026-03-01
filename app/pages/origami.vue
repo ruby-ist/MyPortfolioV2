@@ -2,7 +2,7 @@
   <main
     :id="modelName ? 'origami-show' : 'origami'"
     ref="origamiMain"
-    class="min-h100dvh grid grid-rows-auto-1fr bg-color-main-background color-primary-text noisy-background"
+    class="min-h100dvh grid grid-rows-auto-1fr color-primary-text noisy-background"
     font="f-paragraph-font"
   >
     <h1
