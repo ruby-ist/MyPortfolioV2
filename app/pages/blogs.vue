@@ -16,7 +16,9 @@
     </nav>
     <NuxtPage v-if="blogName" />
     <div v-else class="flex just-c-center">
-      <div class="flex column w-90p md:w-640 md:pt-24 relative md:m-0-80">
+      <div
+        class="flex column w-90p gap-16 md:gap-0 md:w-640 md:pt-24 relative md:m-0-80"
+      >
         <BlogTitle
           v-for="blog in blogs"
           :key="blog.path"

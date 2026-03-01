@@ -17,7 +17,7 @@
         border="0.05em dashed color-timeline-border"
       />
     </div>
-    <div :style="{ marginBottom: link ? spacing + 'px' : '0px' }">
+    <div id="blog-title-link">
       <a
         v-if="link"
         class="color-primary hover:color-link-hover"
@@ -65,5 +65,18 @@ export default defineNuxtComponent({
       default: 0,
     },
   },
+  computed: {
+    marginGap() {
+      return this.link ? this.spacing + "px" : "0px";
+    },
+  },
 });
 </script>
+
+<style scoped>
+@media (min-width: 720px) {
+  #blog-title-link {
+    margin-bottom: v-bind(marginGap);
+  }
+}
+</style>
