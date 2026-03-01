@@ -13,6 +13,10 @@ export const blogLastMod = [
     loc: "/blogs/refinements_and_the_chamber_of_edge_cases",
     lastmod: "2026-02-22",
   },
+  {
+    loc: "/blogs/the_fantastic_modules_and_how_to_use_them",
+    lastmod: "2026-03-01",
+  },
 ];
 
 export const blogRoutes = blogLastMod.map((blog) => blog.loc);
