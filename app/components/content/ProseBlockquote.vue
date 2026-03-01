@@ -1,7 +1,7 @@
 <template>
   <blockquote
     v-if="type === 'note'"
-    class="bg-color-code-block-background m-0 p-8-16-16 strict:[&_p]:m-0 strict:[&_code]:font-s-0.75rem"
+    class="bg-color-code-block-background m-0 p-8-16-16 strict:[&_p]:m-0 strict:[&_code]:font-s-0.75rem strict:[&_strong]:font-s-0.85rem"
     border="rad-8"
     font="s-0.85rem"
   >
