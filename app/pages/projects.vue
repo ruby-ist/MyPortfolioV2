@@ -1,7 +1,7 @@
 <template>
   <main
     id="projects"
-    class="bg-color-main-background color-primary-text noisy-background"
+    class="color-primary-text noisy-background"
     font="f-paragraph-font"
   >
     <h1
