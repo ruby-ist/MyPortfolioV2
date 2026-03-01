@@ -16,8 +16,14 @@
     </nav>
     <NuxtPage v-if="blogName" />
     <div v-else class="flex just-c-center">
-      <div class="flex column gap-16 md:gap-32 w-90p md:w-600 md:pt-24">
-        <BlogTitle v-for="blog in blogs" :key="blog.path" :blog="blog" link />
+      <div class="flex column w-90p md:w-640 md:pt-24 relative">
+        <BlogTitle
+          v-for="blog in blogs"
+          :key="blog.path"
+          :blog="blog"
+          :spacing="blog.dynamicSpacing"
+          link
+        />
       </div>
     </div>
   </main>
@@ -25,9 +31,34 @@
 
 <script setup lang="ts">
 const blogName = useRoute().params.slug;
-const { data: blogs } = await useAsyncData("blogs", () =>
+const { data: rawBlogs } = await useAsyncData("blogs", () =>
   queryCollection("blogs").order("date", "DESC").all(),
 );
+
+const blogs = computed(() => {
+  const list = rawBlogs.value;
+  if (!list) return [];
+
+  return list.map((blog, index) => {
+    const nextBlog = list[index + 1];
+    let spacing = 0;
+
+    if (nextBlog) {
+      const currentDate = new Date(blog.date);
+      const nextDate = new Date(nextBlog.date);
+
+      const diffTime = Math.abs(currentDate.getTime() - nextDate.getTime());
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+      spacing = Math.min(diffDays * 3, 250);
+    }
+
+    return {
+      ...blog,
+      dynamicSpacing: spacing,
+    };
+  });
+});
 
 if (!blogName) {
   useSeoMeta({
