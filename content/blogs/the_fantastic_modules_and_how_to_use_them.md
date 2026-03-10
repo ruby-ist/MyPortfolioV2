@@ -1,7 +1,7 @@
 ---
 title: The Fantastic Modules and How to Use Them
 description: "A practical guide to Ruby’s Forwardable, Comparable, Enumerable, and Observable modules — and what they teach us about designing clean, contract-driven mixins."
-date: 2026-03-08
+date: 2026-03-10
 tags: ["ruby", "mixins"]
 ---
 

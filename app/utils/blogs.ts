@@ -15,7 +15,7 @@ export const blogLastMod = [
   },
   {
     loc: "/blogs/the_fantastic_modules_and_how_to_use_them",
-    lastmod: "2026-03-01",
+    lastmod: "2026-03-10",
   },
 ];
 
