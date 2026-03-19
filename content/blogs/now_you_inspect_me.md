@@ -1,19 +1,23 @@
 ---
 title: Now You Inspect Me
 description: "Learn about the inspect method and it's purposes"
-date: 2026-04-17
+date: 2026-03-31
 tags: ["ruby", "rails", "inspect"]
 ---
 
-The `#inspect` method is used to customize how an object is logged or displayed in the IRB console. It is used by the `Logger` objects and the printer methods `#p` and `#pp`.
+The `#inspect` method is used to customize how an object is logged or displayed in the IRB console. It is used by the `Logger` objects and the printer methods like `#p` and `#pp`.
 
 ::prose-blockquote{type="note"}
-For the beginners with a sense of humor: No, I am not joking. We really do have a method name `#pp`, short for Pretty Print.
+_For the beginners with a sense of humor:_
+<br>
+<br>
+No, I am not joking. We really do have a method named `#pp`, short for **Pretty Print**.
+
 ::
 
 Consider a `Note` class:
 
-```ruby [note.rb]
+```ruby [IRB console]
 class Note
   def initialize(content)
     @content = content
@@ -30,7 +34,7 @@ This is how it usually looks in the console:
 #<Note:0x0000000123274b78 @content="My First Note!", @created_at=2026-03-17 19:19:43.876385 +0530>
 ```
 
-It'll have a class name, the object's encoded id and all the instance variables in it.
+The output have a class name, the object's encoded id and all the instance variables in it.
 
 But when a class has more instance variables or it's value has a lengthy display, it will get ugly.
 
@@ -47,11 +51,15 @@ Note.new("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 
 In most scenarios, how an object gets displayed doesn't matter outside of console unless you're logging it or printing it. But a proper display of values is useful for debugging.
 
-For example, let's say you can identify your note with starting content and you also want the created at time to be bit more readable.
+::prose-blockquote{type="note"}
+Ruby 4.0.0 introduced a new method [#instance_variables_to_inspect](https://github.com/ruby/ruby/pull/13555) to control what are the instance variables should be displayed by default `#inspect`. When you define that method, `#inspect` will automatically call it and only print those attributes returned by it.
+::
+
+For example, let's say you can _identify your note with starting content_ and you also want the created at time to be bit more readable.
 
 For that you can define the `#inspect` method in our `Note` class in a following way:
 
-```ruby [note.rb]
+```ruby [IRB console]
 require 'active_support/core_ext/string/filters'
 
 class Note
@@ -80,7 +88,7 @@ Now this output is short, readable and has all info you want in a way you want t
 
 You can go even farther with our previous example and try this:
 
-```ruby [note.rb]
+```ruby [Code Snippet]
 #...
   def inspect
     puts "." <<  ("_" * 27) << "."
@@ -110,5 +118,5 @@ Likewise, it can be customized as per your need.
 
 However, there are few gotchas:
 
-- if you are calling `#puts` or `#print` method with the object, it'll still print only class name and encoded id no matter what you defined in `#inspect` method.
-- If you're explicitly calling the `#inspect` method on the object, it'll return it as string object (with visible opening and end quotes). So in most cases, it is not meant to be called explicitly
+- if you are calling `#puts` or `#print` method with the object, it'll still print only class name and encoded id irrespective of what you defined in `#inspect` method for that object.
+- If you're explicitly calling the `#inspect` method on the object, it'll return it as string object (with visible opening and end quotes, and escaped inner quotes). So in most cases, it is not meant to be called explicitly
