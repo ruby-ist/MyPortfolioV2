@@ -71,3 +71,11 @@ export default defineNuxtComponent({
   },
 });
 </script>
+
+<style scoped>
+pre,
+code {
+  scrollbar-width: thin;
+  scrollbar-color: var(--filename-background) transparent;
+}
+</style>
