@@ -21,7 +21,7 @@
     <pre
       border="1px solid color-code-block-border rad-0-0-8-8"
       font="s-0.75rem"
-      class="bg-color-code-block-background w-100p m-0 oflow-auto shiki-lang shiki p-16 box-size-border-box [&_code_.line]:block [&_code_.line]:lh-20"
+      class="bg-color-code-block-background w-100p m-0 oflow-auto shiki-lang shiki p-16 box-size-border-box scrollbar-w-thin scrollbar-color-code-scroll-thumb--code-scroll-track [&_code]:scrollbar-w-thin [&_code]:scrollbar-color-code-scroll-thumb--code-scroll-track [&_code_.line]:block [&_code_.line]:lh-20"
     ><slot /></pre>
   </div>
 </template>
@@ -71,11 +71,3 @@ export default defineNuxtComponent({
   },
 });
 </script>
-
-<style scoped>
-pre,
-code {
-  scrollbar-width: thin;
-  scrollbar-color: var(--filename-background) transparent;
-}
-</style>

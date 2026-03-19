@@ -60,6 +60,8 @@ body {
     --horizontal-line: #c2d9ff9c;
     --timeline-border: #190482;
     --timeline-icon: #7650fe;
+    --code-scroll-track: transparent;
+    --code-scroll-thumb: #b8b5ffcc;
   }
 
   background: var(--main-background);
@@ -87,5 +89,7 @@ html.dark body {
     --horizontal-line: #c2d9ff9c;
     --timeline-border: #c2d9ff;
     --timeline-icon: #836fff;
+    --code-scroll-track: transparent;
+    --code-scroll-thumb: #00000044;
   }
 }
