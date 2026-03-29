@@ -52,7 +52,7 @@ const blogs = computed(() => {
       const diffTime = Math.abs(currentDate.getTime() - nextDate.getTime());
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-      spacing = Math.min(diffDays * 3, 250);
+      spacing = Math.min(diffDays * 4, 250);
     }
 
     return {

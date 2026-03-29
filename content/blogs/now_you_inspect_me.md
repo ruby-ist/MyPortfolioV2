@@ -1,18 +1,14 @@
 ---
 title: Now You Inspect Me
-description: "Learn about the inspect method and it's purposes"
-date: 2026-03-31
+description: "Why does Rails console execute queries automatically? Learn how Ruby’s #inspect method works, how to customize it, and its role in Active Record."
+date: 2026-03-29
 tags: ["ruby", "rails", "inspect"]
 ---
 
-The `#inspect` method in Ruby is used to customize how an object is logged or displayed in the IRB console. It is internally called by the `Logger` objects and the printer methods like `#p` and `#pp`.
+The `#inspect` method in Ruby is used to customize how an object is displayed in the console or logged. It is commonly used by debugging tools, console output, and methods like `#p` and `#pp`.
 
 ::prose-blockquote{type="note"}
-_For the beginners with a sense of humor:_
-<br>
-<br>
 Yes, we really do have a method named `#pp`, short for **Pretty Print**.
-
 ::
 
 Consider a `Note` class:
@@ -36,7 +32,7 @@ This is how it usually looks in the console:
 
 The output will have a class name, the object's encoded id and all the instance variables in it.
 
-But when a class has more instance variables or it's value has a lengthy display, it will get ugly.
+But when a class has more instance variables or its values are lengthy, the output can get messy.
 
 ```ruby [IRB Console]
 Note.new("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
@@ -49,15 +45,15 @@ Note.new("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
  @created_at=2026-03-17 19:26:11.707125 +0530>
 ```
 
-In most scenarios, how an object gets displayed doesn't matter outside of console unless you're logging it. But a proper display of values is useful for debugging.
+In most scenarios, how an object gets displayed doesn't matter outside of the console unless you're logging it. But a proper display of values is useful during debugging.
 
 ::prose-blockquote{type="note"}
-Ruby 4.0.0 introduced a new method [#instance_variables_to_inspect](https://github.com/ruby/ruby/pull/13555) to control what are the instance variables should be displayed by `#inspect`. When you define that method, the default `#inspect` will automatically call it and only print those variables returned by it.
+Ruby 4.0.0 introduced a new method [#instance_variables_to_inspect](https://github.com/ruby/ruby/pull/13555) to control which instance variables should be displayed by `#inspect`. When you define that method, the default `#inspect` will automatically call it and only print those variables returned by it.
 ::
 
-Let's say you can _identify your note with starting content_ and you also want the created at time to be bit more readable.
+Let's say you can _identify your note with starting content_ and you also want the created at time to be a bit more readable.
 
-In that case, you can define the `#inspect` method in our `Note` class in a following way:
+In that case, you can define the `#inspect` method in our `Note` class in the following way:
 
 ```ruby [IRB console]
 require 'active_support/core_ext/string/filters'
@@ -69,12 +65,12 @@ class Note
   end
 
   def inspect
-    "<Note \"#{@content.truncate(25)}\" @ #{@created_at.strftime("%a, %d %b %Y")}>"
+    "<Note \"#{@content.truncate(25)}\" @ #{@created_at.strftime('%a, %d %b %Y')}>"
   end
 end
 ```
 
-Now create a note with a lenghty content.
+Now create a note with lengthy content.
 
 ```ruby [IRB Console]
 Note.new("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.")
@@ -84,19 +80,21 @@ Note.new("Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmo
 <Note: "Lorem ipsum dolor sit ..." @ Tue, 17 Mar 2026>
 ```
 
-Now this output is short, readable and has all info you want in a way you want them.
+Now this output is short, readable and has all the information you want, presented the way you want it.
 
 You can go even farther with our previous example and try this:
 
 ```ruby [Code Snippet]
 #...
   def inspect
-    puts "." <<  ("_" * 27) << "."
-    puts "|" << (" " * 27) << "|"
-    puts "| #{@content.truncate(25).ljust(25)} |"
-    puts "|" << (" " * 27) << "|"
-    puts "|" << (" " * 8) << "@ " << @created_at.strftime("%a, %d %b %Y") << " |"
-    puts "|" << ("_" * 27) << "|"
+    <<~STR
+    .___________________________.
+    |                           |
+    | #{@content.truncate(25).ljust(25)} |
+    |                           |
+    |        @ #{@created_at.strftime("%a, %d %b %Y")} |
+    |___________________________|
+    STR
   end
 #...
 ```
@@ -114,47 +112,47 @@ Note.new("Did I already wrote my second note?")
 |___________________________|
 ```
 
-Likewise, it can be customized as per your need.
+Likewise, it can be customized based on your needs.
 
-However, there are few gotchas that you need to know:
+However, there are a few gotchas that you need to know:
 
-- if you are calling `#puts` or `#print` method with the object, it'll still print only class name and encoded id irrespective of what you defined in `#inspect` method for that object.
-- If you're explicitly calling the `#inspect` method on the object, it'll return it as string object (with visible opening and end quotes, and escaped inner quotes). So in most cases, it is not meant to be called explicitly
+- If you call `#puts` or `#print`, Ruby uses `#to_s`, not `#inspect`, so your custom formatting won’t be used.
+- If you're explicitly calling the `#inspect` method on the object, it will return it as a string (with visible opening and closing quotes, and escaped inner quotes). So in most cases, it is not meant to be called explicitly
 
-The reason why I want to talk about this method or how I came to know about it, is that it plays vital part in `ActiveRecord`'s query chaining and console experience.
+The reason why I want to talk about this method or how I came to know about it, is that it plays a vital part in `ActiveRecord`'s query chaining and console experience.
 
 ---
 
 ### ActiveRecord, Inspect and Rails Console
 
-This is how you usually write a query with active record:
+This is how you usually write a query with `ActiveRecord`:
 
 ```ruby [users_controller.rb]
 User.select(:id, :email).where(active: true).order(:created_at).limit(20)
 ```
 
-Even though it breaks the **Law of Demeter**, it is very convenient over raw SQL for most of the scenarios.
+Even though it involves chaining multiple methods, it is very convenient over raw SQL for most scenarios.
 
-However, it is not only convenient, it is implemented with an interesting pattern. You can write the above the query in following way also:
+However, it’s not just convenient—it’s implemented using an interesting pattern. You can also write the above query in the following way:
 
 ```ruby [users_controller.rb]
 query = User.select(:id, :email)
 query = query.where(active: true)
-query = query.order(:creater_at)
+query = query.order(:created_at)
 query.limit(20)
 ```
 
-This is where `ActiveRecord`'s lazy loading shines. Each time you are calling a query-building method, it will add the changes to internal query and return `self`, where self is an instance of `ActiveRecord::Relation`. But it'll not execute the built query.
+This is where `ActiveRecord`'s lazy loading shines. Each time you call a query-building method, it will add the changes to the internal query and return `self`, where self is an instance of `ActiveRecord::Relation`. But it will not execute the built query.
 
 ::prose-blockquote{type="note"}
-The returning `self` part is the reason why you can chain methods and make long queries with the active record.
+The returning `self` part is the reason why you can chain methods and make long queries with the `ActiveRecord`.
 ::
 
-The final query will be executed only when you call an **enumerable method** on the query or explicitly convert it to an array (`#to_a`). This is why most of the queries in controller usually runs at rendering time. Because during rendering only, you have to iterate over the query result.
+The query is executed only when you call an **enumerable method** on the query or explicitly convert it to an array (`#to_a`). This is why most of the queries in a controller usually runs at rendering time. Because only during rendering, you have to iterate over the query result.
 
-But if execute the above line of codes in Rails console, you'll see that four different queries getting executed. Because there is one more method that makes the relation object to execute query, which is (as the title says) the `#inspect` method.
+But if you execute the above lines of code in Rails console, you'll see that four different queries are executed. Because there is one more method that can cause the relation to execute the query, which is (as the title says) the `#inspect` method.
 
-Why? Because of the console experience. Writing active record queries in Rails conosle feels almost like writing SQL in SQL console.
+Why? Because of the console experience. Writing `ActiveRecord` queries in Rails console feels almost like writing SQL in an SQL console.
 
 In both scenarios, you are building up queries with conditions, selection, grouping, etc. And on hitting enter, you will get the query result in both.
 
@@ -165,16 +163,18 @@ User.select(:id, :email).where(active: true)
 #<ActiveRecord::Relation ...>
 ```
 
-It is not neat, right? If `#inspect` is not firing the queries, this is what will happen. You have to call `#to_a` or some enumerable method to get the final result. That is why `#inspect` shares a important role in `ActiveRecord`.
+That’s not very helpful, right? If `#inspect` is not firing the queries, this is what will happen. You have to call `#to_a` or some enumerable method to get the final result. That is why `#inspect` plays an important role in `ActiveRecord`.
 
-Sometimes we are so used to getting the result but we forgot to ask how. Getting the query result in console instantly is an good example for that. It'll never happen that way in ruby files but happens in console.
+> “Sometimes we are so used to getting the result that we forget to ask how.”
 
-Some of you might have faced a error like this when you were working in console:
+Getting the query result in console instantly is a good example for that. This won’t happen in Ruby files—it only happens in the console.
+
+Some of you might have faced an error like this when you were working in console:
 
 ```[Rails Console]
-Kernal Inspection failed for <object>...
+Kernel Inspection failed for <object>...
 ```
 
-That is because either query is loaded but an error was raised during inspect or an error was raised even before loading the query. However, if it is former, there is some chance you can still get the result by calling `#to_a` on the relation.
+That is because either the query is loaded but an error was raised during inspect or an error was raised even before loading the query. However, if it is the former, you may still be able to get the result by calling `#to_a` on the relation.
 
-In any case, the `ActiveRecord` serves as good example for why defining the `#inspect` for custom object matters and helps.
+In any case, `ActiveRecord` is a great example of why defining `#inspect` for custom objects matters—it directly impacts how we debug, explore, and understand our data in real time.
