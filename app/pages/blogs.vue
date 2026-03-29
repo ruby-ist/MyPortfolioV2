@@ -15,7 +15,7 @@
       <BlogThemeSwitcher />
     </nav>
     <NuxtPage v-if="blogName" />
-    <div v-else class="flex just-c-center">
+    <div v-else class="flex just-c-center pb-80">
       <div
         class="flex column w-90p gap-16 md:gap-0 md:w-640 md:pt-24 relative md:m-0-80"
       >
@@ -52,7 +52,7 @@ const blogs = computed(() => {
       const diffTime = Math.abs(currentDate.getTime() - nextDate.getTime());
       const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
 
-      spacing = Math.min(diffDays * 3, 250);
+      spacing = Math.min(diffDays * 4, 250);
     }
 
     return {
