@@ -69,7 +69,7 @@ export default defineNuxtConfig({
       { loc: "/", lastmod: "2026-01-22" },
       {
         loc: "/origami",
-        lastmod: "2026-03-26",
+        lastmod: "2026-04-19",
         images: OrigamiIndexImagesSitemap,
       },
       { loc: "/projects", lastmod: "2026-03-01" },
