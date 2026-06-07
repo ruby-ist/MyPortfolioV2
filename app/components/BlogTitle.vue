@@ -83,7 +83,7 @@ export default defineNuxtComponent({
     animation: spin 1.5s linear infinite;
   }
 
-  div:has(+ #blog-title-link a:hover) {
+  div:has(+ #blog-title-link a:active) {
     .spin {
       animation-play-state: paused;
     }
