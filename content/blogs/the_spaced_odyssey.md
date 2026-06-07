@@ -1,7 +1,7 @@
 ---
 title: The Space-d Odyssey
 description: Journey of creating spaced repetition in mobile first offline PWA
-date: 2026-06-15
+date: 2026-06-10
 tags: ["vue.js", "nuxt.js", "PWA"]
 ---
 
@@ -21,7 +21,7 @@ But their course update finally made me built a new one myself and I created [Re
 
 ### TL;DR
 
-Started learning Japanese using Duolingo after watching dozens of anime, they updated their course to gaslight me new words instead of teaching them. Learned about [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition){:target="\_blank"} but decided hell nah for Anki. Created my own offline PWA for space repetition named [Rebmemer](https://rebmemer.onrender.com){:target="\_blank"}.
+Started learning Japanese using Duolingo after watching dozens of anime, they updated their course to gaslight me new words instead of teaching them. Learned about [spaced repetition](https://en.wikipedia.org/wiki/Spaced_repetition){:target="\_blank"} but decided hell nah for Anki UI. Created my own offline PWA for space repetition named [Rebmemer](https://rebmemer.onrender.com){:target="\_blank"}.
 
 ---
 
