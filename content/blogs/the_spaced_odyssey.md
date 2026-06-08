@@ -1,7 +1,7 @@
 ---
 title: The Space-d Odyssey
 description: Journey of creating spaced repetition in mobile first offline PWA
-date: 2026-06-10
+date: 2026-06-08
 tags: ["vue.js", "nuxt.js", "PWA"]
 ---
 

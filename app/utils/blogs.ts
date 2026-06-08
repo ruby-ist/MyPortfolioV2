@@ -23,7 +23,7 @@ export const blogLastMod = [
   },
   {
     loc: "/blogs/the_spaced_odyssey",
-    lastmod: "2026-06-07",
+    lastmod: "2026-06-08",
   },
 ];
 
