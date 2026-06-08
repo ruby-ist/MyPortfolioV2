@@ -11,7 +11,7 @@
       class="no-display"
       :class="{ 'md:flex column align-i-center gap-16 relative': link }"
     >
-      <IconsShuriken class="h-28 m-0-16" />
+      <IconsShuriken class="h-28 m-0-16 spin" />
       <div
         class="h-[calc(100%-61px)] w-0"
         border="0.05em dashed color-timeline-border"
@@ -77,6 +77,25 @@ export default defineNuxtComponent({
 @media (min-width: 720px) {
   #blog-title-link {
     margin-bottom: v-bind(marginGap);
+  }
+
+  .spin {
+    animation: spin 1.5s linear infinite;
+  }
+
+  div:has(+ #blog-title-link a:active) {
+    .spin {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
   }
 }
 </style>

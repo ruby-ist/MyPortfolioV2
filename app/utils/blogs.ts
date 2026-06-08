@@ -21,6 +21,10 @@ export const blogLastMod = [
     loc: "/blogs/now_you_inspect_me",
     lastmod: "2026-03-29",
   },
+  {
+    loc: "/blogs/the_spaced_odyssey",
+    lastmod: "2026-06-08",
+  },
 ];
 
 export const blogRoutes = blogLastMod.map((blog) => blog.loc);
