@@ -249,7 +249,14 @@
             <IconsColoredAffinity class="w-30 h-32 md:w-36 md:h-38" />
           </template>
         </IconCell>
-        <td />
+        <IconCell class="strict:bd-r-0" title="Zed">
+          <template #mono>
+            <IconsMonochromeZed class="w-28 h-28 md:w-34 md:h-34" />
+          </template>
+          <template #color>
+            <IconsColoredZed class="w-28 h-28 md:w-34 md:h-34" />
+          </template>
+        </IconCell>
       </tr>
     </tbody>
   </table>
