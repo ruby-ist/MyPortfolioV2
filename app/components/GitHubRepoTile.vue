@@ -7,13 +7,15 @@
             {{ gitHubRepo.title }}
           </h2>
         </a>
-        <div font="s-0.8rem">{{ gitHubRepo.publishedMonth }}</div>
+        <div font="w-600 md:w-400 s-0.75rem md:s-0.8rem">
+          {{ gitHubRepo.publishedMonth }}
+        </div>
       </div>
       <a
         :href="gitHubRepo.publishedLink"
         target="_blank"
         :aria-label="`Rubygems link for ${gitHubRepo.title}`"
-        class="color-primary-text"
+        class="color-primary-text active:scale-94"
       >
         <IconsRubygems
           v-if="gitHubRepo.publishedAt === 'rubygems'"

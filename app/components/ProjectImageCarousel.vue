@@ -2,8 +2,8 @@
   <ClientOnly fallback-tag="div">
     <div id="project-carousel" class="w-100p">
       <swiper-container
-        :slides-per-view="project.type === 'mobile' ? 3 : 1"
-        :space-between="28"
+        :slides-per-view="project.type === 'mobile' ? 3.001 : 1.001"
+        :space-between="20"
         :pagination="paginatable"
         :pagination-clickable="paginatable"
         :pagination-el="`#project-${project.name}-pagination`"
@@ -18,7 +18,7 @@
             :src="`/projects/${project.name}/pic_${index + 1}.webp`"
             :alt="`${project.name}_pic_${index + 1}`"
             class="w-100p aspect-ratio-var-image-aspect-ratio [&_.loader]:w-[calc(100%-2px)] [&_.loader]:box-size-border-box [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-text"
-            border-class="bd-rad-15"
+            border-class="bd-rad-6 md:bd-rad-10"
           />
         </swiper-slide>
       </swiper-container>
@@ -43,9 +43,9 @@
           :key="index"
           :src="`/projects/${project.name}/pic_${index + 1}.webp`"
           :alt="`${project.name}_pic_${index + 1}`"
-          border-class="bd-rad-15"
+          border-class="bd-rad-6 md:bd-rad-10"
           class="w-100p aspect-ratio-var-image-aspect-ratio [&_.loader]:w-[calc(100%-2px)] [&_.loader]:box-size-border-box [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-text"
-          :class="`${project.type === 'mobile' ? 'w-30p' : 'w-100p'}
+          :class="`${project.type === 'mobile' ? 'w-30p md:w-31p' : 'w-100p'}
                    ${project.type === 'mobile' && index > 2 ? 'no-display' : ''}
                    ${project.type === 'responsive' && index !== 0 ? 'no-display' : ''}`"
         />
