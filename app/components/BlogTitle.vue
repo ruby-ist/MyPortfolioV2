@@ -80,7 +80,7 @@ export default defineNuxtComponent({
   }
 
   .spin {
-    animation: spin 1.5s linear infinite;
+    animation: spin 1.25s linear infinite;
   }
 
   div:has(+ #blog-title-link a:active) {

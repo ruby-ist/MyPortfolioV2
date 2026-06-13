@@ -16,7 +16,7 @@
     >
       <div />
       <div class="min-w-0">
-        <h1 class="mt-20 mb-60" font="f-header-font w-400">Websites</h1>
+        <h1 class="mt-20 mb-60" font="f-header-font w-400">Websites & PWAs</h1>
         <ProjectTile
           v-for="project in PROJECTS"
           :key="project.id"

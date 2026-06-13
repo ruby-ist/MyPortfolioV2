@@ -8,6 +8,7 @@ export interface Project {
   imagesCount: number;
   type: "responsive" | "mobile";
   heightWidthRatio: number;
+  publishedMonth: string;
 }
 
 export interface GitHubRepo {
@@ -17,11 +18,29 @@ export interface GitHubRepo {
   url: string;
   publishedAt?: string;
   publishedLink?: string;
+  publishedMonth: string;
 }
 
 export const PROJECTS = [
   {
     id: 1,
+    title: "Ruby on Wasm",
+    name: "ruby_on_wasm",
+    description:
+      "RubyOnWasm is a fully browser-based Ruby interpreter built with WebAssembly, " +
+      "requiring no backend server. Powered by Ruby 3.2.0’s WASI support, it runs CRuby " +
+      "directly in the browser and other WASM environments. The platform includes " +
+      "syntax highlighting, code execution, copy support, keyboard shortcuts, and " +
+      "native sharing via the Web Share API.",
+    url: "https://rubyonwasm.onrender.com",
+    imagesCount: 3,
+    type: "responsive",
+    heightWidthRatio: 0.63,
+    gitHubLink: "https://github.com/ruby-ist/Ruby-on-Wasm",
+    publishedMonth: "Sep, 2022",
+  },
+  {
+    id: 2,
     title: "GeoBits",
     name: "geobits",
     description:
@@ -37,9 +56,10 @@ export const PROJECTS = [
     type: "responsive",
     heightWidthRatio: 0.63,
     gitHubLink: "https://github.com/ruby-ist/BITsMap",
+    publishedMonth: "Sep, 2022",
   },
   {
-    id: 2,
+    id: 3,
     title: "Local Ledger",
     name: "local_ledger",
     description:
@@ -52,24 +72,26 @@ export const PROJECTS = [
     type: "mobile",
     heightWidthRatio: 2.35,
     gitHubLink: "https://github.com/ruby-ist/Local-Ledger",
+    publishedMonth: "Dec, 2024",
   },
   {
-    id: 3,
-    title: "Ruby on Wasm",
-    name: "ruby_on_wasm",
+    id: 4,
+    title: "Rebmemer",
+    name: "rebmemer",
     description:
-      "RubyOnWasm is a fully browser-based Ruby interpreter built with WebAssembly, " +
-      "requiring no backend server. Powered by Ruby 3.2.0’s WASI support, it runs CRuby " +
-      "directly in the browser and other WASM environments. The platform includes " +
-      "syntax highlighting, code execution, copy support, keyboard shortcuts, and " +
-      "native sharing via the Web Share API.",
-    url: "https://rubyonwasm.onrender.com",
-    imagesCount: 3,
-    type: "responsive",
-    heightWidthRatio: 0.63,
-    gitHubLink: "https://github.com/ruby-ist/Ruby-on-Wasm",
+      "Rebmemer is a mobile-first Progressive Web App designed for spaced repetition practice with a sleek, modern UI. " +
+      "Create question-and-answer flashcards, organize them into decks, and customize how cards are picked for each practice session. " +
+      "Flip the flow with reverse practice mode to review cards from answer to question. " +
+      "Easily import and export your card data via CSV. " +
+      "Simple, flexible, and designed to make spaced repetition a seamless part of your routine — right from your mobile device.",
+    url: "https://rebmemer.onrender.com",
+    imagesCount: 9,
+    type: "mobile",
+    heightWidthRatio: 2.21,
+    gitHubLink: "https://github.com/ruby-ist/rebmemer",
+    publishedMonth: "Jun, 2026",
   },
-] as Project[];
+].reverse() as Project[];
 
 export const GITHUB_REPOS = [
   {
@@ -83,6 +105,7 @@ export const GITHUB_REPOS = [
     url: "https://github.com/ruby-ist/weaviate_record",
     publishedAt: "rubygems",
     publishedLink: "https://rubygems.org/gems/weaviate_record",
+    publishedMonth: "Jun, 2024",
   },
   {
     id: 2,
@@ -97,5 +120,6 @@ export const GITHUB_REPOS = [
     url: "https://github.com/ruby-ist/dijkstra_trace",
     publishedAt: "rubygems",
     publishedLink: "https://rubygems.org/gems/dijkstra_trace",
+    publishedMonth: "Jul, 2022",
   },
 ];
