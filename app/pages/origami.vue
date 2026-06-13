@@ -42,7 +42,7 @@
             class="max-w-80vw relative flex row wrap gap-20 just-c-center h-var-grid-height"
           >
             <OrigamiCard
-              v-for="origamiInfo in getOrigamiPositionedCards(4, 250, 20, 52)"
+              v-for="origamiInfo in getOrigamiPositionedCards(4, 250, 20, 58)"
               :key="origamiInfo.id"
               ref="OrigamiCards"
               :origami-info="origamiInfo"
@@ -182,7 +182,7 @@ export default defineNuxtComponent({
 #origami {
   --card-width: 250px;
   --cards-gap: 20px;
-  --card-info-height: 52px;
+  --card-info-height: 58px;
   --grid-area: 0.8;
   --scroll-button-right-position: 5%;
   --grid-height: v-bind(gridHeight);
@@ -199,6 +199,7 @@ export default defineNuxtComponent({
   #origami {
     --card-width: 288px;
     --cards-gap: 40px;
+    --card-info-height: 52px;
   }
 }
 

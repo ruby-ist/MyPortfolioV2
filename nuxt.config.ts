@@ -66,14 +66,14 @@ export default defineNuxtConfig({
   },
   sitemap: {
     urls: [
-      { loc: "/", lastmod: "2026-01-22" },
+      { loc: "/", lastmod: "2026-06-11" },
       {
         loc: "/origami",
-        lastmod: "2026-04-19",
+        lastmod: "2026-06-13",
         images: OrigamiIndexImagesSitemap,
       },
-      { loc: "/projects", lastmod: "2026-03-01" },
-      { loc: "/blogs", lastmod: "2026-03-29" },
+      { loc: "/projects", lastmod: "2026-06-13" },
+      { loc: "/blogs", lastmod: "2026-06-08" },
       ...origamiLastMod,
       ...blogLastMod,
     ],

@@ -1304,6 +1304,16 @@ export const ORIGAMI_INFO_ARRAY = [
     heightWidthRatio: 0.56,
     imagesCount: 8,
   },
+  {
+    id: 126,
+    name: "Baby T-Rex",
+    picFolderName: "chibi_rex",
+    author: "Kawamura Miyuki",
+    date: new Date(2026, 5, 7),
+    lastModifiedDate: "2026-06-13",
+    heightWidthRatio: 0.75,
+    imagesCount: 7,
+  },
 ].reverse() as OrigamiInfo[];
 
 export const origamiRoutes = ORIGAMI_INFO_ARRAY.map(

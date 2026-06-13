@@ -1,6 +1,6 @@
 <template>
   <a
-    class="flex column gap-12 pointer color-primary-text w-var-card-width"
+    class="flex column gap-8 pointer color-primary-text w-var-card-width"
     :class="{
       'absolute l-var-card-left-position t-var-card-top-position': !serverSide,
     }"
@@ -11,9 +11,9 @@
       :src="`/origami/${origamiInfo.picFolderName}/pic_1.webp`"
       loading="lazy"
       class="w-100p aspect-ratio-var-image-aspect-ratio [&_.loader]:bd-1 [&_.loader]:bd-solid [&_.loader]:bd-color-primary-border"
-      border-class="bd-rad-15 md:bd-rad-23"
+      border-class="bd-rad-15 md:bd-rad-20"
     />
-    <div class="flex column gap-7">
+    <div class="flex column gap-6">
       <div class="flex align-i-center just-c-space-between">
         <div class="m-0" font="s-0.87rem w-400">{{ origamiInfo.name }}</div>
         <NuxtTime
